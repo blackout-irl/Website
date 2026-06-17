@@ -21,17 +21,17 @@ const lagoonPhotos = [
   {
     image: images.lagoon,
     label: "Hobe Sound refuge",
-    text: "Open Indian River Lagoon water.",
+    text: "A quiet stretch of the lagoon.",
   },
   {
     image: images.eauGallie,
     label: "Eau Gallie reach",
-    text: "A lagoon reach near Melbourne.",
+    text: "Water close to the neighborhoods we are talking about.",
   },
   {
     image: images.tidal,
     label: "Tidal flats",
-    text: "Shallow water, sensitive habitat.",
+    text: "Shallow water changes fast.",
   },
 ];
 
@@ -47,11 +47,11 @@ const pollutantPositions = [
 ];
 
 const trailSteps = [
-  { number: "01", title: "Street", text: "Rain lifts debris.", x: 10.42, y: 48.88 },
-  { number: "02", title: "Drain", text: "No filter.", x: 34.36, y: 54.86 },
-  { number: "03", title: "Pipe", text: "Underground flow.", x: 49.22, y: 56.42 },
-  { number: "04", title: "Outfall", text: "Shoreline exit.", x: 65.67, y: 62.82 },
-  { number: "05", title: "Lagoon", text: "The water arrives.", x: 73.9, y: 70.22 },
+  { number: "01", title: "Street", text: "Rain picks things up.", x: 10.42, y: 48.88 },
+  { number: "02", title: "Drain", text: "It goes in fast.", x: 34.36, y: 54.86 },
+  { number: "03", title: "Pipe", text: "Then it disappears underground.", x: 49.22, y: 56.42 },
+  { number: "04", title: "Outfall", text: "The pipe opens near the shore.", x: 65.67, y: 62.82 },
+  { number: "05", title: "Lagoon", text: "Now it is lagoon water.", x: 73.9, y: 70.22 },
 ];
 
 const pageLinks = [
@@ -70,7 +70,7 @@ const missionSteps = [
     verb: "Mark",
     title: "Mark storm drains.",
     stat: "50-75 drains",
-    text: "Put the message at the curb.",
+    text: "Put the reminder where people will see it.",
     x: "5%",
     y: "18%",
   },
@@ -79,25 +79,25 @@ const missionSteps = [
     verb: "Reach",
     title: "Reach homes.",
     stat: "300-500 households",
-    text: "Door hangers and a quick survey.",
+    text: "Leave a note and ask a few questions.",
     x: "36%",
     y: "8%",
   },
   {
     number: "03",
     verb: "Show",
-    title: "Show the demo.",
+    title: "Do the classroom demo.",
     stat: "4-6 demos",
-    text: "Clean water vs. runoff.",
+    text: "Show what runoff can carry.",
     x: "18%",
     y: "54%",
   },
   {
     number: "04",
     verb: "Log",
-    title: "Log the work.",
-    stat: "1 archive",
-    text: "Photos, locations, notes.",
+    title: "Keep track.",
+    stat: "1 shared folder",
+    text: "Photos, locations, and notes.",
     x: "58%",
     y: "43%",
   },
@@ -109,100 +109,100 @@ const fieldPanels = [
     image: images.marker,
     stat: "50-75",
     title: "Mark the drain.",
-    text: "Make the connection visible.",
+    text: "So people notice it before it rains.",
   },
   {
     label: "Neighborhood wave",
     image: images.eauGallie,
     stat: "300-500",
-    title: "Reach homes.",
-    text: "One clear message.",
+    title: "Reach nearby homes.",
+    text: "Keep the message short.",
   },
   {
     label: "Classroom ripple",
     image: images.tidal,
     stat: "4-6",
-    title: "Teach the demo.",
-    text: "Show where runoff goes.",
+    title: "Show the demo.",
+    text: "Make runoff easy to understand.",
   },
   {
-    label: "App archive",
+    label: "App log",
     image: images.shore,
-    stat: "1 handoff",
-    title: "Leave a trail.",
-    text: "Map, photos, survey.",
+    stat: "1 project folder",
+    title: "Keep it organized.",
+    text: "Map, photos, and survey answers.",
   },
 ];
 
 const team = [
-  ["Faizan Ahmed", "Project lead", "Report and timeline."],
-  ["Kairav Kumar", "Field lead", "Routes and photos."],
-  ["Sankeerth Reddy Keisreddy", "Outreach lead", "Door hangers and surveys."],
-  ["Prithiv Ponnusamy", "Education lead", "Classroom demo."],
-  ["Aryan Pattu", "App/data lead", "App log and charts."],
+  ["Faizan Ahmed", "Project lead", "Keeps the project moving."],
+  ["Kairav Kumar", "Field lead", "Handles routes and photos."],
+  ["Sankeerth Reddy Keisreddy", "Outreach lead", "Leads door hangers and surveys."],
+  ["Prithiv Ponnusamy", "Education lead", "Runs the classroom demo."],
+  ["Aryan Pattu", "App/data lead", "Keeps the app log organized."],
 ];
 
 const problemStats = [
-  ["No treatment", "Street water moves through."],
-  ["Nutrients", "Fertilizer feeds runoff."],
-  ["Cloudy water", "Algae blocks light."],
-  ["Local action", "Start before the drain."],
+  ["No filter", "Storm drains do not clean the water."],
+  ["Yard waste", "Clippings and fertilizer can wash away."],
+  ["Cloudy water", "Too many nutrients can feed algae."],
+  ["Before rain", "That is when small choices matter."],
 ];
 
 const runoffChain = [
-  ["01", "Rain starts", "Across lawn and street."],
-  ["02", "Runoff forms", "It carries what is there."],
-  ["03", "Drain collects", "The inlet is not a filter."],
-  ["04", "Lagoon receives", "The path ends in water."],
+  ["01", "Rain starts", "Water moves across lawns and streets."],
+  ["02", "Runoff forms", "It carries what was left outside."],
+  ["03", "Drain collects", "The drain does not stop it."],
+  ["04", "Lagoon receives", "The path ends in the lagoon."],
 ];
 
 const missionBlueprint = [
   ["Mark", "50-75 drains."],
-  ["Inform", "300-500 households."],
-  ["Educate", "Classroom demos."],
-  ["Log", "App and archive."],
+  ["Tell", "300-500 nearby homes."],
+  ["Teach", "Classroom demos."],
+  ["Save", "Photos, survey, and map."],
 ];
 
 const stormDrainSpecs = [
-  ["Target", "50-75 drains", "Neighborhood drains."],
-  ["Proof", "Photo + GPS", "Before and after."],
-  ["Message", "No dumping", "This drain connects to water."],
+  ["Goal", "50-75 drains", "Drains people pass every day."],
+  ["Save", "Photo + GPS", "Before and after."],
+  ["Sticker", "No dumping", "This drain leads to the lagoon."],
 ];
 
 const fieldDatabase = [
-  ["drain_id", "ID", "Marked drain."],
+  ["drain_id", "ID", "Which drain it is."],
   ["lat / lon", "GPS", "Location."],
-  ["photo", "file", "Before and after."],
-  ["notes", "text", "Field notes."],
+  ["photo", "file", "What the drain looked like."],
+  ["notes", "text", "Anything worth remembering."],
 ];
 
 const campaignTimeline = [
-  ["Before", "Pick drains and prep survey."],
-  ["During", "Mark, teach, reach."],
-  ["After", "Archive and hand off."],
+  ["Before", "Pick the drains and write the survey."],
+  ["During", "Mark drains, teach, and talk to homes."],
+  ["After", "Put everything somewhere the next group can use."],
 ];
 
 const impactEvidence = [
-  ["Surveys", "What people learned."],
-  ["Drain archive", "Photos and GPS."],
-  ["Classroom proof", "Demo photos and counts."],
-  ["App log", "Reports in one place."],
-  ["Handoff", "Files the next group can use."],
+  ["Surveys", "What people knew before and after."],
+  ["Marked drains", "Photos and locations."],
+  ["Classroom work", "Demo photos and student counts."],
+  ["App log", "Notes and reports in one place."],
+  ["Next group", "Files they can actually use."],
 ];
 
 const surveyPlan = [
   ["Pre-survey", "Before outreach."],
   ["Post-survey", "After outreach."],
   ["QR access", "Fast on a phone."],
-  ["Result", "Knowledge change."],
+  ["Result", "Did people learn the route?"],
 ];
 
 const teamResponsibilities = [
-  ["Project lead", "Timeline and report."],
-  ["Field operations", "Routes and photos."],
-  ["Outreach", "Door hangers and surveys."],
-  ["Education", "Classroom demo."],
-  ["App & data", "Survey and archive."],
+  ["Project lead", "Keeps the group on schedule."],
+  ["Field operations", "Marks drains and takes photos."],
+  ["Outreach", "Gets the survey to nearby homes."],
+  ["Education", "Explains the demo to students."],
+  ["App & data", "Keeps the survey and map together."],
 ];
 
 function Cursor() {
@@ -933,7 +933,7 @@ function Hero() {
           <span className="hero-word">This water</span>
           <span className="hero-word">is ours.</span>
         </h1>
-        <p className="hero-lede">Storm drains are shortcuts to the lagoon. We make that shortcut visible.</p>
+        <p className="hero-lede">Most people walk past storm drains without thinking about where they go. This project slows that down.</p>
         <div className="hero-actions">
           <a className="button light" href="/storm-drains">Start the trail</a>
           <a className="button quiet light" href="/survey">Help out</a>
@@ -971,12 +971,12 @@ function PageHeader({ kicker, title, text, actions = [] }) {
 
 function OverviewGrid() {
   const cards = [
-    ["/problem", "Runoff", "Street water has a route."],
-    ["/storm-drains", "Route", "Follow the path to the lagoon."],
-    ["/mission", "Plan", "Mark. Teach. Log."],
-    ["/impact", "Impact", "What we did."],
-    ["/team", "Team", "The students behind it."],
-    ["/survey", "Survey", "Help before rain."],
+    ["/problem", "Runoff", "What rain carries with it."],
+    ["/storm-drains", "Route", "Where the drain leads."],
+    ["/mission", "Plan", "What we are doing."],
+    ["/impact", "Impact", "What we can show."],
+    ["/team", "Team", "Who is doing the work."],
+    ["/survey", "Survey", "Help us out."],
   ];
 
   return (
@@ -997,7 +997,7 @@ function LagoonPhotoEssay() {
     <section className="photo-essay" aria-label="Indian River Lagoon photo record">
       <div className="photo-essay-head" data-reveal>
         <p className="eyebrow">Lagoon record</p>
-        <h2>Real water. Real places.</h2>
+        <h2>The lagoon is close.</h2>
       </div>
       <div className="photo-panels">
         {lagoonPhotos.map((photo, index) => (
@@ -1119,8 +1119,8 @@ function ProblemScene() {
     <section className="problem" id="problem">
       <div className="problem-frame">
         <div className="problem-copy">
-          <h2>Rain turns streets into streams.</h2>
-          <p>Grass clippings, fertilizer, oil, and pet waste can move from a curb to the lagoon in the same storm.</p>
+          <h2>Rain does not leave empty-handed.</h2>
+          <p>It can pick up grass clippings, fertilizer, oil, and pet waste before anyone thinks about it.</p>
         </div>
         <div className="runoff-field runoff-field-v2" aria-hidden="true">
           <figure className="problem-photo">
@@ -1160,7 +1160,7 @@ function ProblemScene() {
         </div>
         <div className="bloom-warning">
           <strong>Algae blooms</strong>
-          <span>Extra nutrients can turn clear water cloudy.</span>
+          <span>Too much fertilizer can help algae grow.</span>
         </div>
       </div>
     </section>
@@ -1206,10 +1206,10 @@ function MissionSequence() {
       <div className="mission-stage">
         <div className="mission-shade" aria-hidden="true" />
         <div className="mission-copy">
-          <h2>The work.</h2>
-          <p>Mark drains. Talk to homes. Teach the demo. Save the proof.</p>
+          <h2>What we are doing.</h2>
+          <p>Mark the drains, talk to nearby homes, teach the demo, and keep track of it.</p>
         </div>
-        <div className="mission-field" aria-label="Campaign sequence">
+        <div className="mission-field" aria-label="Project steps">
           <span className="mission-scanline" />
           <svg className="mission-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <path className="mission-path" d="M4 78 C18 50 29 36 43 49 C55 60 57 22 72 28 C86 35 82 70 96 56" />
@@ -1239,7 +1239,7 @@ function ImpactRun() {
   return (
     <section className="impact" id="app">
       <div className="impact-head">
-        <h2>The field plan.</h2>
+        <h2>What happens on the ground.</h2>
         <div className="impact-progress" aria-hidden="true"><span /></div>
       </div>
       <div className="impact-track">
@@ -1290,7 +1290,7 @@ function Final() {
           The lagoon was never disconnected from us.
           <span>We were just disconnected from it.</span>
         </h2>
-        <p>Take the survey or log a drain.</p>
+        <p>Take the survey or use the app to help us keep track.</p>
         <div className="final-actions">
           <a className="button light" href="#app">Get our app</a>
           <a className="button quiet light" href="#final">Take our survey</a>
@@ -1306,16 +1306,16 @@ function HomePage() {
       <Hero />
       <LagoonPhotoEssay />
       <ContentBand
-        kicker="Field brief"
-        title="Make the shortcut visible."
-        text="Mark drains. Teach the route. Collect responses."
+        kicker="Start here"
+        title="Help people notice the drain before it rains."
+        text="We are marking drains, teaching the route, and asking what people know before and after."
         dark
       >
         <StatGrid items={[
           ["50-75", "drains marked."],
           ["300-500", "homes reached."],
-          ["survey", "before and after."],
-          ["1 handoff", "usable archive."],
+          ["survey", "what changed."],
+          ["1 folder", "so the work does not disappear."],
         ]} />
       </ContentBand>
       <OverviewGrid />
@@ -1330,35 +1330,35 @@ function ProblemPage() {
       <PageHeader
         kicker="Runoff"
         title="The drain is not a filter."
-        text="Rain picks up what we leave outside."
+        text="Rain can carry what we leave outside."
         actions={[["Follow the route", "/storm-drains"], ["See the mission", "/mission"]]}
       />
       <ContentBand
         kicker="Cause"
-        title="What starts on the street can reach the lagoon."
-        text="What sits on the street can enter the water."
+        title="What starts on the street can end up in the lagoon."
+        text="That is the part a lot of people never see."
         dark
       >
         <StatGrid items={problemStats} />
       </ContentBand>
       <ContentBand
         kicker="Path"
-        title="Street. Drain. Lagoon."
-        text="The path is short."
+        title="Street to drain to lagoon."
+        text="It is a shorter trip than it feels."
       >
         <ChainList items={runoffChain} />
       </ContentBand>
       <ProblemScene />
       <ContentBand
         kicker="Shift"
-        title="Act before rain."
-        text="The fix starts at the curb."
+        title="The best time to act is before rain."
+        text="Once water enters the drain, it is already moving."
         dark
       >
         <StoryCards items={[
-          ["Mark", "Make the route visible."],
-          ["Teach", "Show the water path."],
-          ["Log", "Keep proof."],
+          ["Mark", "Put the reminder where people can see it."],
+          ["Teach", "Show students what runoff carries."],
+          ["Log", "Save the photos, map, and survey answers."],
         ]} />
       </ContentBand>
     </>
@@ -1371,34 +1371,34 @@ function StormDrainsPage() {
       <PageHeader
         kicker="Field work"
         title="Street to lagoon."
-        text="Follow the water."
+        text="Follow one rainstorm from the street to the lagoon."
         actions={[["See the mission", "/mission"], ["Track impact", "/impact"]]}
       />
       <Trail />
       <ContentBand
-        kicker="Marker system"
-        title="Every drain gets a record."
-        text="Photo, GPS, and notes."
+        kicker="Drain marking"
+        title="Every marked drain gets saved."
+        text="A photo, a location, and a few notes."
       >
         <StatGrid items={stormDrainSpecs} />
       </ContentBand>
       <ContentBand
-        kicker="Field database"
-        title="A simple archive."
-        text="Enough for the next team to continue."
+        kicker="Project folder"
+        title="Keep it useful."
+        text="The next group should not have to start over."
         dark
       >
         <DataTable rows={fieldDatabase} />
       </ContentBand>
       <ContentBand
-        kicker="Install sequence"
-        title="Route day."
+        kicker="Route day"
+        title="On route day."
       >
         <TimelineRows items={[
-          ["Select", "Pick visible drains."],
-          ["Photo", "Capture before and after."],
-          ["Mark", "Place the curb reminder."],
-          ["Log", "Save GPS and notes."],
+          ["Pick", "Choose drains people will actually see."],
+          ["Photo", "Take a before and after photo."],
+          ["Mark", "Put the reminder on the drain."],
+          ["Save", "Add the location and notes."],
         ]} />
       </ContentBand>
     </>
@@ -1411,35 +1411,35 @@ function MissionPage() {
       <PageHeader
         kicker="Mission"
         title="The plan."
-        text="Mark drains, reach homes, teach students, and save the results."
+        text="Do the work where people already live, walk, and learn."
         actions={[["View impact", "/impact"], ["Meet the team", "/team"]]}
       />
       <MissionSequence />
       <ContentBand
-        kicker="Blueprint"
-        title="Four jobs."
-        text="Each job has something to show."
+        kicker="What we do"
+        title="Four simple jobs."
+        text="Each one leaves something useful behind."
         dark
       >
         <StoryCards items={missionBlueprint} />
       </ContentBand>
       <ContentBand
         kicker="Timeline"
-        title="Before. During. After."
-        text="Set up. Do it. Hand it off."
+        title="Before, during, after."
+        text="Plan it, do it, then leave it organized."
       >
         <TimelineRows items={campaignTimeline} />
       </ContentBand>
       <ContentBand
-        kicker="Deliverables"
-        title="What we hand off."
+        kicker="What stays"
+        title="What we leave behind."
         dark
       >
         <EvidenceRows items={[
-          ["Drain packet", "Map, photos, GPS."],
-          ["Outreach packet", "Door hanger, QR, survey notes."],
-          ["Education packet", "Slides and demo proof."],
-          ["Archive packet", "App log, survey, handoff."],
+          ["Drain map", "Where we marked drains."],
+          ["Outreach notes", "Where the door hangers went."],
+          ["Classroom materials", "The demo and what students saw."],
+          ["Project folder", "Photos, survey answers, and app notes."],
         ]} />
       </ContentBand>
     </>
@@ -1452,28 +1452,28 @@ function ImpactPage() {
       <PageHeader
         kicker="Impact"
         title="What changed?"
-        text="Marked drains, survey responses, and classroom proof."
+        text="We can point to marked drains, survey answers, and classroom work."
         actions={[["Take the survey", "/survey"], ["Meet the team", "/team"]]}
       />
       <ImpactRun />
       <ContentBand
-        kicker="Evidence streams"
-        title="What we can show."
-        text="Photos, surveys, and the archive."
+        kicker="What we saved"
+        title="Here is what we can point to."
+        text="Photos, survey answers, class materials, and the map."
         dark
       >
         <EvidenceRows items={impactEvidence} />
       </ContentBand>
       <ContentBand
-        kicker="What changed"
-        title="Did people get it?"
-        text="The survey shows whether the message landed."
+        kicker="Survey"
+        title="Did people understand the connection?"
+        text="The survey is there to check that, not just to collect names."
       >
         <StatGrid items={[
-          ["Pre", "Before outreach."],
-          ["Post", "After outreach."],
-          ["QR", "Fast on a phone."],
-          ["Result", "More people know the route."],
+          ["Before", "What people knew at first."],
+          ["After", "What changed later."],
+          ["QR", "Easy to open on a phone."],
+          ["Result", "More people know where drains lead."],
         ]} />
       </ContentBand>
     </>
@@ -1485,28 +1485,28 @@ function TeamPage() {
     <>
       <PageHeader
         kicker="Field team"
-        title="Students doing the work."
-        text="Five roles. One campaign."
+        title="The people doing the work."
+        text="Everyone has a part to handle."
         actions={[["See mission", "/mission"], ["Help out", "/survey"]]}
       />
       <DossierDeck />
       <ContentBand
-        kicker="Responsibilities"
-        title="Our roles."
-        text="Each role owns one piece."
+        kicker="Roles"
+        title="Who handles what."
+        text="This keeps the work from turning into a mess."
         dark
       >
         <EvidenceRows items={teamResponsibilities} />
       </ContentBand>
       <ContentBand
-        kicker="Workflow"
-        title="Workflow."
+        kicker="Process"
+        title="How we keep moving."
       >
         <TimelineRows items={[
-          ["Plan", "Route, dates, survey."],
-          ["Collect", "Field days and demos."],
-          ["Organize", "Keep the archive clean."],
-          ["Explain", "Turn proof into the final story."],
+          ["Plan", "Pick the route and set dates."],
+          ["Collect", "Do field days, demos, and surveys."],
+          ["Organize", "Name files and keep them together."],
+          ["Explain", "Turn the work into a clear final story."],
         ]} />
       </ContentBand>
     </>
@@ -1518,27 +1518,27 @@ function SurveyPage() {
     <>
       <PageHeader
         kicker="Help out"
-        title="Take the survey. Get the app."
-        text="Answer the survey or use the app."
+        title="Take the survey or use the app."
+        text="Either one helps us understand what people notice."
         actions={[["Back to home", "/"], ["See impact", "/impact"]]}
       />
       <ContentBand
-        kicker="Survey design"
-        title="Quick survey."
-        text="Before and after outreach."
+        kicker="Survey"
+        title="A short survey."
+        text="Just enough to see if the message is working."
         dark
       >
         <StoryCards items={surveyPlan} />
       </ContentBand>
       <ContentBand
         kicker="How to help"
-        title="Help before rain."
+        title="What you can do before rain."
       >
         <TimelineRows items={[
           ["Scan", "Take the survey."],
-          ["Notice", "Check nearby drains."],
-          ["Change", "Keep waste away."],
-          ["Share", "Tell one person."],
+          ["Look", "Notice the drains near you."],
+          ["Move", "Keep clippings and trash away."],
+          ["Tell", "Explain it to one other person."],
         ]} />
       </ContentBand>
       <Final />
