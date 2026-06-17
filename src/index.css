@@ -4010,6 +4010,146 @@ p {
   opacity: 0.68;
 }
 
+/* Less packed copy pass. */
+p {
+  line-height: 1.55;
+}
+
+.page-hero {
+  min-height: 62svh;
+}
+
+.page-hero p:not(.eyebrow),
+.hero-lede,
+.content-heading > p:not(.eyebrow),
+.section-head p:not(.eyebrow),
+.app-copy p:not(.eyebrow),
+.evidence p:not(.eyebrow),
+.final p:not(.eyebrow) {
+  max-width: 560px;
+}
+
+.content-band,
+.photo-essay,
+.overview-grid,
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.impact,
+.dossiers,
+.lab-stage,
+.final {
+  padding-top: clamp(76px, 8vw, 108px);
+  padding-bottom: clamp(76px, 8vw, 108px);
+}
+
+.content-heading {
+  margin-bottom: 34px;
+}
+
+.content-heading > p:not(.eyebrow),
+.page-hero p:not(.eyebrow),
+.hero-lede {
+  margin-top: 18px;
+}
+
+.overview-grid,
+.stat-grid,
+.story-cards,
+.impact-track {
+  gap: 10px;
+  background: transparent;
+  border: 0;
+}
+
+.overview-card,
+.stat-card,
+.story-card,
+.action-panel,
+.trail-card,
+.mission-card,
+.impact-panel {
+  border: 1px solid rgba(232, 221, 199, 0.14);
+}
+
+.overview-card {
+  min-height: 230px;
+  padding: 22px;
+}
+
+.stat-card,
+.story-card {
+  min-height: 176px;
+  padding: 20px;
+}
+
+.stat-card strong,
+.story-card h3 {
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+}
+
+.stat-card p,
+.story-card p,
+.overview-card p,
+.trail-card p,
+.mission-card p,
+.impact-panel p:not(.eyebrow) {
+  margin-top: 10px;
+  font-size: 0.98rem;
+}
+
+.chain-row,
+.timeline-row,
+.evidence-row,
+.data-row {
+  grid-template-columns: 72px minmax(160px, 0.38fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.evidence-row {
+  grid-template-columns: 72px minmax(0, 1fr);
+}
+
+.data-row {
+  grid-template-columns: minmax(108px, 0.22fr) minmax(82px, 0.16fr) minmax(0, 1fr);
+}
+
+.chain-row h3,
+.timeline-row h3,
+.evidence-row h3 {
+  font-size: clamp(1.18rem, 1.7vw, 1.65rem);
+}
+
+.mission-field {
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.mission-card {
+  padding: 16px;
+}
+
+.mission-card h3 {
+  margin-top: 14px;
+}
+
+.mission-card p {
+  margin-top: 8px;
+}
+
+.impact-panel > div {
+  padding: 22px;
+}
+
+.impact-panel strong {
+  margin: 18px 0 12px;
+}
+
+.impact-panel img {
+  min-height: 260px;
+}
+
 @media (max-width: 900px) {
   .mission-field,
   .impact-track {
@@ -4018,6 +4158,28 @@ p {
 
   .impact {
     padding-right: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .top-nav-inner {
+    overflow: hidden;
+  }
+
+  .top-nav-links {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .top-nav-links a {
+    padding: 0 9px;
+    font-size: 0.7rem;
+  }
+
+  .overview-card,
+  .stat-card,
+  .story-card {
+    min-height: 158px;
   }
 }
 
