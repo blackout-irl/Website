@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #061014;
-  --water: #0a1d24;
-  --asphalt: #1c2427;
+  --navy: #12313a;
+  --water: #1c4a55;
+  --asphalt: #2b3e42;
   --lagoon: #2aa7a0;
   --muted-teal: #6fb7b0;
   --paper: #e8ddc7;
@@ -269,7 +269,7 @@ html.fluid-dragging {
   padding: 9px 12px 9px 18px;
   border: 1px solid rgba(244, 239, 229, 0.13);
   border-radius: 999px;
-  background: rgba(5, 12, 15, 0.68);
+  background: rgba(13, 40, 48, 0.74);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
 }
 
@@ -346,8 +346,8 @@ html.fluid-dragging {
   align-items: flex-end;
   padding: 150px 72px 72px;
   background:
-    linear-gradient(90deg, rgba(2, 8, 12, 0.78), rgba(2, 8, 12, 0.26) 58%, rgba(2, 8, 12, 0.58)),
-    linear-gradient(0deg, rgba(2, 8, 12, 0.92), transparent 58%);
+    linear-gradient(90deg, rgba(13, 40, 48, 0.58), rgba(13, 40, 48, 0.12) 58%, rgba(13, 40, 48, 0.38)),
+    linear-gradient(0deg, rgba(13, 40, 48, 0.56), transparent 58%);
 }
 
 .page-hero > div {
@@ -393,8 +393,8 @@ html.fluid-dragging {
   flex-direction: column;
   padding: 26px;
   background:
-    linear-gradient(180deg, rgba(4, 18, 25, 0.82), rgba(4, 18, 25, 0.62)),
-    rgba(6, 16, 20, 0.46);
+    linear-gradient(180deg, rgba(20, 65, 76, 0.68), rgba(16, 50, 60, 0.48)),
+    rgba(27, 75, 84, 0.42);
   backdrop-filter: blur(10px);
   transition:
     transform 260ms ease,
@@ -405,8 +405,8 @@ html.fluid-dragging {
 .overview-card:focus-visible {
   transform: translateY(-8px);
   background:
-    linear-gradient(180deg, rgba(7, 32, 42, 0.88), rgba(4, 18, 25, 0.68)),
-    rgba(6, 16, 20, 0.54);
+    linear-gradient(180deg, rgba(27, 86, 96, 0.76), rgba(18, 58, 68, 0.58)),
+    rgba(30, 84, 94, 0.5);
 }
 
 .overview-card span {
@@ -433,8 +433,8 @@ html.fluid-dragging {
   z-index: 2;
   padding: 118px 72px;
   background:
-    linear-gradient(180deg, rgba(4, 11, 14, 0.72), rgba(4, 11, 14, 0.9)),
-    rgba(6, 16, 20, 0.68);
+    linear-gradient(180deg, rgba(18, 49, 58, 0.46), rgba(22, 64, 74, 0.62)),
+    rgba(30, 78, 88, 0.58);
   overflow: hidden;
 }
 
@@ -481,7 +481,7 @@ html.fluid-dragging {
   min-height: 420px;
   overflow: hidden;
   border: 1px solid rgba(232, 221, 199, 0.16);
-  background: #061014;
+  background: #173944;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
@@ -495,7 +495,7 @@ html.fluid-dragging {
   height: calc(100% + 80px);
   min-height: inherit;
   object-fit: cover;
-  filter: brightness(0.78) saturate(1.04) contrast(1.04);
+  filter: brightness(0.9) saturate(1.06) contrast(1.02);
 }
 
 .photo-panel::after {
@@ -504,7 +504,7 @@ html.fluid-dragging {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, transparent 42%, rgba(3, 9, 12, 0.82)),
+    linear-gradient(180deg, transparent 48%, rgba(8, 30, 38, 0.68)),
     repeating-linear-gradient(0deg, transparent 0 7px, rgba(244, 239, 229, 0.045) 8px);
 }
 
@@ -543,7 +543,7 @@ html.fluid-dragging {
 .content-band.dark {
   color: var(--paper-bright);
   background:
-    linear-gradient(180deg, rgba(3, 12, 18, 0.84), rgba(3, 12, 18, 0.68));
+    linear-gradient(180deg, rgba(17, 52, 62, 0.62), rgba(22, 68, 78, 0.5));
 }
 
 .content-band.light {
@@ -604,7 +604,7 @@ html.fluid-dragging {
   display: flex;
   flex-direction: column;
   padding: 24px;
-  background: rgba(6, 16, 20, 0.58);
+  background: rgba(16, 54, 64, 0.54);
   color: var(--paper-bright);
   transition:
     transform 260ms ease,
@@ -620,7 +620,7 @@ html.fluid-dragging {
 .stat-card:hover,
 .story-card:hover {
   transform: translateY(-8px);
-  background: rgba(8, 32, 40, 0.74);
+  background: rgba(24, 78, 88, 0.68);
 }
 
 .content-band.light .stat-card:hover,
@@ -908,7 +908,7 @@ p {
   align-items: flex-end;
   padding: 58px 72px;
   color: var(--paper-bright);
-  background: var(--navy);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -975,7 +975,7 @@ p {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: #03101a;
+  background: #12313a;
 }
 
 .pavel-fluid::before {
@@ -984,9 +984,9 @@ p {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 55% 30%, rgba(42, 167, 160, 0.08), transparent 30%),
-    linear-gradient(90deg, rgba(1, 8, 12, 0.66), rgba(1, 8, 12, 0.12) 50%, rgba(1, 8, 12, 0.5)),
-    linear-gradient(180deg, rgba(1, 9, 14, 0.1), rgba(1, 9, 14, 0.82));
+    radial-gradient(circle at 55% 30%, rgba(111, 183, 176, 0.18), transparent 32%),
+    linear-gradient(90deg, rgba(13, 40, 48, 0.38), rgba(13, 40, 48, 0.04) 50%, rgba(13, 40, 48, 0.28)),
+    linear-gradient(180deg, rgba(13, 40, 48, 0.04), rgba(13, 40, 48, 0.46));
   pointer-events: none;
 }
 
@@ -1086,9 +1086,9 @@ p {
 
 .hero-shade {
   background:
-    radial-gradient(circle at 72% 24%, rgba(42, 167, 160, 0.2), transparent 22%),
-    linear-gradient(0deg, rgba(4, 9, 12, 0.96), rgba(4, 9, 12, 0.2) 54%, rgba(4, 9, 12, 0.42)),
-    linear-gradient(90deg, rgba(4, 9, 12, 0.88), rgba(4, 9, 12, 0.24) 54%, rgba(4, 9, 12, 0.54));
+    radial-gradient(circle at 72% 24%, rgba(111, 183, 176, 0.26), transparent 24%),
+    linear-gradient(0deg, rgba(11, 36, 44, 0.72), rgba(11, 36, 44, 0.08) 54%, rgba(11, 36, 44, 0.24)),
+    linear-gradient(90deg, rgba(11, 36, 44, 0.68), rgba(11, 36, 44, 0.1) 54%, rgba(11, 36, 44, 0.32));
 }
 
 .hero::before {
@@ -1169,7 +1169,7 @@ p {
 .problem {
   position: relative;
   min-height: 320svh;
-  background: #09161b;
+  background: rgba(18, 49, 58, 0.72);
 }
 
 .problem-frame {
@@ -1188,7 +1188,7 @@ p {
   position: absolute;
   inset: -4%;
   background:
-    linear-gradient(180deg, rgba(6, 16, 20, 0.4), rgba(6, 16, 20, 0.98)),
+    linear-gradient(180deg, rgba(17, 52, 62, 0.22), rgba(17, 52, 62, 0.68)),
     url("/images/storm-drain-rain.png") center / cover;
   filter: brightness(0.62) saturate(0.85) contrast(1.06);
   animation: photoBackgroundDrift 20s ease-in-out infinite alternate;
@@ -1200,7 +1200,7 @@ p {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(6, 16, 20, 0.92), rgba(6, 16, 20, 0.36) 56%, rgba(6, 16, 20, 0.76)),
+    linear-gradient(90deg, rgba(17, 52, 62, 0.68), rgba(17, 52, 62, 0.18) 56%, rgba(17, 52, 62, 0.48)),
     repeating-linear-gradient(90deg, rgba(232, 221, 199, 0.04) 0 1px, transparent 1px 92px);
 }
 
@@ -1526,7 +1526,7 @@ p {
 
 .trail {
   min-height: 480svh;
-  background: #0b1517;
+  background: rgba(18, 49, 58, 0.74);
 }
 
 .trail-stage {
@@ -1543,7 +1543,7 @@ p {
   position: relative;
   aspect-ratio: 1672 / 941;
   border: 1px solid rgba(232, 221, 199, 0.16);
-  background: #0d1a1d;
+  background: #183e48;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -2754,9 +2754,9 @@ p {
 
 .hero-shade {
   background:
-    radial-gradient(circle at 70% 22%, rgba(42, 167, 160, 0.28), transparent 26%),
-    linear-gradient(90deg, rgba(2, 8, 12, 0.92), rgba(3, 15, 23, 0.42) 54%, rgba(2, 8, 12, 0.7)),
-    linear-gradient(0deg, rgba(2, 8, 12, 0.92), transparent 52%, rgba(2, 8, 12, 0.22));
+    radial-gradient(circle at 70% 22%, rgba(111, 183, 176, 0.34), transparent 28%),
+    linear-gradient(90deg, rgba(13, 40, 48, 0.58), rgba(13, 40, 48, 0.18) 54%, rgba(13, 40, 48, 0.4)),
+    linear-gradient(0deg, rgba(13, 40, 48, 0.6), transparent 52%, rgba(13, 40, 48, 0.12));
 }
 
 .problem-frame,
@@ -2764,7 +2764,7 @@ p {
 .mission-stage,
 .lab-stage {
   background:
-    linear-gradient(180deg, rgba(3, 12, 18, 0.6), rgba(3, 12, 18, 0.76));
+    linear-gradient(180deg, rgba(18, 49, 58, 0.42), rgba(22, 68, 78, 0.5));
 }
 
 .problem-frame::before,
@@ -2799,37 +2799,36 @@ p {
 .impact-panel,
 .sample-grid article {
   background:
-    linear-gradient(180deg, rgba(4, 18, 25, 0.74), rgba(4, 18, 25, 0.56)),
-    rgba(6, 16, 20, 0.38);
-  backdrop-filter: blur(10px);
+    linear-gradient(180deg, rgba(20, 65, 76, 0.58), rgba(22, 68, 78, 0.42)),
+    rgba(30, 84, 94, 0.34);
 }
 
 .trail-map,
 .evidence-photo,
 .impact-panel,
 .problem-photo {
-  background: rgba(3, 12, 18, 0.62);
+  background: rgba(20, 65, 76, 0.52);
 }
 
 .mission-stage {
   background:
-    linear-gradient(90deg, rgba(3, 12, 18, 0.82), rgba(3, 12, 18, 0.36) 62%, rgba(3, 12, 18, 0.74));
+    linear-gradient(90deg, rgba(18, 49, 58, 0.58), rgba(22, 68, 78, 0.24) 62%, rgba(18, 49, 58, 0.48));
 }
 
 .impact {
   background:
-    linear-gradient(180deg, rgba(3, 12, 18, 0.7), rgba(3, 12, 18, 0.82));
+    linear-gradient(180deg, rgba(18, 49, 58, 0.52), rgba(22, 68, 78, 0.56));
 }
 
 .evidence-wall,
 .dossiers {
   background:
-    linear-gradient(180deg, rgba(3, 12, 18, 0.78), rgba(3, 12, 18, 0.7));
+    linear-gradient(180deg, rgba(18, 49, 58, 0.56), rgba(22, 68, 78, 0.48));
 }
 
 .lab-section {
   background:
-    linear-gradient(180deg, rgba(3, 12, 18, 0.74), rgba(3, 12, 18, 0.86));
+    linear-gradient(180deg, rgba(18, 49, 58, 0.5), rgba(22, 68, 78, 0.58));
 }
 
 .final > img {
