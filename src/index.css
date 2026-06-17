@@ -166,7 +166,6 @@ html.fluid-dragging {
   padding: 0 14px;
   border: 1px solid rgba(244, 239, 229, 0.34);
   background: rgba(6, 16, 20, 0.72);
-  backdrop-filter: blur(16px);
   list-style: none;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.68rem;
@@ -205,7 +204,6 @@ html.fluid-dragging {
   margin-top: 8px;
   border: 1px solid rgba(244, 239, 229, 0.22);
   background: rgba(6, 16, 20, 0.86);
-  backdrop-filter: blur(18px);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
 }
 
@@ -272,7 +270,6 @@ html.fluid-dragging {
   border: 1px solid rgba(244, 239, 229, 0.13);
   border-radius: 999px;
   background: rgba(5, 12, 15, 0.68);
-  backdrop-filter: blur(24px);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
 }
 
@@ -1006,22 +1003,21 @@ p {
   inset: 0;
   background: var(--bg) center / cover;
   opacity: 0;
-  filter: brightness(0.68) saturate(1.08) contrast(1.04);
   transform: scale(1.06) translate3d(-1.6%, -1%, 0);
-  animation: lagoonPhotoCycle 36s linear infinite;
-  will-change: opacity, transform;
+  animation: lagoonPhotoCycle 56s ease-in-out infinite;
+  will-change: opacity;
 }
 
 .lagoon-photo-reel span:nth-child(2) {
-  animation-delay: 9s;
+  animation-delay: 14s;
 }
 
 .lagoon-photo-reel span:nth-child(3) {
-  animation-delay: 18s;
+  animation-delay: 28s;
 }
 
 .lagoon-photo-reel span:nth-child(4) {
-  animation-delay: 27s;
+  animation-delay: 42s;
 }
 
 .pavel-fluid-canvas {
@@ -1031,8 +1027,12 @@ p {
   height: 100%;
   display: block;
   pointer-events: none;
-  opacity: 0.72;
+  opacity: 0.46;
   mix-blend-mode: soft-light;
+}
+
+.fluid-static .pavel-fluid-canvas {
+  display: none;
 }
 
 .pavel-fluid .promo,
@@ -1109,7 +1109,6 @@ p {
   background-image: radial-gradient(circle, rgba(244, 239, 229, 0.42) 0 1px, transparent 1.5px);
   background-size: 88px 88px;
   opacity: 0.13;
-  animation: particulate 24s linear infinite;
 }
 
 .hero-copy {

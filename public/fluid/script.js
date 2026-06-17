@@ -57,31 +57,31 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 1024,
+    SIM_RESOLUTION: 64,
+    DYE_RESOLUTION: 384,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 0.58,
-    VELOCITY_DISSIPATION: 0.08,
+    DENSITY_DISSIPATION: 0.74,
+    VELOCITY_DISSIPATION: 0.16,
     PRESSURE: 0.62,
-    PRESSURE_ITERATIONS: 20,
-    CURL: 12,
-    SPLAT_RADIUS: 0.16,
-    SPLAT_FORCE: 4300,
+    PRESSURE_ITERATIONS: 10,
+    CURL: 6,
+    SPLAT_RADIUS: 0.12,
+    SPLAT_FORCE: 2600,
     SHADING: true,
-    COLORFUL: true,
+    COLORFUL: false,
     COLOR_UPDATE_SPEED: 3,
     PAUSED: false,
     BACK_COLOR: { r: 1, g: 9, b: 18 },
     TRANSPARENT: true,
-    BLOOM: true,
-    BLOOM_ITERATIONS: 8,
-    BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.18,
+    BLOOM: false,
+    BLOOM_ITERATIONS: 3,
+    BLOOM_RESOLUTION: 128,
+    BLOOM_INTENSITY: 0.12,
     BLOOM_THRESHOLD: 0.86,
     BLOOM_SOFT_KNEE: 0.7,
-    SUNRAYS: true,
-    SUNRAYS_RESOLUTION: 196,
-    SUNRAYS_WEIGHT: 0.38,
+    SUNRAYS: false,
+    SUNRAYS_RESOLUTION: 128,
+    SUNRAYS_WEIGHT: 0.25,
 }
 
 function pointerPrototype () {
@@ -104,7 +104,9 @@ pointers.push(new pointerPrototype());
 const { gl, ext } = getWebGLContext(canvas);
 
 if (isMobile()) {
-    config.DYE_RESOLUTION = 512;
+    config.SIM_RESOLUTION = 32;
+    config.DYE_RESOLUTION = 192;
+    config.SHADING = false;
 }
 if (!ext.supportLinearFiltering) {
     config.DYE_RESOLUTION = 512;
@@ -1167,13 +1169,19 @@ function updateKeywords () {
 
 updateKeywords();
 initFramebuffers();
-multipleSplats(parseInt(Math.random() * 20) + 5);
+multipleSplats(4);
 
 let lastUpdateTime = Date.now();
+let lastFrameTime = 0;
 let colorUpdateTimer = 0.0;
 update();
 
 function update () {
+    requestAnimationFrame(update);
+    const frameNow = Date.now();
+    if (frameNow - lastFrameTime < 33)
+        return;
+    lastFrameTime = frameNow;
     const dt = calcDeltaTime();
     if (resizeCanvas())
         initFramebuffers();
@@ -1182,7 +1190,6 @@ function update () {
     if (!config.PAUSED)
         step(dt);
     render(null);
-    requestAnimationFrame(update);
 }
 
 function calcDeltaTime () {
@@ -1639,7 +1646,7 @@ function getTextureScale (texture, width, height) {
 }
 
 function scaleByPixelRatio (input) {
-    let pixelRatio = window.devicePixelRatio || 1;
+    let pixelRatio = Math.min(window.devicePixelRatio || 1, 1);
     return Math.floor(input * pixelRatio);
 }
 

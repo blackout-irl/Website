@@ -425,7 +425,12 @@ function PavelFluidBackground() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!canvas || reduced) return undefined;
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
+    const lowPower = (navigator.hardwareConcurrency || 4) < 4;
+    if (!canvas || reduced || !finePointer || window.innerWidth < 900 || lowPower) {
+      document.documentElement.classList.add("fluid-static");
+      return () => document.documentElement.classList.remove("fluid-static");
+    }
 
     window.ga = window.ga || (() => {});
 
@@ -446,13 +451,18 @@ function PavelFluidBackground() {
       });
 
     let cancelled = false;
-    loadScript("/fluid/dat.gui.min.js")
-      .then(() => {
-        if (cancelled || window.__pavelFluidLoaded) return undefined;
-        window.__pavelFluidLoaded = true;
-        return loadScript("/fluid/script.js");
-      })
-      .catch(() => {});
+    const startFluid = () => {
+      loadScript("/fluid/dat.gui.min.js")
+        .then(() => {
+          if (cancelled || window.__pavelFluidLoaded) return undefined;
+          window.__pavelFluidLoaded = true;
+          return loadScript("/fluid/script.js");
+        })
+        .catch(() => {});
+    };
+    const idleId = "requestIdleCallback" in window
+      ? window.requestIdleCallback(startFluid, { timeout: 1200 })
+      : window.setTimeout(startFluid, 500);
 
     const forward = (type, event) => {
       if (!canvas) return;
@@ -466,19 +476,30 @@ function PavelFluidBackground() {
       }));
     };
 
+    let dragging = false;
+    let queuedMove = null;
+    let moveFrame = 0;
+
     const down = (event) => {
+      dragging = true;
       document.documentElement.classList.add("fluid-dragging");
       window.getSelection()?.removeAllRanges();
       forward("mousedown", event);
     };
     const move = (event) => {
-      if (document.documentElement.classList.contains("fluid-dragging")) {
-        event.preventDefault();
-        window.getSelection()?.removeAllRanges();
-      }
-      forward("mousemove", event);
+      if (!dragging) return;
+      event.preventDefault();
+      window.getSelection()?.removeAllRanges();
+      queuedMove = event;
+      if (moveFrame) return;
+      moveFrame = window.requestAnimationFrame(() => {
+        moveFrame = 0;
+        if (queuedMove) forward("mousemove", queuedMove);
+      });
     };
     const up = () => {
+      dragging = false;
+      queuedMove = null;
       document.documentElement.classList.remove("fluid-dragging");
       window.getSelection()?.removeAllRanges();
       window.dispatchEvent(new MouseEvent("mouseup"));
@@ -491,7 +512,14 @@ function PavelFluidBackground() {
 
     return () => {
       cancelled = true;
+      if ("cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId);
+      } else {
+        window.clearTimeout(idleId);
+      }
+      if (moveFrame) window.cancelAnimationFrame(moveFrame);
       document.documentElement.classList.remove("fluid-dragging");
+      document.documentElement.classList.remove("fluid-static");
       window.removeEventListener("pointerdown", down);
       window.removeEventListener("pointermove", move);
       window.removeEventListener("pointerup", up);
@@ -718,13 +746,6 @@ function useMotion() {
         });
       });
 
-      gsap.to(".lagoon-photo-reel", {
-        scale: 1.08,
-        yPercent: 4,
-        ease: "none",
-        scrollTrigger: { trigger: document.body, start: "top top", end: "bottom bottom", scrub: true },
-      });
-
       gsap.utils.toArray(".page-hero").forEach((section) => {
         gsap.fromTo(section.querySelectorAll(".eyebrow, h1, p, .page-actions"), {
           y: 38,
@@ -782,11 +803,6 @@ function useMotion() {
           duration: 0.9,
           ease: "power3.out",
           scrollTrigger: { trigger: panel, start: "top 82%" },
-        });
-        gsap.to(panel.querySelector("img"), {
-          yPercent: index % 2 ? -8 : 8,
-          ease: "none",
-          scrollTrigger: { trigger: panel, start: "top bottom", end: "bottom top", scrub: true },
         });
       });
 
