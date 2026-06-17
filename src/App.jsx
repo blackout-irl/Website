@@ -570,6 +570,7 @@ function useMotion() {
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const compact = window.matchMedia("(max-width: 760px)").matches;
     let cleanupCursor = () => {};
     let cleanupHash = () => {};
 
@@ -610,10 +611,12 @@ function useMotion() {
         return path;
       };
 
-      prepPath(".runoff-curve");
-      prepPath(".curb-route");
-      prepPath(".route-path");
-      prepPath(".mission-path");
+      if (!compact) {
+        prepPath(".runoff-curve");
+        prepPath(".curb-route");
+        prepPath(".route-path");
+        prepPath(".mission-path");
+      }
 
       if (document.querySelector(".hero")) {
         gsap.from(".hero-word, .hero-lede, .hero-actions", {
@@ -624,15 +627,17 @@ function useMotion() {
           ease: "power3.out",
         });
 
-        gsap.to(".hero-media img", {
-          scale: 1.12,
-          yPercent: 8,
-          ease: "none",
-          scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
-        });
+        if (!compact) {
+          gsap.to(".hero-media img", {
+            scale: 1.12,
+            yPercent: 8,
+            ease: "none",
+            scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
+          });
+        }
       }
 
-      if (document.querySelector(".problem")) {
+      if (!compact && document.querySelector(".problem")) {
         const problemTl = gsap.timeline({
           scrollTrigger: { trigger: ".problem", start: "top top", end: "+=220%", scrub: true, pin: ".problem-frame" },
         });
@@ -658,7 +663,7 @@ function useMotion() {
           .fromTo(".bloom-warning", { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.8 }, 1.48);
       }
 
-      if (document.querySelector(".trail")) {
+      if (!compact && document.querySelector(".trail")) {
         const trailTl = gsap.timeline({
           scrollTrigger: { trigger: ".trail", start: "top top", end: "+=410%", scrub: true, pin: ".trail-stage" },
         });
@@ -685,7 +690,7 @@ function useMotion() {
         });
       }
 
-      if (document.querySelector(".mission")) {
+      if (!compact && document.querySelector(".mission")) {
         const missionTl = gsap.timeline({
           scrollTrigger: { trigger: ".mission", start: "top top", end: "+=300%", scrub: true, pin: ".mission-stage" },
         });
@@ -828,7 +833,7 @@ function useMotion() {
         });
       }
 
-      if (document.querySelector(".lab-section")) {
+      if (!compact && document.querySelector(".lab-section")) {
         const labTl = gsap.timeline({
           scrollTrigger: { trigger: ".lab-section", start: "top top", end: "+=180%", scrub: true, pin: ".lab-stage" },
         });
