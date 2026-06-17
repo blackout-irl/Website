@@ -94,10 +94,10 @@ const missionSteps = [
   },
   {
     number: "04",
-    verb: "Test",
-    title: "Test the sites.",
-    stat: "3 rounds",
-    text: "Before, during, after.",
+    verb: "Log",
+    title: "Log the work.",
+    stat: "1 archive",
+    text: "Photos, locations, notes.",
     x: "58%",
     y: "43%",
   },
@@ -126,11 +126,11 @@ const fieldPanels = [
     text: "Show where runoff goes.",
   },
   {
-    label: "Water testing",
+    label: "App archive",
     image: images.shore,
-    stat: "3 rounds",
-    title: "Test the water.",
-    text: "Compare sites over time.",
+    stat: "1 handoff",
+    title: "Leave a trail.",
+    text: "Map, photos, survey.",
   },
 ];
 
@@ -139,10 +139,8 @@ const team = [
   ["Kairav Kumar", "Field lead", "Routes and photos."],
   ["Sankeerth Reddy Keisreddy", "Outreach lead", "Door hangers and surveys."],
   ["Prithiv Ponnusamy", "Education lead", "Classroom demo."],
-  ["Aryan Pattu", "Data lead", "Testing and charts."],
+  ["Aryan Pattu", "App/data lead", "App log and charts."],
 ];
-
-const tests = ["nitrate", "phosphate", "pH", "temperature", "turbidity"];
 
 const problemStats = [
   ["No treatment", "Street water moves through."],
@@ -162,7 +160,7 @@ const missionBlueprint = [
   ["Mark", "50-75 drains."],
   ["Inform", "300-500 households."],
   ["Educate", "Classroom demos."],
-  ["Measure", "Three water tests."],
+  ["Log", "App and archive."],
 ];
 
 const stormDrainSpecs = [
@@ -179,16 +177,17 @@ const fieldDatabase = [
 ];
 
 const campaignTimeline = [
-  ["Before", "Survey and test."],
+  ["Before", "Pick drains and prep survey."],
   ["During", "Mark, teach, reach."],
-  ["After", "Survey, test, and hand off."],
+  ["After", "Archive and hand off."],
 ];
 
 const impactEvidence = [
   ["Surveys", "What people learned."],
   ["Drain archive", "Photos and GPS."],
-  ["Water data", "Five basic tests."],
-  ["Handoff", "A repeatable packet."],
+  ["Classroom proof", "Demo photos and counts."],
+  ["App log", "Reports in one place."],
+  ["Handoff", "Files the next group can use."],
 ];
 
 const surveyPlan = [
@@ -203,7 +202,7 @@ const teamResponsibilities = [
   ["Field operations", "Routes and photos."],
   ["Outreach", "Door hangers and surveys."],
   ["Education", "Classroom demo."],
-  ["Science & data", "Testing and charts."],
+  ["App & data", "Survey and archive."],
 ];
 
 function Cursor() {
@@ -876,7 +875,6 @@ function useMotion() {
         [
           [".trail-card", ".trail"],
           [".mission-card", ".mission"],
-          [".lab-step, .test-chip", ".lab-section"],
         ].forEach(([items, trigger]) => {
           if (!document.querySelector(trigger)) return;
           gsap.fromTo(items, {
@@ -902,25 +900,6 @@ function useMotion() {
           ease: "power3.out",
           scrollTrigger: { trigger: ".dossiers", start: "top 70%" },
         });
-      }
-
-      if (immersive && !compact && document.querySelector(".lab-section")) {
-        const labTl = gsap.timeline({
-          scrollTrigger: { trigger: ".lab-section", start: "top top", end: "+=180%", scrub: true, pin: ".lab-stage" },
-        });
-
-        labTl
-          .set(".phase-word", { autoAlpha: 0, yPercent: 80 }, 0)
-          .from(".lab-copy", { y: 48, duration: 0.45 }, 0)
-          .fromTo(".lab-step", { y: 34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.18, duration: 0.55 }, 0.12)
-          .to(".phase-before", { autoAlpha: 1, yPercent: 0, duration: 0.28 }, 0.14)
-          .to(".phase-before", { autoAlpha: 0, yPercent: -55, duration: 0.22 }, 0.52)
-          .to(".phase-during", { autoAlpha: 1, yPercent: 0, duration: 0.28 }, 0.52)
-          .to(".phase-during", { autoAlpha: 0, yPercent: -55, duration: 0.22 }, 0.82)
-          .to(".phase-after", { autoAlpha: 1, yPercent: 0, duration: 0.34 }, 0.82)
-          .fromTo(".jar-fill", { scaleY: 0.12 }, { scaleY: 1, stagger: 0.16, duration: 0.9, ease: "power3.out" }, 0.34)
-          .fromTo(".lab-pulse", { scale: 0.2, autoAlpha: 0 }, { scale: 1, autoAlpha: 0.65, duration: 0.8 }, 0.7)
-          .fromTo(".test-chip", { y: 28, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.07, duration: 0.55 }, 0.92);
       }
 
       if (document.querySelector(".final img")) {
@@ -994,8 +973,8 @@ function OverviewGrid() {
   const cards = [
     ["/problem", "Runoff", "Street water has a route."],
     ["/storm-drains", "Route", "Follow the path to the lagoon."],
-    ["/mission", "Plan", "Mark. Teach. Test."],
-    ["/impact", "Impact", "Proof from the field."],
+    ["/mission", "Plan", "Mark. Teach. Log."],
+    ["/impact", "Impact", "What we did."],
     ["/team", "Team", "The students behind it."],
     ["/survey", "Survey", "Help before rain."],
   ];
@@ -1181,7 +1160,7 @@ function ProblemScene() {
         </div>
         <div className="bloom-warning">
           <strong>Algae blooms</strong>
-          <span>Extra nutrients can feed cloudy water before anyone notices.</span>
+          <span>Extra nutrients can turn clear water cloudy.</span>
         </div>
       </div>
     </section>
@@ -1227,8 +1206,8 @@ function MissionSequence() {
       <div className="mission-stage">
         <div className="mission-shade" aria-hidden="true" />
         <div className="mission-copy">
-          <h2>Simple work, real signal.</h2>
-          <p>Mark the drains. Reach nearby homes. Teach the demo. Test the water before and after.</p>
+          <h2>The work.</h2>
+          <p>Mark drains. Talk to homes. Teach the demo. Save the proof.</p>
         </div>
         <div className="mission-field" aria-label="Campaign sequence">
           <span className="mission-scanline" />
@@ -1249,7 +1228,7 @@ function MissionSequence() {
           ))}
           <span className="mission-object object-marker">marker</span>
           <span className="mission-object object-hanger">door hanger</span>
-          <span className="mission-object object-sample">sample vial</span>
+          <span className="mission-object object-log">app log</span>
         </div>
       </div>
     </section>
@@ -1302,57 +1281,6 @@ function DossierDeck() {
   );
 }
 
-function WaterLab() {
-  return (
-    <section className="lab-section" id="testing">
-      <div className="lab-stage">
-        <div className="lab-copy">
-          <h2>Track the water.</h2>
-          <p>Use the same sites each round so the results can be compared.</p>
-        </div>
-        <div className="phase-reel" aria-hidden="true">
-          <span className="phase-word phase-before">Before</span>
-          <span className="phase-word phase-during">During</span>
-          <span className="phase-word phase-after">After</span>
-        </div>
-        <div className="lab-timeline" aria-label="Water testing rounds">
-          <article className="lab-step">
-            <span>01</span>
-            <h3>Baseline</h3>
-            <p>Before outreach</p>
-          </article>
-          <article className="lab-step">
-            <span>02</span>
-            <h3>Midpoint</h3>
-            <p>During outreach</p>
-          </article>
-          <article className="lab-step">
-            <span>03</span>
-            <h3>Final</h3>
-            <p>After outreach</p>
-          </article>
-        </div>
-        <div className="jar-stage" aria-label="Water testing preview">
-          <span className="lab-pulse" />
-          <div className="jar clean">
-            <span className="jar-fill" />
-            <p>campaign site</p>
-          </div>
-          <div className="jar runoff">
-            <span className="jar-fill" />
-            <p>control site</p>
-          </div>
-        </div>
-        <div className="test-strip">
-          {tests.map((test) => (
-            <span className="test-chip" key={test}>{test}</span>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Final() {
   return (
     <section className="final" id="final">
@@ -1380,13 +1308,13 @@ function HomePage() {
       <ContentBand
         kicker="Field brief"
         title="Make the shortcut visible."
-        text="Mark the drains. Teach the route. Test the water."
+        text="Mark drains. Teach the route. Collect responses."
         dark
       >
         <StatGrid items={[
           ["50-75", "drains marked."],
           ["300-500", "homes reached."],
-          ["3 rounds", "water testing."],
+          ["survey", "before and after."],
           ["1 handoff", "usable archive."],
         ]} />
       </ContentBand>
@@ -1401,13 +1329,13 @@ function ProblemPage() {
     <>
       <PageHeader
         kicker="Runoff"
-        title="The drain does not clean the water."
+        title="The drain is not a filter."
         text="Rain picks up what we leave outside."
         actions={[["Follow the route", "/storm-drains"], ["See the mission", "/mission"]]}
       />
       <ContentBand
         kicker="Cause"
-        title="Land becomes lagoon."
+        title="What starts on the street can reach the lagoon."
         text="What sits on the street can enter the water."
         dark
       >
@@ -1430,7 +1358,7 @@ function ProblemPage() {
         <StoryCards items={[
           ["Mark", "Make the route visible."],
           ["Teach", "Show the water path."],
-          ["Test", "Keep proof."],
+          ["Log", "Keep proof."],
         ]} />
       </ContentBand>
     </>
@@ -1482,15 +1410,15 @@ function MissionPage() {
     <>
       <PageHeader
         kicker="Mission"
-        title="Simple work. Real signal."
-        text="Four actions: mark, reach, teach, test."
+        title="The plan."
+        text="Mark drains, reach homes, teach students, and save the results."
         actions={[["View impact", "/impact"], ["Meet the team", "/team"]]}
       />
       <MissionSequence />
       <ContentBand
         kicker="Blueprint"
         title="Four jobs."
-        text="Each one leaves proof."
+        text="Each job has something to show."
         dark
       >
         <StoryCards items={missionBlueprint} />
@@ -1498,7 +1426,7 @@ function MissionPage() {
       <ContentBand
         kicker="Timeline"
         title="Before. During. After."
-        text="Simple phases."
+        text="Set up. Do it. Hand it off."
       >
         <TimelineRows items={campaignTimeline} />
       </ContentBand>
@@ -1511,7 +1439,7 @@ function MissionPage() {
           ["Drain packet", "Map, photos, GPS."],
           ["Outreach packet", "Door hanger, QR, survey notes."],
           ["Education packet", "Slides and demo proof."],
-          ["Science packet", "Samples, charts, result."],
+          ["Archive packet", "App log, survey, handoff."],
         ]} />
       </ContentBand>
     </>
@@ -1523,30 +1451,29 @@ function ImpactPage() {
     <>
       <PageHeader
         kicker="Impact"
-        title="Measure what changed."
-        text="Action, survey movement, and water data."
-        actions={[["Water testing", "/impact#testing"], ["Take the survey", "/survey"]]}
+        title="What changed?"
+        text="Marked drains, survey responses, and classroom proof."
+        actions={[["Take the survey", "/survey"], ["Meet the team", "/team"]]}
       />
       <ImpactRun />
       <ContentBand
         kicker="Evidence streams"
-        title="Proof, not promises."
-        text="Each activity leaves a record."
+        title="What we can show."
+        text="Photos, surveys, and the archive."
         dark
       >
         <EvidenceRows items={impactEvidence} />
       </ContentBand>
-      <WaterLab />
       <ContentBand
-        kicker="Water testing"
-        title="Simple science."
-        text="Same sites. Same tests. Three rounds."
+        kicker="What changed"
+        title="Did people get it?"
+        text="The survey shows whether the message landed."
       >
         <StatGrid items={[
-          ["Site A", "Campaign site."],
-          ["Site B", "Second campaign site."],
-          ["Control", "Outside the campaign zone."],
-          ["5 tests", "Nitrate, phosphate, pH, temp, turbidity."],
+          ["Pre", "Before outreach."],
+          ["Post", "After outreach."],
+          ["QR", "Fast on a phone."],
+          ["Result", "More people know the route."],
         ]} />
       </ContentBand>
     </>
@@ -1576,7 +1503,7 @@ function TeamPage() {
         title="Workflow."
       >
         <TimelineRows items={[
-          ["Plan", "Route, dates, samples."],
+          ["Plan", "Route, dates, survey."],
           ["Collect", "Field days and demos."],
           ["Organize", "Keep the archive clean."],
           ["Explain", "Turn proof into the final story."],
