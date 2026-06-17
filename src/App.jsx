@@ -611,11 +611,12 @@ function useMotion() {
         return path;
       };
 
+      prepPath(".route-path");
+      prepPath(".mission-path");
+
       if (!compact) {
         prepPath(".runoff-curve");
         prepPath(".curb-route");
-        prepPath(".route-path");
-        prepPath(".mission-path");
       }
 
       if (document.querySelector(".hero")) {
@@ -645,6 +646,7 @@ function useMotion() {
         problemTl
           .fromTo(".problem-photo", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.75 }, 0)
           .fromTo(".problem-photo img", { scale: 1.04, xPercent: -2, yPercent: -2 }, { scale: 1.16, xPercent: 4, yPercent: 3, duration: 1.8, ease: "none" }, 0)
+          .fromTo(".storm-scan", { xPercent: -125, autoAlpha: 0 }, { xPercent: 125, autoAlpha: 0.72, duration: 1.15, ease: "none" }, 0.08)
           .fromTo(".street-slice", { xPercent: -120, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, stagger: 0.08, duration: 0.6 }, 0.08)
           .fromTo(".rain-streak", { y: -130, autoAlpha: 0 }, { y: 140, autoAlpha: 0.52, stagger: 0.025, duration: 0.95 }, 0.08)
           .to(".curb-route", { strokeDashoffset: 0, duration: 1.05, ease: "none" }, 0.24)
@@ -672,9 +674,17 @@ function useMotion() {
         const trailStepTimes = [0.15, 0.88, 1.55, 2.34, 3.02];
 
         trailTl
+          .set(".route-runner", { autoAlpha: 0, scale: 0.5 }, 0)
           .set(trailPins, { autoAlpha: 0, scale: 0.78 }, 0)
           .set(trailCards, { autoAlpha: 0, y: 34 }, 0)
-          .to(".route-path", { strokeDashoffset: 0, duration: 3.34, ease: "none" }, 0);
+          .to(".route-path", { strokeDashoffset: 0, duration: 3.34, ease: "none" }, 0)
+          .to(".route-runner", { autoAlpha: 1, scale: 1, duration: 0.12 }, 0.08)
+          .to(".route-runner", {
+            motionPath: { path: ".route-path", align: ".route-path", alignOrigin: [0.5, 0.5] },
+            duration: 3.34,
+            ease: "none",
+          }, 0.02)
+          .to(".route-runner", { scale: 1.45, autoAlpha: 0, duration: 0.22 }, 3.18);
 
         trailCards.forEach((card, index) => {
           const start = trailStepTimes[index];
@@ -698,6 +708,7 @@ function useMotion() {
         missionTl
           .from(".mission-copy", { y: 58, duration: 0.55 }, 0)
           .to(".mission-path", { strokeDashoffset: 0, duration: 1.55, ease: "none" }, 0.12)
+          .fromTo(".mission-scanline", { xPercent: -130, autoAlpha: 0 }, { xPercent: 130, autoAlpha: 0.8, duration: 1.4, ease: "none" }, 0.1)
           .fromTo(".mission-card", {
             y: 190,
             x: (index) => (index % 2 ? 120 : -120),
@@ -727,15 +738,27 @@ function useMotion() {
 
       const track = document.querySelector(".impact-track");
       if (track && window.innerWidth > 900) {
+        const impactScroll = {
+          trigger: ".impact",
+          start: "top top",
+          end: () => `+=${track.scrollWidth}`,
+          scrub: true,
+          pin: true,
+          invalidateOnRefresh: true,
+        };
         gsap.to(track, {
           x: () => -(track.scrollWidth - window.innerWidth + 72),
+          ease: "none",
+          scrollTrigger: impactScroll,
+        });
+        gsap.fromTo(".impact-progress span", { scaleX: 0 }, {
+          scaleX: 1,
           ease: "none",
           scrollTrigger: {
             trigger: ".impact",
             start: "top top",
             end: () => `+=${track.scrollWidth}`,
             scrub: true,
-            pin: true,
             invalidateOnRefresh: true,
           },
         });
@@ -818,6 +841,43 @@ function useMotion() {
           stagger: 0.1,
           duration: 0.75,
           scrollTrigger: { trigger: ".impact", start: "top 72%" },
+        });
+      }
+
+      if (compact) {
+        gsap.to(".route-path", {
+          strokeDashoffset: 0,
+          duration: 1.1,
+          ease: "power2.out",
+          scrollTrigger: { trigger: ".trail-map", start: "top 72%" },
+        });
+
+        gsap.fromTo(".trail-pin", { autoAlpha: 0, scale: 0.5 }, {
+          autoAlpha: 1,
+          scale: 1,
+          stagger: 0.08,
+          duration: 0.45,
+          ease: "back.out(1.7)",
+          scrollTrigger: { trigger: ".trail-map", start: "top 70%" },
+        });
+
+        [
+          [".trail-card", ".trail"],
+          [".mission-card", ".mission"],
+          [".lab-step, .test-chip", ".lab-section"],
+        ].forEach(([items, trigger]) => {
+          if (!document.querySelector(trigger)) return;
+          gsap.fromTo(items, {
+            y: 36,
+            autoAlpha: 0,
+          }, {
+            y: 0,
+            autoAlpha: 1,
+            stagger: 0.07,
+            duration: 0.58,
+            ease: "power3.out",
+            scrollTrigger: { trigger, start: "top 82%" },
+          });
         });
       }
 
@@ -1076,6 +1136,7 @@ function ProblemScene() {
           <figure className="problem-photo">
             <img src={images.drain} alt="" />
           </figure>
+          <span className="storm-scan" />
           <div className="street-slices">
             <span className="street-slice" />
             <span className="street-slice" />
@@ -1125,6 +1186,7 @@ function Trail() {
           <svg className="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <path className="route-path" d="M10.42 48.88 C11.58 47.56 12.42 47.42 12.82 47.92 C13.36 48.72 13.05 51.08 13.42 52.82 C14.04 55.12 16.35 53.92 18.2 53 C20.68 51.78 23.38 50.9 25.9 52.02 C28.55 53.15 31.2 54.72 34.36 54.86 C38.8 54.64 43.45 54.2 49.22 56.42 C54.82 57.86 60.26 60.84 65.67 62.82 C68.62 63.92 68.58 65.82 70.72 66.98 C72.12 67.78 72.88 69.38 73.9 70.22" />
           </svg>
+          <span className="route-runner" />
           {trailSteps.map((step) => (
             <span className="trail-pin" key={step.number} style={{ left: `${step.x}%`, top: `${step.y}%` }}>
               {step.number}
@@ -1158,6 +1220,7 @@ function MissionSequence() {
           <p>Mark the drains. Reach nearby homes. Teach the demo. Test the water before and after.</p>
         </div>
         <div className="mission-field" aria-label="Campaign sequence">
+          <span className="mission-scanline" />
           <svg className="mission-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <path className="mission-path" d="M4 78 C18 50 29 36 43 49 C55 60 57 22 72 28 C86 35 82 70 96 56" />
           </svg>
@@ -1187,6 +1250,7 @@ function ImpactRun() {
     <section className="impact" id="app">
       <div className="impact-head">
         <h2>The field plan.</h2>
+        <div className="impact-progress" aria-hidden="true"><span /></div>
       </div>
       <div className="impact-track">
         {fieldPanels.map((panel) => (
