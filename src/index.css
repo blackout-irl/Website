@@ -3829,6 +3829,198 @@ p {
   }
 }
 
+/* Continuous story mode: keep every chapter on the same lagoon surface and
+   use simple reveal motion instead of separate pinned set pieces. */
+.page-hero,
+.photo-essay,
+.content-band.dark,
+.content-band.light,
+.problem,
+.trail,
+.mission,
+.impact,
+.evidence-wall,
+.dossiers,
+.lab-section,
+.final {
+  background: transparent;
+}
+
+.content-band.light {
+  color: var(--paper-bright);
+}
+
+.content-band.light .content-heading > p:not(.eyebrow),
+.content-band.light .chain-row p,
+.content-band.light .timeline-row p,
+.content-band.light .evidence-row p,
+.content-band.light .data-row p {
+  color: rgba(244, 239, 229, 0.72);
+}
+
+.content-band.light .stat-grid,
+.content-band.light .story-cards {
+  background: rgba(232, 221, 199, 0.12);
+  border-color: rgba(232, 221, 199, 0.14);
+}
+
+.content-band.light .stat-card,
+.content-band.light .story-card {
+  background: rgba(20, 65, 76, 0.5);
+  color: var(--paper-bright);
+}
+
+.content-band.light .stat-card p,
+.content-band.light .story-card p {
+  color: rgba(244, 239, 229, 0.7);
+}
+
+.content-band.light .data-row code {
+  color: rgba(244, 239, 229, 0.88);
+}
+
+.content-band,
+.photo-essay,
+.overview-grid,
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.impact,
+.dossiers,
+.lab-stage,
+.final {
+  padding-top: clamp(84px, 10vw, 132px);
+  padding-bottom: clamp(84px, 10vw, 132px);
+}
+
+.problem,
+.trail,
+.mission,
+.lab-section {
+  min-height: auto;
+}
+
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.lab-stage {
+  min-height: auto;
+  overflow: visible;
+  background:
+    linear-gradient(180deg, rgba(18, 49, 58, 0.22), rgba(22, 68, 78, 0.18));
+}
+
+.problem-frame::before,
+.problem-frame::after,
+.mission-shade {
+  opacity: 0.38;
+}
+
+.trail {
+  min-height: auto;
+}
+
+.trail-stage {
+  align-items: start;
+}
+
+.trail-copy {
+  min-height: auto;
+}
+
+.trail-cards {
+  position: static;
+  min-height: auto;
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.trail-card {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  min-height: 150px;
+}
+
+.mission {
+  min-height: auto;
+}
+
+.mission-stage {
+  display: block;
+}
+
+.mission-field {
+  min-height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 38px;
+  padding: 96px 20px 20px;
+}
+
+.mission-card,
+.mission-card:nth-of-type(1),
+.mission-card:nth-of-type(2),
+.mission-card:nth-of-type(3),
+.mission-card:nth-of-type(4) {
+  position: relative;
+  left: auto !important;
+  top: auto !important;
+  width: auto;
+  min-height: 0;
+}
+
+.mission-svg,
+.mission-object,
+.mission-scanline {
+  display: none;
+}
+
+.impact {
+  min-height: auto;
+  overflow: visible;
+  padding-right: 72px;
+}
+
+.impact-track {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-right: 0;
+}
+
+.impact-panel {
+  width: 100%;
+  min-height: auto;
+  grid-template-columns: 1fr;
+}
+
+.impact-panel img {
+  min-height: 320px;
+}
+
+.impact-progress {
+  display: none;
+}
+
+.phase-reel {
+  opacity: 0.68;
+}
+
+@media (max-width: 900px) {
+  .mission-field,
+  .impact-track {
+    grid-template-columns: 1fr;
+  }
+
+  .impact {
+    padding-right: 18px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

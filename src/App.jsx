@@ -591,6 +591,7 @@ function useMotion() {
     if (reduced) return cleanupHash;
 
     const ctx = gsap.context(() => {
+      const immersive = false;
       const cursor = document.querySelector(".cursor-dot");
       if (cursor && window.matchMedia("(pointer: fine)").matches) {
         const xTo = gsap.quickTo(cursor, "x", { duration: 0.22, ease: "power3.out" });
@@ -638,7 +639,7 @@ function useMotion() {
         }
       }
 
-      if (!compact && document.querySelector(".problem")) {
+      if (immersive && !compact && document.querySelector(".problem")) {
         const problemTl = gsap.timeline({
           scrollTrigger: { trigger: ".problem", start: "top top", end: "+=220%", scrub: true, pin: ".problem-frame" },
         });
@@ -665,7 +666,7 @@ function useMotion() {
           .fromTo(".bloom-warning", { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.8 }, 1.48);
       }
 
-      if (!compact && document.querySelector(".trail")) {
+      if (immersive && !compact && document.querySelector(".trail")) {
         const trailTl = gsap.timeline({
           scrollTrigger: { trigger: ".trail", start: "top top", end: "+=410%", scrub: true, pin: ".trail-stage" },
         });
@@ -700,7 +701,7 @@ function useMotion() {
         });
       }
 
-      if (!compact && document.querySelector(".mission")) {
+      if (immersive && !compact && document.querySelector(".mission")) {
         const missionTl = gsap.timeline({
           scrollTrigger: { trigger: ".mission", start: "top top", end: "+=300%", scrub: true, pin: ".mission-stage" },
         });
@@ -737,7 +738,7 @@ function useMotion() {
       }
 
       const track = document.querySelector(".impact-track");
-      if (track && window.innerWidth > 900) {
+      if (immersive && track && window.innerWidth > 900) {
         const impactScroll = {
           trigger: ".impact",
           start: "top top",
@@ -790,15 +791,12 @@ function useMotion() {
 
       gsap.utils.toArray(".stat-card, .story-card, .overview-card").forEach((card) => {
         gsap.fromTo(card, {
-          y: 70,
-          rotateX: -9,
+          y: 34,
           autoAlpha: 0,
-          transformOrigin: "50% 100%",
         }, {
           y: 0,
-          rotateX: 0,
           autoAlpha: 1,
-          duration: 0.72,
+          duration: 0.58,
           ease: "power3.out",
           scrollTrigger: { trigger: card, start: "top 88%" },
         });
@@ -821,36 +819,56 @@ function useMotion() {
 
       gsap.utils.toArray(".photo-panel").forEach((panel, index) => {
         gsap.fromTo(panel, {
-          yPercent: index % 2 ? 14 : -10,
-          rotate: index % 2 ? 1.8 : -1.8,
+          y: 36,
           autoAlpha: 0,
         }, {
-          yPercent: 0,
-          rotate: 0,
+          y: 0,
           autoAlpha: 1,
-          duration: 0.9,
+          duration: 0.72,
           ease: "power3.out",
           scrollTrigger: { trigger: panel, start: "top 82%" },
         });
       });
 
       if (document.querySelector(".impact")) {
-        gsap.fromTo(".impact-panel", { y: 72, autoAlpha: 0 }, {
+        gsap.fromTo(".impact-panel", { y: 34, autoAlpha: 0 }, {
           y: 0,
           autoAlpha: 1,
           stagger: 0.1,
-          duration: 0.75,
+          duration: 0.58,
           scrollTrigger: { trigger: ".impact", start: "top 72%" },
         });
       }
 
-      if (compact) {
+      if (document.querySelector(".trail-map")) {
         gsap.to(".route-path", {
           strokeDashoffset: 0,
-          duration: 1.1,
+          duration: compact ? 1.1 : 1.35,
           ease: "power2.out",
           scrollTrigger: { trigger: ".trail-map", start: "top 72%" },
         });
+
+        if (!compact) {
+          gsap.fromTo(".route-runner", { autoAlpha: 0, scale: 0.65 }, {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.15,
+            scrollTrigger: { trigger: ".trail-map", start: "top 72%" },
+          });
+          gsap.to(".route-runner", {
+            motionPath: { path: ".route-path", align: ".route-path", alignOrigin: [0.5, 0.5] },
+            duration: 1.35,
+            ease: "power2.inOut",
+            scrollTrigger: { trigger: ".trail-map", start: "top 72%" },
+          });
+          gsap.to(".route-runner", {
+            autoAlpha: 0,
+            scale: 1.25,
+            duration: 0.25,
+            delay: 1.15,
+            scrollTrigger: { trigger: ".trail-map", start: "top 72%" },
+          });
+        }
 
         gsap.fromTo(".trail-pin", { autoAlpha: 0, scale: 0.5 }, {
           autoAlpha: 1,
@@ -860,7 +878,9 @@ function useMotion() {
           ease: "back.out(1.7)",
           scrollTrigger: { trigger: ".trail-map", start: "top 70%" },
         });
+      }
 
+      if (compact) {
         [
           [".trail-card", ".trail"],
           [".mission-card", ".mission"],
@@ -882,18 +902,17 @@ function useMotion() {
       }
 
       if (document.querySelector(".dossiers")) {
-        gsap.fromTo(".dossier-card", { y: 70, rotate: -4, autoAlpha: 0 }, {
+        gsap.fromTo(".dossier-card", { y: 34, autoAlpha: 0 }, {
           y: 0,
-          rotate: 0,
           autoAlpha: 1,
           stagger: 0.08,
-          duration: 0.75,
+          duration: 0.58,
           ease: "power3.out",
           scrollTrigger: { trigger: ".dossiers", start: "top 70%" },
         });
       }
 
-      if (!compact && document.querySelector(".lab-section")) {
+      if (immersive && !compact && document.querySelector(".lab-section")) {
         const labTl = gsap.timeline({
           scrollTrigger: { trigger: ".lab-section", start: "top top", end: "+=180%", scrub: true, pin: ".lab-stage" },
         });
