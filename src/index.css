@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #12313a;
-  --water: #1c4a55;
-  --asphalt: #2b3e42;
-  --lagoon: #2aa7a0;
-  --muted-teal: #6fb7b0;
+  --navy: #171814;
+  --water: #26312c;
+  --asphalt: #2c2b25;
+  --lagoon: #7aa095;
+  --muted-teal: #d0bf91;
   --paper: #e8ddc7;
   --paper-bright: #f4efe5;
   --sand: #bfae8a;
@@ -3830,6 +3830,201 @@ p {
   min-height: 260px;
 }
 
+/* Readability and warmer palette pass. */
+html,
+body {
+  background: #171814;
+}
+
+body::before {
+  opacity: 0.055;
+}
+
+.pavel-fluid {
+  background: #171814;
+}
+
+.pavel-fluid::before {
+  background:
+    radial-gradient(circle at 62% 28%, rgba(191, 174, 138, 0.18), transparent 30%),
+    radial-gradient(circle at 18% 70%, rgba(122, 160, 149, 0.14), transparent 34%),
+    linear-gradient(90deg, rgba(23, 24, 20, 0.74), rgba(41, 48, 39, 0.18) 52%, rgba(23, 24, 20, 0.64)),
+    linear-gradient(180deg, rgba(23, 24, 20, 0.2), rgba(23, 24, 20, 0.72));
+}
+
+.pavel-fluid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(23, 24, 20, 0.2), rgba(23, 24, 20, 0.62)),
+    radial-gradient(circle at 50% 20%, transparent 0 30%, rgba(23, 24, 20, 0.42) 72%);
+}
+
+.lagoon-photo-reel span {
+  opacity: 0;
+  filter: brightness(0.62) saturate(0.62) sepia(0.16) hue-rotate(-18deg) contrast(1.06);
+}
+
+.pavel-fluid-canvas {
+  opacity: 0.3;
+  mix-blend-mode: soft-light;
+  filter: saturate(0.72) contrast(0.94) sepia(0.08);
+}
+
+.page-hero,
+.photo-essay,
+.content-band.dark,
+.content-band.light,
+.problem,
+.trail,
+.mission,
+.impact,
+.dossiers,
+.final {
+  color: #fff7e8;
+}
+
+h1,
+h2,
+h3,
+.hero-lede,
+.page-hero p:not(.eyebrow),
+.content-heading > p:not(.eyebrow) {
+  color: #fff7e8;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.32);
+}
+
+p,
+.overview-card p,
+.photo-panel figcaption p,
+.stat-card p,
+.story-card p,
+.trail-card p,
+.mission-card p,
+.impact-panel p:not(.eyebrow),
+.chain-row p,
+.timeline-row p,
+.evidence-row p,
+.data-row p,
+.dossier-card small,
+.final p:not(.eyebrow) {
+  color: rgba(255, 247, 232, 0.9);
+}
+
+.eyebrow,
+.overview-card span,
+.story-card span,
+.chain-row span,
+.timeline-row span,
+.evidence-row span,
+.data-row span,
+.photo-panel figcaption span,
+.trail-card span {
+  color: #d8c593;
+}
+
+.page-hero,
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.impact,
+.dossiers,
+.content-band.dark,
+.content-band.light {
+  background:
+    linear-gradient(180deg, rgba(23, 24, 20, 0.6), rgba(31, 34, 28, 0.38));
+}
+
+.overview-card,
+.stat-card,
+.story-card,
+.trail-card,
+.impact-panel,
+.runoff-field,
+.mission-field {
+  background:
+    linear-gradient(180deg, rgba(35, 34, 28, 0.86), rgba(24, 26, 22, 0.78)),
+    rgba(23, 24, 20, 0.82);
+  border-color: rgba(232, 221, 199, 0.22);
+}
+
+.overview-card:hover,
+.stat-card:hover,
+.story-card:hover {
+  background:
+    linear-gradient(180deg, rgba(55, 52, 42, 0.9), rgba(28, 31, 25, 0.84)),
+    rgba(23, 24, 20, 0.88);
+}
+
+.content-band.light .stat-card,
+.content-band.light .story-card {
+  background:
+    linear-gradient(180deg, rgba(35, 34, 28, 0.86), rgba(24, 26, 22, 0.78)),
+    rgba(23, 24, 20, 0.82);
+  color: #fff7e8;
+}
+
+.content-band.light .content-heading > p:not(.eyebrow),
+.content-band.light .chain-row p,
+.content-band.light .timeline-row p,
+.content-band.light .evidence-row p,
+.content-band.light .data-row p,
+.content-band.light .stat-card p,
+.content-band.light .story-card p {
+  color: rgba(255, 247, 232, 0.9);
+}
+
+.content-band.light .data-row code {
+  color: rgba(255, 247, 232, 0.96);
+}
+
+.mission-card,
+.dossier-card {
+  background: rgba(244, 239, 229, 0.96);
+  color: #11120f;
+}
+
+.mission-card p,
+.dossier-card small {
+  color: rgba(17, 18, 15, 0.78);
+}
+
+.mission-card strong,
+.dossier-card p {
+  color: #596f47;
+}
+
+.photo-panel img,
+.impact-panel img,
+.trail-map img {
+  filter: brightness(0.76) saturate(0.72) sepia(0.1) hue-rotate(-14deg) contrast(1.08);
+}
+
+.photo-panel::after {
+  background:
+    linear-gradient(180deg, transparent 34%, rgba(18, 18, 14, 0.84)),
+    repeating-linear-gradient(0deg, transparent 0 7px, rgba(244, 239, 229, 0.04) 8px);
+}
+
+.top-nav-inner,
+.site-menu summary,
+.site-menu nav {
+  background: rgba(23, 24, 20, 0.86);
+  border-color: rgba(244, 239, 229, 0.22);
+}
+
+.top-nav-links a,
+.brand-lockup span {
+  color: rgba(255, 247, 232, 0.78);
+}
+
+.hero-facts span {
+  color: rgba(255, 247, 232, 0.88);
+}
+
 @media (max-width: 900px) {
   .mission-field,
   .impact-track {
@@ -3848,12 +4043,18 @@ p {
 
   .top-nav-links {
     max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 3px;
+    overflow: hidden;
     padding-bottom: 0;
   }
 
   .top-nav-links a {
-    padding: 0 9px;
-    font-size: 0.7rem;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 4px;
+    font-size: 0.64rem;
   }
 
   .overview-card,

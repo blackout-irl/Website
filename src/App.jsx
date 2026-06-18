@@ -614,7 +614,6 @@ function useMotion() {
       if (document.querySelector(".hero")) {
         gsap.from(".hero-word, .hero-lede, .hero-actions", {
           y: 42,
-          autoAlpha: 0,
           stagger: 0.09,
           duration: 0.9,
           ease: "power3.out",
@@ -769,10 +768,8 @@ function useMotion() {
       gsap.utils.toArray(".page-hero").forEach((section) => {
         gsap.fromTo(section.querySelectorAll(".eyebrow, h1, p, .page-actions"), {
           y: 38,
-          autoAlpha: 0,
         }, {
           y: 0,
-          autoAlpha: 1,
           stagger: 0.08,
           duration: 0.8,
           ease: "power3.out",
