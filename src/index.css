@@ -4064,63 +4064,34 @@ p,
   }
 }
 
-/* Restraint pass: quieter surfaces, less glow, less visual noise. */
+/* Light restraint pass: keep the original motion, just reduce the loudest edges. */
 :root {
-  --shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+  --shadow: 0 22px 58px rgba(0, 0, 0, 0.3);
 }
 
 body::before,
 body::after {
-  opacity: 0.018;
+  opacity: 0.035;
 }
 
 .pavel-fluid::before {
   background:
-    linear-gradient(90deg, rgba(23, 24, 20, 0.78), rgba(38, 43, 34, 0.16) 52%, rgba(23, 24, 20, 0.72)),
-    linear-gradient(180deg, rgba(23, 24, 20, 0.38), rgba(23, 24, 20, 0.78));
+    linear-gradient(90deg, rgba(23, 24, 20, 0.54), rgba(38, 43, 34, 0.06) 52%, rgba(23, 24, 20, 0.48)),
+    linear-gradient(180deg, rgba(23, 24, 20, 0.16), rgba(23, 24, 20, 0.54));
 }
 
 .pavel-fluid::after {
   background:
-    linear-gradient(180deg, rgba(23, 24, 20, 0.48), rgba(23, 24, 20, 0.78));
+    linear-gradient(180deg, rgba(23, 24, 20, 0.24), rgba(23, 24, 20, 0.56));
 }
 
 .pavel-fluid-canvas {
-  opacity: 0.16;
-  filter: saturate(0.55) contrast(0.88) sepia(0.08);
+  opacity: 0.28;
+  filter: saturate(0.78) contrast(0.94) sepia(0.04);
 }
 
 .lagoon-photo-reel span {
-  animation-name: quietLagoonPhotoCycle;
-  filter: brightness(0.56) saturate(0.55) sepia(0.2) hue-rotate(-18deg) contrast(1.03);
-}
-
-@keyframes quietLagoonPhotoCycle {
-  0%,
-  18% {
-    opacity: 0;
-    transform: scale(1.04) translate3d(-0.8%, -0.6%, 0);
-  }
-
-  6%,
-  28% {
-    opacity: 0.42;
-  }
-
-  40%,
-  100% {
-    opacity: 0;
-    transform: scale(1.08) translate3d(0.8%, 0.8%, 0);
-  }
-}
-
-h1,
-h2,
-h3,
-.hero-lede,
-.page-hero p:not(.eyebrow),
-.content-heading > p:not(.eyebrow) {
-  text-shadow: none;
+  filter: brightness(0.68) saturate(0.75) sepia(0.1) hue-rotate(-12deg) contrast(1.02);
 }
 
 .page-hero,
@@ -4133,14 +4104,7 @@ h3,
 .content-band.dark,
 .content-band.light,
 .final {
-  background: rgba(23, 24, 20, 0.54);
-}
-
-.hero-shade,
-.final::before {
-  background:
-    linear-gradient(90deg, rgba(18, 18, 14, 0.72), rgba(18, 18, 14, 0.18) 58%, rgba(18, 18, 14, 0.5)),
-    linear-gradient(0deg, rgba(18, 18, 14, 0.7), rgba(18, 18, 14, 0.12) 58%);
+  background-color: rgba(23, 24, 20, 0.28);
 }
 
 .problem-frame::before,
@@ -4151,7 +4115,7 @@ h3,
 .photo-essay::before,
 .runoff-field::before,
 .trail-map::before {
-  opacity: 0.18;
+  opacity: 0.34;
 }
 
 .overview-card,
@@ -4161,10 +4125,9 @@ h3,
 .impact-panel,
 .runoff-field,
 .mission-field {
-  background: rgba(24, 25, 21, 0.86);
+  background: rgba(24, 25, 21, 0.74);
   border-color: rgba(232, 221, 199, 0.18);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
-  backdrop-filter: none;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
 }
 
 .photo-panel,
@@ -4174,7 +4137,7 @@ h3,
 .app-window,
 .bloom-warning,
 .drain-mouth {
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.28);
 }
 
 .overview-card:hover,
@@ -4183,70 +4146,30 @@ h3,
 .story-card:hover,
 .action-panel:hover,
 .dossier-card:hover {
-  transform: translateY(-2px);
-  background: rgba(34, 34, 28, 0.9);
+  transform: translateY(-5px);
+  background: rgba(34, 34, 28, 0.84);
 }
 
 .button:hover,
 .button:focus-visible {
-  transform: translateY(-1px);
-}
-
-.route-runner,
-.trail-pin::after,
-.flow-drop,
-.lagoon-plume,
-.drain-mouth::before {
-  box-shadow: none;
-  filter: none;
-}
-
-.route-runner::after,
-.trail-pin::after {
-  animation: none;
-  opacity: 0.24;
-}
-
-.runoff-curve,
-.curb-route,
-.route-path,
-.mission-path {
-  filter: none;
-}
-
-.storm-scan,
-.mission-scanline {
-  display: none;
+  transform: translateY(-2px);
 }
 
 .photo-panel img,
 .impact-panel img,
 .trail-map img,
 .problem-photo img {
-  filter: brightness(0.72) saturate(0.58) sepia(0.12) hue-rotate(-14deg) contrast(1.04);
+  filter: brightness(0.82) saturate(0.78) sepia(0.06) hue-rotate(-8deg) contrast(1.03);
 }
 
 .photo-panel::after {
-  background: linear-gradient(180deg, transparent 38%, rgba(18, 18, 14, 0.78));
+  background: linear-gradient(180deg, transparent 34%, rgba(18, 18, 14, 0.62));
 }
 
 .top-nav-inner,
 .site-menu summary,
 .site-menu nav {
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-  backdrop-filter: none;
-}
-
-@media (pointer: fine) {
-  body,
-  a,
-  button {
-    cursor: auto;
-  }
-
-  .cursor-dot {
-    display: none;
-  }
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
 }
 
 @media (prefers-reduced-motion: reduce) {
