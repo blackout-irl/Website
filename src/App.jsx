@@ -280,6 +280,274 @@ const resourceLinks = [
   ["Survey", "/survey", "Help measure awareness."],
 ];
 
+const homeNotes = [
+  {
+    title: "This is not a far-away water problem.",
+    body: "The lagoon feels separate when you only see it from a bridge or a shoreline. The whole point of this project is to show that it is also connected to the street outside school, the grass next to a driveway, and the drain people step over without thinking. That connection is the story we are trying to make obvious.",
+  },
+  {
+    title: "The campaign starts with noticing.",
+    body: "A storm drain marker is small, but it changes the moment. Someone walking past a grate gets a reminder before the next rainstorm, not after. That is why the markers matter. They turn a piece of street infrastructure into a warning label for the lagoon.",
+  },
+  {
+    title: "The project has to leave proof.",
+    body: "A good idea is not enough for CmPS. The route, photos, survey answers, classroom demo, and final files all need to be saved clearly. If another group opens the folder later, they should be able to see what happened without guessing.",
+  },
+  {
+    title: "The message stays simple on purpose.",
+    body: "People do not need a lecture at their front door. They need to know that stormwater does not disappear, that the drain can lead to the Indian River Lagoon, and that small choices before rain can keep pollution out of the water.",
+  },
+  {
+    title: "The website follows the project instead of selling it.",
+    body: "The structure is meant to feel like walking through the work: first the lagoon, then the street, then the drain route, then the plan, then the evidence. That order matters because the project is about connection, not just awareness.",
+  },
+  {
+    title: "The real audience is local.",
+    body: "The writing should sound like it belongs to Melbourne, not a national campaign. It is about nearby streets, nearby drains, nearby homes, and a lagoon people already know. The closer the message feels, the less it sounds like a template.",
+  },
+  {
+    title: "The final goal is continuation.",
+    body: "If the project ends with one website and one report, it is weaker than it could be. The stronger version gives the next group enough material to mark more drains, run another survey wave, or teach the lesson again.",
+  },
+];
+
+const problemNotes = [
+  {
+    title: "The drain looks like an ending, but it is really a shortcut.",
+    body: "When water drops through the grate, it disappears from the street. That makes the problem easy to ignore. The route keeps going through pipes, ditches, canals, and outfalls until the water reaches connected lagoon areas. The drain is only the part people can see.",
+  },
+  {
+    title: "Runoff is made from normal things.",
+    body: "The project is not built around one dramatic spill. It is built around everyday pieces: fertilizer, leaves, grass clippings, pet waste, loose soil, oil from pavement, and trash. None of those things look huge by themselves. During rain, they can all move at once.",
+  },
+  {
+    title: "Nutrients are useful until they are in the wrong place.",
+    body: "Fertilizer is meant for lawns, not lagoon water. When nitrogen and phosphorus wash into stormwater, they can help algae grow. More algae can block light, and less light can hurt seagrass. That is the connection students and residents need to understand.",
+  },
+  {
+    title: "The project focuses on the moment before rain.",
+    body: "Once runoff is moving, it is hard to stop. Before rain, people can sweep clippings back onto the lawn, pick up pet waste, move loose trash, and avoid applying fertilizer. The campaign is timed around that practical moment.",
+  },
+  {
+    title: "The goal is not to blame people.",
+    body: "Most people are not trying to hurt the lagoon. A lot of people just do not know where the water goes. This project works better when it treats residents like partners who can make better choices once the route is visible.",
+  },
+  {
+    title: "The problem is easy to miss on a sunny day.",
+    body: "A clean street can still become a runoff path when the rain starts. That is why the project talks about timing. The same curb, lawn, and drain look harmless until water starts moving across them.",
+  },
+  {
+    title: "The lagoon receives what the street forgets.",
+    body: "Leaves left near the curb, fertilizer placed before a storm, or trash sitting by a drain can all become part of the same water path. The route makes those small choices feel connected instead of separate.",
+  },
+  {
+    title: "A marker changes the meaning of a drain.",
+    body: "Without a marker, a grate is just part of the road. With a marker, it becomes a reminder. That is why the problem page connects pollution sources to the marking plan instead of stopping at bad news.",
+  },
+];
+
+const routeNotes = [
+  {
+    title: "The route has to make sense on foot.",
+    body: "A drain route should not be random dots on a map. It should be a path someone can understand: street, grate, pipe direction, outfall, lagoon. The selected drains should sit where residents actually walk, drive, wait, or pass on the way home.",
+  },
+  {
+    title: "Every drain needs a record.",
+    body: "Each marker should have a drain ID, location, street note, before photo, after photo, date, and condition note. If the marker comes loose or the city asks for documentation, the group should be able to find that drain fast.",
+  },
+  {
+    title: "Photos are evidence, not decoration.",
+    body: "A before photo shows that the drain was found and checked. An after photo proves the marker was placed. A wide route photo helps explain the area. These pictures are part of the project record, not just images for the website.",
+  },
+  {
+    title: "The map should show timing.",
+    body: "The route animation is meant to show water moving in order. Street first, drain second, pipe third, outfall fourth, lagoon last. The user should feel the water getting farther from view but closer to the lagoon.",
+  },
+  {
+    title: "The map is also a handoff tool.",
+    body: "Future groups can use the map to revisit drains, replace missing markers, expand the route, or compare new survey results. That only works if the map is clean and tied to real field notes.",
+  },
+  {
+    title: "The route should be checked twice.",
+    body: "Before marking day, the team should check whether the drains are reachable, visible, and safe. After marking day, the team should check whether the photos and locations make sense to someone who was not there.",
+  },
+  {
+    title: "The right drain is one people notice.",
+    body: "A perfect drain on an empty road is less useful than a visible drain near homes, sidewalks, or a common turn. The campaign works better when the marker is placed in someone else's normal routine.",
+  },
+  {
+    title: "The route should not depend on memory.",
+    body: "Nobody should have to remember which drain was marked from memory. The field log should hold the route clearly enough that the map, website, and report all match the same record.",
+  },
+];
+
+const missionNotes = [
+  {
+    title: "Marking is the visible part.",
+    body: "The markers are the thing people will notice first. They should be placed neatly, photographed clearly, and installed where they can be read. The message should be direct: this drain leads to the lagoon.",
+  },
+  {
+    title: "Outreach has to be close to the route.",
+    body: "The door hangers and QR survey should go to homes near the marked drains. That gives the campaign a real boundary. The people seeing the survey are also the people most likely to pass the drains in daily life.",
+  },
+  {
+    title: "The classroom demo gives the project a memory.",
+    body: "Students remember what they can see. A clean-water jar and polluted-runoff jar make the issue physical. The lesson should connect the jar back to the storm drain outside, not leave it as a random science activity.",
+  },
+  {
+    title: "The app or folder keeps the project honest.",
+    body: "If a drain is marked, it gets logged. If a survey is collected, it gets exported. If a demo happens, the date and student count are saved. The archive keeps the project from becoming only a good story.",
+  },
+  {
+    title: "The work should be repeatable.",
+    body: "The final handoff should make it possible for another class or another CmPS group to pick one more route and keep going. That is how a school project becomes something useful outside the classroom.",
+  },
+  {
+    title: "The four parts support each other.",
+    body: "Markers catch attention on the street. Door hangers explain the message at home. Classroom demos make the science visible. The archive proves the work happened. None of the pieces is supposed to stand alone.",
+  },
+  {
+    title: "The mission is practical before it is inspirational.",
+    body: "The project should not sound like it is solving the lagoon by itself. It is doing a real, limited job: make a route visible, teach the route, measure awareness, and leave behind organized proof.",
+  },
+  {
+    title: "The best version is easy to repeat.",
+    body: "If a future group needs special knowledge to understand the plan, the handoff failed. The mission page should explain the model clearly enough that another team can copy the structure in a new neighborhood.",
+  },
+];
+
+const impactNotes = [
+  {
+    title: "Impact is what we can prove.",
+    body: "The site should not pretend the whole lagoon changes because one group marked drains. The honest impact is smaller and stronger: marked drains, reached homes, students taught, surveys collected, and a clean handoff for the next group.",
+  },
+  {
+    title: "The survey is a before-and-after check.",
+    body: "The point is not to collect random opinions. The survey asks whether people know where storm drains lead and whether they understand what can wash in. The second wave should show whether the message landed.",
+  },
+  {
+    title: "The classroom work matters because students carry messages home.",
+    body: "A student who understands runoff can explain it to a parent, a sibling, or a neighbor. That does not show up as a giant number, but it is one of the reasons the education part belongs in the project.",
+  },
+  {
+    title: "The handoff is part of the result.",
+    body: "The project is stronger if the next team can open the archive and find the route map, marker photos, survey files, outreach copy, classroom plan, and final report. That is a real outcome.",
+  },
+  {
+    title: "The best evidence is boring in a good way.",
+    body: "Dates, counts, file names, locations, and photos are not flashy, but they make the project credible. The website should make those records feel clear instead of buried.",
+  },
+  {
+    title: "The numbers should stay honest.",
+    body: "The targets are useful because they are concrete: 50-75 drains, 300-500 homes, classroom sessions, survey waves, and one archive. The site should not turn those into vague claims about saving the lagoon.",
+  },
+  {
+    title: "Impact includes what people remember.",
+    body: "If a resident notices the marker before mowing, or a student explains the demo at home, that matters. The survey and classroom records are there to catch some of that awareness instead of guessing.",
+  },
+  {
+    title: "The final story should show the work.",
+    body: "A strong final page should point back to the route, the photos, the outreach, the lessons, and the folder. It should feel like evidence gathered over time, not a single polished claim.",
+  },
+];
+
+const teamNotes = [
+  {
+    title: "The roles are there so nothing gets lost.",
+    body: "A project like this can fall apart if everyone is responsible for everything. Splitting the work into route, outreach, education, data, and report writing makes each deliverable easier to finish and easier to check.",
+  },
+  {
+    title: "Field work needs someone watching the details.",
+    body: "Drain marking is simple, but there are a lot of small mistakes that can happen: missing photos, unclear locations, bad angles, duplicate drain IDs, or notes that nobody can understand later. The field lead keeps that clean.",
+  },
+  {
+    title: "Outreach needs a human voice.",
+    body: "The door hanger should sound like a person wrote it. The message should not feel like a government poster or a copied paragraph. It should explain the route, ask for the survey, and give one thing to do before rain.",
+  },
+  {
+    title: "Education needs to be hands-on.",
+    body: "The classroom part should not be a slideshow only. The water jars, runoff materials, and student questions make the topic real. The goal is for students to leave able to explain the storm drain path in their own words.",
+  },
+  {
+    title: "Data work is not just numbers.",
+    body: "The data lead keeps the map, survey exports, photos, and folder structure from turning into a pile of files. That organization is what makes the final website, report, and handoff believable.",
+  },
+  {
+    title: "The team should review each other's work.",
+    body: "The field lead can check whether photo names match the map. The report lead can check whether the text matches the evidence. The education lead can check whether the classroom story is accurate. That cross-check keeps mistakes from becoming final.",
+  },
+  {
+    title: "Roles can overlap, but ownership matters.",
+    body: "Everyone can help mark drains or prepare materials, but each deliverable still needs one person watching it. Otherwise small tasks get delayed because everyone assumes someone else handled them.",
+  },
+  {
+    title: "The group voice should sound local.",
+    body: "The final writing should sound like students who actually walked the route and built the project. It should not sound like a generic environmental campaign pasted onto a school assignment.",
+  },
+];
+
+const surveyNotes = [
+  {
+    title: "The survey should be short enough that people actually finish it.",
+    body: "A long survey might collect more details, but fewer people will complete it. This project needs a short set of questions that checks the main idea: do people know that storm drains can connect to the lagoon?",
+  },
+  {
+    title: "The first wave protects the baseline.",
+    body: "Residents should answer before the campaign changes what they know. That gives the team a fair starting point. After markers, door hangers, and classroom outreach, the second wave can show whether awareness changed.",
+  },
+  {
+    title: "The questions should avoid sounding like a quiz.",
+    body: "People should not feel tricked or judged. The questions should be clear, normal, and easy to answer on a phone. The goal is to learn what people notice, not make them feel wrong.",
+  },
+  {
+    title: "The results should feed the handoff.",
+    body: "If survey answers show that people still miss one part of the message, the next team can fix the door hanger or classroom script. The survey becomes a tool for improving the project, not just a requirement.",
+  },
+  {
+    title: "The survey should ask about the route.",
+    body: "The most important question is whether residents understand that storm drains can lead toward the lagoon. If they miss that route, the rest of the message becomes weaker.",
+  },
+  {
+    title: "The QR code needs a clear promise.",
+    body: "People are more likely to scan if they know what they are opening. The door hanger should say the survey is short, local, and connected to the drain markers they may see nearby.",
+  },
+  {
+    title: "The post-survey should use the same core questions.",
+    body: "Changing every question after outreach makes the results harder to compare. The second wave can add one or two reflection questions, but the main awareness questions should stay consistent.",
+  },
+];
+
+const resourceNotes = [
+  {
+    title: "The archive is the project memory.",
+    body: "Without the archive, the project becomes a presentation that ends when the school year ends. With the archive, the route, photos, survey results, classroom plan, and outreach materials can be used again.",
+  },
+  {
+    title: "The folder should be easy to open cold.",
+    body: "Someone who was not in the group should be able to open the folder and understand what each file is. Clear names matter: route-map, drain-log, survey-export, outreach-copy, classroom-demo, and final-report.",
+  },
+  {
+    title: "The PDF is only one piece.",
+    body: "The field guide explains the project, but the website should also point to the living parts: route records, survey links, photos, outreach materials, and the app or shared folder that keeps field notes together.",
+  },
+  {
+    title: "The handoff should be practical, not ceremonial.",
+    body: "A useful handoff tells the next group what worked, what was unfinished, where to restart, and which files to trust. That is more valuable than a polished folder nobody can actually use.",
+  },
+  {
+    title: "The file names should tell the truth.",
+    body: "Names like final-final-map or image-0234 do not help anyone later. A clean archive uses names that say what the file is: drain-014-after, survey-wave-1-export, outreach-door-hanger, classroom-demo-plan.",
+  },
+  {
+    title: "The archive should include unfinished work.",
+    body: "A handoff is more honest when it includes what still needs attention. If some drains need a second check or a survey wave is not complete, the next team should be able to see that clearly.",
+  },
+  {
+    title: "The website is part of the archive.",
+    body: "The site should not only look good. It should organize the project for someone reading it later. That means the pages, resources, survey, and impact sections all need to point back to the same field record.",
+  },
+];
+
 function Cursor() {
   return (
     <div className="cursor-dot" aria-hidden="true">
@@ -639,6 +907,8 @@ function useMotion() {
     const compact = window.matchMedia("(max-width: 760px)").matches;
     let cleanupCursor = () => {};
     let cleanupHash = () => {};
+    let cleanupFieldNotes = () => {};
+    let cleanupRouteProgress = () => {};
 
     const scrollToHash = () => {
       if (!window.location.hash) return;
@@ -657,7 +927,7 @@ function useMotion() {
     if (reduced) return cleanupHash;
 
     const ctx = gsap.context(() => {
-      const immersive = false;
+      const immersive = !compact;
       const cursor = document.querySelector(".cursor-dot");
       if (cursor && window.matchMedia("(pointer: fine)").matches) {
         const xTo = gsap.quickTo(cursor, "x", { duration: 0.22, ease: "power3.out" });
@@ -673,7 +943,7 @@ function useMotion() {
       const prepPath = (selector) => {
         const path = document.querySelector(selector);
         if (!path) return null;
-        const length = path.getTotalLength();
+        const length = typeof path.getTotalLength === "function" ? path.getTotalLength() : 100;
         gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
         return path;
       };
@@ -685,6 +955,85 @@ function useMotion() {
         prepPath(".runoff-curve");
         prepPath(".curb-route");
       }
+
+      const setupRouteProgress = () => {
+        const trail = document.querySelector(".trail");
+        const path = document.querySelector(".route-path");
+        const runner = document.querySelector(".route-runner");
+        const pins = gsap.utils.toArray(".trail-pin");
+        if (!trail || !path) return false;
+
+        const length = typeof path.getTotalLength === "function" ? path.getTotalLength() : 100;
+        gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+        let frame = 0;
+        let loop = 0;
+
+        const update = () => {
+          frame = 0;
+          const rect = trail.getBoundingClientRect();
+          const travel = Math.max(rect.height - window.innerHeight, 1);
+          const progress = Math.min(1, Math.max(0, -rect.top / travel));
+          path.style.strokeDashoffset = String(length * (1 - progress));
+
+          if (runner) {
+            const point = typeof path.getPointAtLength === "function"
+              ? path.getPointAtLength(length * progress)
+              : (() => {
+                  const routePoints = trailSteps.map((step) => ({ x: step.x, y: step.y }));
+                  const scaled = progress * (routePoints.length - 1);
+                  const index = Math.min(routePoints.length - 2, Math.max(0, Math.floor(scaled)));
+                  const local = scaled - index;
+                  const a = routePoints[index];
+                  const b = routePoints[index + 1];
+                  return {
+                    x: a.x + (b.x - a.x) * local,
+                    y: a.y + (b.y - a.y) * local,
+                  };
+                })();
+            runner.style.left = `${point.x}%`;
+            runner.style.top = `${point.y}%`;
+            runner.style.opacity = progress > 0.02 && progress < 0.98 ? "1" : "0";
+            runner.style.transform = `translate(-50%, -50%) scale(${1 + progress * 0.32})`;
+          }
+
+          pins.forEach((pin, index) => {
+            const threshold = pins.length <= 1 ? 0 : index / (pins.length - 1);
+            const active = progress >= threshold - 0.045;
+            pin.style.opacity = active ? "1" : "0.18";
+            pin.style.transform = active ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.74)";
+          });
+        };
+
+        const requestUpdate = () => {
+          if (frame) return;
+          frame = window.requestAnimationFrame(update);
+        };
+
+        update();
+        const tick = () => {
+          update();
+          loop = window.requestAnimationFrame(tick);
+        };
+        loop = window.requestAnimationFrame(tick);
+        window.__routeSetup = { pins: pins.length, length };
+        window.addEventListener("scroll", requestUpdate, { passive: true });
+        window.addEventListener("resize", requestUpdate);
+        cleanupRouteProgress = () => {
+          if (frame) window.cancelAnimationFrame(frame);
+          if (loop) window.cancelAnimationFrame(loop);
+          window.removeEventListener("scroll", requestUpdate);
+          window.removeEventListener("resize", requestUpdate);
+        };
+        return true;
+      };
+
+      let routeAttempts = 0;
+      const tryRouteSetup = () => {
+        routeAttempts += 1;
+        if (setupRouteProgress() || routeAttempts > 20) return;
+        window.setTimeout(tryRouteSetup, 120);
+      };
+      window.setTimeout(tryRouteSetup, 120);
 
       if (document.querySelector(".hero")) {
         gsap.from(".hero-word, .hero-lede, .hero-actions", {
@@ -731,7 +1080,7 @@ function useMotion() {
           .fromTo(".bloom-warning", { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.8 }, 1.48);
       }
 
-      if (immersive && !compact && document.querySelector(".trail")) {
+      if (false && immersive && !compact && document.querySelector(".trail")) {
         const trailTl = gsap.timeline({
           scrollTrigger: { trigger: ".trail", start: "top top", end: "+=410%", scrub: true, pin: ".trail-stage" },
         });
@@ -880,6 +1229,32 @@ function useMotion() {
         });
       });
 
+      const fieldNotes = gsap.utils.toArray(".field-note");
+      const revealFieldNotes = () => {
+        fieldNotes.forEach((note) => {
+          if (note.getBoundingClientRect().top < window.innerHeight * 0.9) {
+            note.classList.add("is-visible");
+          }
+        });
+      };
+      revealFieldNotes();
+      window.addEventListener("scroll", revealFieldNotes, { passive: true });
+      window.addEventListener("resize", revealFieldNotes);
+      cleanupFieldNotes = () => {
+        window.removeEventListener("scroll", revealFieldNotes);
+        window.removeEventListener("resize", revealFieldNotes);
+      };
+
+      fieldNotes.forEach((note, index) => {
+        if (!compact) {
+          gsap.to(note.querySelector("h3"), {
+            y: index % 2 ? -18 : 18,
+            ease: "none",
+            scrollTrigger: { trigger: note, start: "top bottom", end: "bottom top", scrub: true },
+          });
+        }
+      });
+
       gsap.utils.toArray(".photo-panel").forEach((panel, index) => {
         gsap.fromTo(panel, {
           y: 36,
@@ -903,7 +1278,7 @@ function useMotion() {
         });
       }
 
-      if (document.querySelector(".trail-map")) {
+      if (false && !immersive && document.querySelector(".trail-map")) {
         gsap.to(".route-path", {
           strokeDashoffset: 0,
           duration: compact ? 1.1 : 1.35,
@@ -981,16 +1356,96 @@ function useMotion() {
           scrollTrigger: { trigger: ".final", start: "top bottom", end: "bottom top", scrub: true },
         });
       }
+
+      window.setTimeout(() => {
+        ScrollTrigger.refresh();
+        ScrollTrigger.update();
+        window.__ctwTriggerCount = ScrollTrigger.getAll().length;
+      }, 250);
     }, root);
 
     return () => {
       cleanupCursor();
       cleanupHash();
+      cleanupFieldNotes();
+      cleanupRouteProgress();
       ctx.revert();
     };
   }, []);
 
   return root;
+}
+
+function useRouteProgress(path) {
+  useEffect(() => {
+    if (path !== "/storm-drains") return undefined;
+
+    let frame = 0;
+    let retry = 0;
+    let cancel = false;
+
+    const start = () => {
+      if (cancel) return;
+      const trail = document.querySelector(".trail");
+      const routePath = document.querySelector(".route-path");
+      const runner = document.querySelector(".route-runner");
+      const pins = [...document.querySelectorAll(".trail-pin")];
+
+      if (!trail || !routePath || pins.length === 0) {
+        retry += 1;
+        if (retry < 30) window.setTimeout(start, 100);
+        return;
+      }
+
+      const length = typeof routePath.getTotalLength === "function" ? routePath.getTotalLength() : 100;
+      routePath.style.strokeDasharray = String(length);
+      window.__routeSetup = { pins: pins.length, length, source: "standalone" };
+
+      const update = () => {
+        if (cancel) return;
+        const rect = trail.getBoundingClientRect();
+        const travel = Math.max(rect.height - window.innerHeight, 1);
+        const progress = Math.min(1, Math.max(0, -rect.top / travel));
+        routePath.style.strokeDashoffset = String(length * (1 - progress));
+
+        if (runner) {
+          const scaled = progress * (trailSteps.length - 1);
+          const index = Math.min(trailSteps.length - 2, Math.max(0, Math.floor(scaled)));
+          const local = scaled - index;
+          const a = trailSteps[index];
+          const b = trailSteps[index + 1];
+          const x = a.x + (b.x - a.x) * local;
+          const y = a.y + (b.y - a.y) * local;
+          runner.style.left = `${x}%`;
+          runner.style.top = `${y}%`;
+          runner.style.opacity = progress > 0.02 && progress < 0.98 ? "1" : "0";
+          runner.style.transform = `translate(-50%, -50%) scale(${1 + progress * 0.32})`;
+        }
+
+        pins.forEach((pin, index) => {
+          const threshold = pins.length <= 1 ? 0 : index / (pins.length - 1);
+          const active = progress >= threshold - 0.045;
+          pin.style.opacity = active ? "1" : "0.18";
+          pin.style.transform = active ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.74)";
+        });
+      };
+
+      const tick = () => {
+        update();
+        frame = window.requestAnimationFrame(tick);
+      };
+
+      tick();
+    };
+
+    const startId = window.setTimeout(start, 100);
+
+    return () => {
+      cancel = true;
+      window.clearTimeout(startId);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [path]);
 }
 
 function Hero() {
@@ -1089,7 +1544,7 @@ function LagoonPhotoEssay() {
 
 function ContentBand({ kicker, title, text, children, dark = false }) {
   return (
-    <section className={`content-band ${dark ? "dark" : "light"}`} data-reveal>
+    <section className={`content-band ${dark ? "dark" : "light"}`}>
       <div className="content-shell">
         <div className="content-heading">
           <p className="eyebrow">{kicker}</p>
@@ -1198,6 +1653,20 @@ function ResourceRows({ items }) {
             <p>{text}</p>
           </div>
         </a>
+      ))}
+    </div>
+  );
+}
+
+function FieldNotes({ items }) {
+  return (
+    <div className="field-notes">
+      {items.map((item, index) => (
+        <article className="field-note" key={item.title} style={{ "--i": index }}>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
       ))}
     </div>
   );
@@ -1414,6 +1883,14 @@ function HomePage() {
       >
         <StoryCards items={lagoonContext} />
       </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="What we are trying to make obvious."
+        text="Before the route animation, this is the basic idea behind the whole project."
+        dark
+      >
+        <FieldNotes items={homeNotes} />
+      </ContentBand>
       <OverviewGrid />
       <ContentBand
         kicker="Project snapshot"
@@ -1454,11 +1931,18 @@ function ProblemPage() {
       </ContentBand>
       <ContentBand
         kicker="What washes in"
-        title="The problem is ordinary stuff in the wrong place."
-        text="The site stays away from dramatic wording because the real issue is simple: rain carries small things downhill."
+        title="Small things move fast in rain."
+        text="The real issue is not mysterious. Rain carries loose stuff downhill."
         dark
       >
         <EvidenceRows items={runoffSources} />
+      </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="The part people usually do not see."
+        text="Runoff sounds abstract until it is written out as a street-level story."
+      >
+        <FieldNotes items={problemNotes} />
       </ContentBand>
       <ProblemScene />
       <ContentBand
@@ -1528,6 +2012,14 @@ function StormDrainsPage() {
       >
         <StoryCards items={outreachDetails} />
       </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="How the route becomes evidence."
+        text="The map has to work as a story on the website and as a record after the field day."
+        dark
+      >
+        <FieldNotes items={routeNotes} />
+      </ContentBand>
     </>
   );
 }
@@ -1573,6 +2065,14 @@ function MissionPage() {
         <StoryCards items={classroomDetails} />
       </ContentBand>
       <ContentBand
+        kicker="Field notes"
+        title="How the plan actually works."
+        text="The project only works if each piece connects to the next one."
+        dark
+      >
+        <FieldNotes items={missionNotes} />
+      </ContentBand>
+      <ContentBand
         kicker="What stays"
         title="What we leave behind."
         dark
@@ -1593,15 +2093,15 @@ function ImpactPage() {
     <>
       <PageHeader
         kicker="Impact"
-        title="What changed?"
-        text="We can point to marked drains, survey answers, and classroom work."
+        title="What we can prove."
+        text="Marked drains, survey answers, classroom work, and a folder someone else can use."
         actions={[["Take the survey", "/survey"], ["Meet the team", "/team"]]}
       />
       <ImpactRun />
       <ContentBand
         kicker="What we saved"
-        title="Here is what we can point to."
-        text="Photos, survey answers, class materials, and the map."
+        title="The proof should be easy to check."
+        text="Photos, survey answers, class materials, route notes, and the map all need to stay together."
         dark
       >
         <EvidenceRows items={impactEvidence} />
@@ -1632,6 +2132,14 @@ function ImpactPage() {
         text="A final folder matters because a good project becomes weak if the proof is scattered."
       >
         <EvidenceRows items={archiveItems} />
+      </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="What counts as impact."
+        text="The honest version is more believable than pretending one campaign fixes everything."
+        dark
+      >
+        <FieldNotes items={impactNotes} />
       </ContentBand>
     </>
   );
@@ -1680,6 +2188,13 @@ function TeamPage() {
           ["Data", "App log, survey exports, and organized archive."],
         ]} />
       </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="How the team stays organized."
+        text="The roles are practical. They exist because the project has a lot of small pieces."
+      >
+        <FieldNotes items={teamNotes} />
+      </ContentBand>
     </>
   );
 }
@@ -1709,6 +2224,14 @@ function SurveyPage() {
         <EvidenceRows items={surveyQuestions} />
       </ContentBand>
       <ContentBand
+        kicker="Field notes"
+        title="Why the survey matters."
+        text="The survey is useful only if it is short, fair, and easy to compare later."
+        dark
+      >
+        <FieldNotes items={surveyNotes} />
+      </ContentBand>
+      <ContentBand
         kicker="How to help"
         title="What you can do before rain."
         dark
@@ -1730,8 +2253,8 @@ function ResourcesPage() {
     <>
       <PageHeader
         kicker="Archive"
-        title="Everything in one place."
-        text="The project only matters if the work is easy to check, share, and continue."
+        title="The folder after the field day."
+        text="The work matters more when someone else can open it, check it, and keep going."
         actions={[["Open survey", "/survey"], ["See impact", "/impact"]]}
       />
       <ContentBand
@@ -1748,6 +2271,14 @@ function ResourcesPage() {
         text="The folder should tell the story without needing someone from the team to explain every file."
       >
         <EvidenceRows items={archiveItems} />
+      </ContentBand>
+      <ContentBand
+        kicker="Field notes"
+        title="How to make the archive usable."
+        text="The archive should help someone continue the project, not just admire it."
+        dark
+      >
+        <FieldNotes items={resourceNotes} />
       </ContentBand>
       <ContentBand
         kicker="Handoff"
@@ -1804,6 +2335,7 @@ function getRoute(pathname) {
 export default function App() {
   const root = useMotion();
   const path = window.location.pathname;
+  useRouteProgress(path);
 
   return (
     <main ref={root}>
