@@ -4933,6 +4933,353 @@ body::after {
   }
 }
 
+/* Calm pass: keep the expedition feel, but make the site less loud. */
+:root {
+  --shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
+  --line: rgba(232, 221, 199, 0.11);
+  --line-strong: rgba(232, 221, 199, 0.22);
+}
+
+body::before {
+  opacity: 0.02;
+}
+
+body::after {
+  opacity: 0.012;
+}
+
+.cursor-ring {
+  width: 5px;
+  height: 5px;
+  background: rgba(244, 239, 229, 0.82);
+  box-shadow: 0 0 12px rgba(111, 183, 176, 0.42);
+}
+
+.pavel-fluid::before {
+  background:
+    linear-gradient(90deg, rgba(23, 24, 20, 0.64), rgba(38, 43, 34, 0.04) 52%, rgba(23, 24, 20, 0.58)),
+    linear-gradient(180deg, rgba(23, 24, 20, 0.22), rgba(23, 24, 20, 0.68));
+}
+
+.pavel-fluid::after {
+  background: linear-gradient(180deg, rgba(23, 24, 20, 0.36), rgba(23, 24, 20, 0.68));
+}
+
+.pavel-fluid-canvas {
+  opacity: 0.16;
+  filter: saturate(0.58) contrast(0.9) sepia(0.08);
+}
+
+.lagoon-photo-reel span {
+  filter: brightness(0.58) saturate(0.58) sepia(0.12) hue-rotate(-10deg) contrast(0.98);
+  animation-duration: 82s;
+}
+
+h1,
+h2,
+h3,
+.hero-lede,
+.page-hero p:not(.eyebrow),
+.content-heading > p:not(.eyebrow) {
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.18);
+}
+
+p,
+.overview-card p,
+.photo-panel figcaption p,
+.stat-card p,
+.story-card p,
+.trail-card p,
+.mission-card p,
+.impact-panel p:not(.eyebrow),
+.chain-row p,
+.timeline-row p,
+.evidence-row p,
+.data-row p,
+.dossier-card small,
+.final p:not(.eyebrow) {
+  color: rgba(255, 247, 232, 0.76);
+}
+
+.hero h1 {
+  font-size: clamp(4.8rem, 10vw, 8.4rem);
+}
+
+.page-hero h1,
+.content-heading h2,
+.photo-essay-head h2,
+.problem-copy h2,
+.section-head h2,
+.app-copy h2,
+.evidence h2,
+.team-time h2,
+.final h2,
+.trail-copy h2,
+.mission-copy h2,
+.impact-head h2,
+.evidence-copy h2,
+.dossier-head h2 {
+  font-size: clamp(3.1rem, 7.2vw, 5.9rem);
+  letter-spacing: -0.045em;
+}
+
+.page-hero,
+.photo-essay,
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.impact,
+.dossiers,
+.content-band.dark,
+.content-band.light,
+.final {
+  background-color: rgba(23, 24, 20, 0.16);
+}
+
+.content-band,
+.photo-essay,
+.overview-grid,
+.problem-frame,
+.trail-stage,
+.mission-stage,
+.impact,
+.dossiers,
+.final {
+  padding-top: clamp(68px, 7vw, 96px);
+  padding-bottom: clamp(68px, 7vw, 96px);
+}
+
+.top-nav-inner,
+.site-menu summary,
+.site-menu nav {
+  background: rgba(23, 24, 20, 0.68);
+  border-color: rgba(244, 239, 229, 0.13);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+.top-nav-links a {
+  color: rgba(255, 247, 232, 0.62);
+}
+
+.top-nav-links a:hover,
+.top-nav-links a:focus-visible,
+.top-nav-links a.active {
+  color: rgba(255, 247, 232, 0.86);
+}
+
+.overview-card,
+.stat-card,
+.story-card,
+.trail-card,
+.impact-panel,
+.runoff-field,
+.mission-field,
+.field-note {
+  background: rgba(24, 25, 21, 0.52);
+  border-color: rgba(232, 221, 199, 0.12);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+}
+
+.mission-card,
+.dossier-card {
+  background: rgba(232, 221, 199, 0.88);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+}
+
+.photo-panel,
+.impact-panel,
+.app-window,
+.bloom-warning,
+.drain-mouth {
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+}
+
+.overview-card:hover,
+.overview-card:focus-visible,
+.stat-card:hover,
+.story-card:hover,
+.action-panel:hover,
+.dossier-card:hover {
+  transform: translateY(-2px);
+  background: rgba(31, 32, 27, 0.62);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: none;
+}
+
+.hero-facts {
+  opacity: 0.72;
+}
+
+.hero-facts span {
+  background: rgba(23, 24, 20, 0.52);
+  border-color: rgba(232, 221, 199, 0.11);
+}
+
+.photo-panel img,
+.impact-panel img,
+.trail-map img,
+.problem-photo img,
+.final > img {
+  filter: brightness(0.76) saturate(0.66) sepia(0.06) hue-rotate(-8deg) contrast(0.98);
+  animation-duration: 42s;
+}
+
+.photo-panel::after {
+  background: linear-gradient(180deg, transparent 42%, rgba(18, 18, 14, 0.5));
+}
+
+.project-essay::before {
+  opacity: 0.28;
+}
+
+.project-essay::after {
+  opacity: 0.2;
+}
+
+.essay-block {
+  border-color: rgba(232, 221, 199, 0.09);
+}
+
+.essay-block::before {
+  background: rgba(122, 160, 149, 0.48);
+  border-color: rgba(244, 239, 229, 0.34);
+  box-shadow: 0 0 0 6px rgba(122, 160, 149, 0.04);
+}
+
+.essay-block::after {
+  background: rgba(232, 221, 199, 0.12);
+}
+
+.essay-block span,
+.eyebrow,
+.overview-card span,
+.story-card span,
+.chain-row span,
+.timeline-row span,
+.evidence-row span,
+.data-row span,
+.photo-panel figcaption span,
+.trail-card span {
+  color: rgba(216, 197, 147, 0.58);
+}
+
+.essay-block p {
+  color: rgba(255, 247, 232, 0.68);
+}
+
+.trail-pin {
+  width: 24px;
+  height: 24px;
+  border-color: rgba(228, 111, 58, 0.48);
+  background: rgba(8, 16, 18, 0.56);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.trail-pin::after {
+  display: none;
+}
+
+.route-path {
+  stroke: rgba(228, 111, 58, 0.58);
+  filter: none;
+}
+
+.route-runner {
+  width: 12px;
+  height: 12px;
+  background: rgba(111, 183, 176, 0.62);
+  box-shadow: 0 0 0 7px rgba(111, 183, 176, 0.06);
+}
+
+.route-runner::after {
+  display: none;
+}
+
+.mission-path,
+.runoff-curve,
+.curb-route {
+  filter: none;
+  opacity: 0.62;
+}
+
+.flow-drop {
+  box-shadow: 0 0 12px rgba(42, 167, 160, 0.34);
+}
+
+.runoff-item,
+.mission-object,
+.evidence-chip {
+  opacity: 0.74;
+}
+
+@media (max-width: 760px) {
+  .pavel-fluid-canvas {
+    opacity: 0.1;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.05rem, 14vw, 4.1rem);
+  }
+
+  .page-hero h1,
+  .content-heading h2,
+  .photo-essay-head h2,
+  .problem-copy h2,
+  .section-head h2,
+  .app-copy h2,
+  .evidence h2,
+  .team-time h2,
+  .final h2,
+  .trail-copy h2,
+  .mission-copy h2,
+  .impact-head h2,
+  .evidence-copy h2,
+  .dossier-head h2 {
+    font-size: clamp(2.25rem, 10vw, 3.1rem);
+    max-width: 11ch;
+  }
+
+  .content-band,
+  .photo-essay,
+  .overview-grid,
+  .problem-frame,
+  .trail-stage,
+  .mission-stage,
+  .impact,
+  .dossiers,
+  .final {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  .hero {
+    padding-top: 116px;
+  }
+
+  .hero-facts {
+    opacity: 0.62;
+  }
+
+  .overview-card,
+  .stat-card,
+  .story-card,
+  .action-panel,
+  .trail-card,
+  .impact-panel,
+  .dossier-card,
+  .mission-card,
+  .field-note {
+    padding: 16px;
+  }
+
+  .essay-block p {
+    color: rgba(255, 247, 232, 0.7);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
