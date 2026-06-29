@@ -4375,6 +4375,467 @@ body::after {
   }
 }
 
+/* Final phone layout pass: one clean mobile system after older overrides. */
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 104px;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body::before {
+    background-size: 54px 54px;
+    opacity: 0.032;
+  }
+
+  body::after {
+    opacity: 0.02;
+  }
+
+  .pavel-fluid::before {
+    background:
+      linear-gradient(180deg, rgba(23, 24, 20, 0.2), rgba(23, 24, 20, 0.58)),
+      linear-gradient(90deg, rgba(23, 24, 20, 0.52), rgba(38, 43, 34, 0.06) 54%, rgba(23, 24, 20, 0.52));
+  }
+
+  .lagoon-photo-reel span {
+    filter: brightness(0.72) saturate(0.72) sepia(0.08) hue-rotate(-8deg) contrast(1.02);
+  }
+
+  .top-nav {
+    padding: 8px;
+  }
+
+  .top-nav-inner {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 9px;
+    border-radius: 12px;
+    background: rgba(23, 24, 20, 0.88);
+    backdrop-filter: blur(14px);
+  }
+
+  .brand-lockup {
+    width: 100%;
+    min-height: 34px;
+    gap: 8px;
+  }
+
+  .brand-lockup span {
+    display: none;
+  }
+
+  .brand-lockup strong {
+    padding-left: 0;
+    border-left: 0;
+    font-size: 0.98rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .top-nav-links {
+    width: 100%;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 0 0 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .top-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .top-nav-links a {
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 0 11px;
+    border: 1px solid rgba(244, 239, 229, 0.14);
+    background: rgba(244, 239, 229, 0.055);
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+  }
+
+  .top-nav-links a.active {
+    border-color: rgba(244, 239, 229, 0.36);
+    background: rgba(244, 239, 229, 0.12);
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 118px 16px 30px;
+  }
+
+  .hero::before {
+    inset: 10px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero h1 {
+    max-width: 9ch;
+    font-size: clamp(3.4rem, 17vw, 4.75rem);
+    line-height: 0.9;
+  }
+
+  .hero-lede {
+    max-width: 30rem;
+    font-size: 1.02rem;
+    line-height: 1.54;
+  }
+
+  .hero-actions,
+  .page-actions,
+  .final-actions,
+  .app-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 46px;
+    justify-content: center;
+  }
+
+  .hero-facts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 20px;
+  }
+
+  .hero-facts span {
+    min-height: 46px;
+    display: grid;
+    place-items: center;
+    padding: 8px 6px;
+    font-size: 0.58rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .page-hero {
+    min-height: auto;
+    padding: 126px 16px 56px;
+  }
+
+  .page-hero h1 {
+    max-width: 9ch;
+    font-size: clamp(2.85rem, 13.5vw, 4.45rem);
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    overflow-wrap: normal;
+  }
+
+  .page-hero p:not(.eyebrow) {
+    max-width: 31rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .content-band,
+  .photo-essay,
+  .overview-grid,
+  .problem-frame,
+  .trail-stage,
+  .mission-stage,
+  .impact,
+  .dossiers,
+  .final {
+    padding: 64px 16px;
+  }
+
+  .content-shell {
+    width: 100%;
+  }
+
+  .content-heading {
+    margin-bottom: 26px;
+  }
+
+  .content-heading h2,
+  .photo-essay-head h2,
+  .problem-copy h2,
+  .section-head h2,
+  .app-copy h2,
+  .evidence h2,
+  .team-time h2,
+  .final h2,
+  .trail-copy h2,
+  .mission-copy h2,
+  .impact-head h2,
+  .evidence-copy h2,
+  .dossier-head h2 {
+    max-width: 9.5ch;
+    font-size: clamp(2.55rem, 12vw, 3.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+  }
+
+  .content-heading > p:not(.eyebrow),
+  .section-head p:not(.eyebrow),
+  .app-copy p:not(.eyebrow),
+  .evidence p:not(.eyebrow),
+  .final p:not(.eyebrow) {
+    max-width: 31rem;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .overview-grid,
+  .stat-grid,
+  .story-cards,
+  .photo-panels,
+  .action-grid,
+  .split-list,
+  .dossier-grid,
+  .impact-track,
+  .app-body,
+  .app-board {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .overview-card,
+  .stat-card,
+  .story-card,
+  .action-panel,
+  .trail-card,
+  .impact-panel,
+  .dossier-card,
+  .mission-card,
+  .field-note,
+  .essay-block {
+    min-height: 0;
+    padding: 18px;
+    border-radius: 6px;
+  }
+
+  .overview-card h2,
+  .story-card h3,
+  .trail-card h3,
+  .impact-panel h3,
+  .dossier-card h3,
+  .mission-card h3 {
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
+    line-height: 1.04;
+  }
+
+  .stat-card strong,
+  .impact-panel strong {
+    font-size: clamp(2.35rem, 13vw, 4rem);
+    line-height: 0.9;
+  }
+
+  .chain-row,
+  .timeline-row,
+  .evidence-row,
+  .data-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 17px 0;
+  }
+
+  .chain-row h3,
+  .timeline-row h3,
+  .evidence-row h3 {
+    font-size: 1.2rem;
+  }
+
+  .photo-panel:first-child,
+  .photo-panel,
+  .runoff-field,
+  .evidence figure,
+  .evidence img,
+  .impact-panel img {
+    min-height: 260px;
+  }
+
+  .photo-panel figcaption {
+    padding: 18px;
+  }
+
+  .trail-stage {
+    display: block;
+    overflow: visible;
+  }
+
+  .trail-map {
+    width: 100%;
+    aspect-ratio: 1 / 0.82;
+    margin: 0;
+  }
+
+  .trail-map img {
+    height: 100%;
+    object-position: 50% 50%;
+  }
+
+  .trail-map::after {
+    left: 12px;
+    bottom: 10px;
+    max-width: calc(100% - 24px);
+    font-size: 0.52rem;
+    line-height: 1.35;
+  }
+
+  .trail-pin {
+    width: 24px;
+    height: 24px;
+    font-size: 0.52rem;
+  }
+
+  .route-runner {
+    width: 14px;
+    height: 14px;
+  }
+
+  .trail-copy {
+    margin-top: 26px;
+  }
+
+  .trail-cards {
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .mission-field {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 76px 14px 14px;
+  }
+
+  .mission-counter {
+    left: 14px;
+    right: auto;
+    top: 14px;
+    width: calc(100% - 28px);
+    display: flex;
+    align-items: end;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .mission-count {
+    font-size: 3rem;
+  }
+
+  .mission-counter p {
+    margin: 0 0 5px;
+  }
+
+  .impact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .impact-head {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .impact-track {
+    width: 100%;
+    display: grid;
+    padding-right: 0;
+  }
+
+  .impact-panel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .impact-panel > div {
+    padding: 18px;
+  }
+
+  .app-body {
+    padding: 20px;
+  }
+
+  .app-window::after {
+    inset: 10px;
+  }
+
+  .app-board div {
+    min-height: 116px;
+    padding: 18px;
+    border-right: 0;
+  }
+
+  .app-board span {
+    font-size: 2.65rem;
+  }
+
+  .dossier-grid {
+    margin-top: 28px;
+  }
+
+  .dossier-card {
+    min-height: 220px;
+  }
+
+  .field-note h3 {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+  }
+
+  .project-essay {
+    gap: 0;
+  }
+
+  .essay-block {
+    gap: 10px;
+  }
+
+  .essay-block p {
+    max-width: none;
+    font-size: 0.98rem;
+    line-height: 1.66;
+  }
+
+  .final {
+    min-height: 92svh;
+    align-items: end;
+  }
+
+  .final > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1,
+  .page-hero h1,
+  .content-heading h2,
+  .photo-essay-head h2,
+  .final h2 {
+    max-width: 100%;
+  }
+
+  .hero-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .top-nav-links a {
+    padding: 0 10px;
+    font-size: 0.62rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

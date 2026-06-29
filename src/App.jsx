@@ -1057,7 +1057,6 @@ function useMotion() {
         const length = typeof path.getTotalLength === "function" ? path.getTotalLength() : 100;
         gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
         let frame = 0;
-        let loop = 0;
 
         const update = () => {
           frame = 0;
@@ -1101,17 +1100,11 @@ function useMotion() {
         };
 
         update();
-        const tick = () => {
-          update();
-          loop = window.requestAnimationFrame(tick);
-        };
-        loop = window.requestAnimationFrame(tick);
         window.__routeSetup = { pins: pins.length, length };
         window.addEventListener("scroll", requestUpdate, { passive: true });
         window.addEventListener("resize", requestUpdate);
         cleanupRouteProgress = () => {
           if (frame) window.cancelAnimationFrame(frame);
-          if (loop) window.cancelAnimationFrame(loop);
           window.removeEventListener("scroll", requestUpdate);
           window.removeEventListener("resize", requestUpdate);
         };
@@ -1465,78 +1458,6 @@ function useMotion() {
   }, []);
 
   return root;
-}
-
-function useRouteProgress(path) {
-  useEffect(() => {
-    if (path !== "/storm-drains") return undefined;
-
-    let frame = 0;
-    let retry = 0;
-    let cancel = false;
-
-    const start = () => {
-      if (cancel) return;
-      const trail = document.querySelector(".trail");
-      const routePath = document.querySelector(".route-path");
-      const runner = document.querySelector(".route-runner");
-      const pins = [...document.querySelectorAll(".trail-pin")];
-
-      if (!trail || !routePath || pins.length === 0) {
-        retry += 1;
-        if (retry < 30) window.setTimeout(start, 100);
-        return;
-      }
-
-      const length = typeof routePath.getTotalLength === "function" ? routePath.getTotalLength() : 100;
-      routePath.style.strokeDasharray = String(length);
-      window.__routeSetup = { pins: pins.length, length, source: "standalone" };
-
-      const update = () => {
-        if (cancel) return;
-        const rect = trail.getBoundingClientRect();
-        const travel = Math.max(rect.height - window.innerHeight, 1);
-        const progress = Math.min(1, Math.max(0, -rect.top / travel));
-        routePath.style.strokeDashoffset = String(length * (1 - progress));
-
-        if (runner) {
-          const scaled = progress * (trailSteps.length - 1);
-          const index = Math.min(trailSteps.length - 2, Math.max(0, Math.floor(scaled)));
-          const local = scaled - index;
-          const a = trailSteps[index];
-          const b = trailSteps[index + 1];
-          const x = a.x + (b.x - a.x) * local;
-          const y = a.y + (b.y - a.y) * local;
-          runner.style.left = `${x}%`;
-          runner.style.top = `${y}%`;
-          runner.style.opacity = progress > 0.02 && progress < 0.98 ? "1" : "0";
-          runner.style.transform = `translate(-50%, -50%) scale(${1 + progress * 0.32})`;
-        }
-
-        pins.forEach((pin, index) => {
-          const threshold = pins.length <= 1 ? 0 : index / (pins.length - 1);
-          const active = progress >= threshold - 0.045;
-          pin.style.opacity = active ? "1" : "0.18";
-          pin.style.transform = active ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.74)";
-        });
-      };
-
-      const tick = () => {
-        update();
-        frame = window.requestAnimationFrame(tick);
-      };
-
-      tick();
-    };
-
-    const startId = window.setTimeout(start, 100);
-
-    return () => {
-      cancel = true;
-      window.clearTimeout(startId);
-      if (frame) window.cancelAnimationFrame(frame);
-    };
-  }, [path]);
 }
 
 function Hero() {
@@ -2497,7 +2418,6 @@ function getRoute(pathname) {
 export default function App() {
   const root = useMotion();
   const path = window.location.pathname;
-  useRouteProgress(path);
 
   return (
     <main ref={root}>
