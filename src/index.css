@@ -857,6 +857,57 @@ html.fluid-dragging {
   color: rgba(17, 24, 20, 0.7);
 }
 
+.project-essay {
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(232, 221, 199, 0.16);
+  background: rgba(232, 221, 199, 0.14);
+}
+
+.essay-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 52px);
+  padding: clamp(24px, 4.6vw, 64px);
+  background:
+    linear-gradient(90deg, rgba(244, 239, 229, 0.06), transparent 42%),
+    rgba(17, 24, 20, 0.48);
+  color: var(--paper-bright);
+}
+
+.content-band.light .project-essay {
+  border-color: rgba(17, 24, 20, 0.14);
+  background: rgba(17, 24, 20, 0.12);
+}
+
+.content-band.light .essay-block {
+  background:
+    linear-gradient(90deg, rgba(17, 24, 20, 0.06), transparent 46%),
+    rgba(244, 239, 229, 0.72);
+  color: #111814;
+}
+
+.essay-block span {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-teal);
+}
+
+.essay-block p {
+  max-width: 980px;
+  color: rgba(255, 247, 232, 0.86);
+  font-size: clamp(1.08rem, 1.45vw, 1.28rem);
+  line-height: 1.82;
+}
+
+.content-band.light .essay-block p {
+  color: rgba(17, 24, 20, 0.74);
+}
+
 @media (pointer: fine) {
   body,
   a,
@@ -4286,6 +4337,10 @@ body::after {
     grid-column: auto;
     margin-top: 0;
   }
+
+  .essay-block {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 760px) {
@@ -4306,6 +4361,17 @@ body::after {
   .field-note p {
     font-size: 0.98rem;
     line-height: 1.62;
+  }
+
+  .essay-block {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px;
+  }
+
+  .essay-block p {
+    font-size: 1rem;
+    line-height: 1.68;
   }
 }
 

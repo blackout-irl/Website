@@ -548,6 +548,97 @@ const resourceNotes = [
   },
 ];
 
+const projectEssays = {
+  home: [
+    "Clearing the Way is about making one hidden connection visible: what happens on a Melbourne street can end up in the Indian River Lagoon. A storm drain can look like the end of the story because the water disappears below the road, but it is really the start of a route. This website follows that route from the street to the lagoon so the project feels local, physical, and easy to understand.",
+    "The campaign is built around practical work instead of a vague environmental message. The group plans to mark storm drains, reach nearby homes, teach students, collect survey responses, and keep a clean record of what was done. Each part is small enough to finish, but together they create a clear story that another group could repeat.",
+    "The project also has to respect how people actually learn. Most residents will not stop to read a long explanation at a storm drain, and most students will remember a demonstration better than a paragraph. That is why the message is repeated in different forms: a marker on the street, a short door hanger, a classroom demo, a survey, and a final archive.",
+    "The most important idea is that the lagoon was never separate from us. It is connected to lawns, curbs, rain, pipes, outfalls, classrooms, and daily habits. The website is organized to show that connection step by step, not to make the project sound bigger than it is.",
+    "The final product should feel like a real field record. If someone opens this site after the project is finished, they should be able to understand the goal, follow the route, see what the team did, and know what files or records should exist in the handoff folder.",
+    "The reason the project starts with the street is simple: that is where people still have time to act. Once the water is rushing into a drain, nobody is standing there filtering it by hand. Before rain, people can move clippings, pick up waste, clear trash, and think twice about what is sitting near the curb.",
+    "This project is also built for a school team that has to prove what happened. That means the website cannot only be pretty. It has to explain the work in a way that matches the photos, route logs, surveys, classroom materials, and final report. The design should make the evidence easier to follow, not cover it up.",
+    "The story is local on purpose. Melbourne is close enough to the lagoon that the route from neighborhood to water does not feel imaginary. The project asks people to connect places they already know: their street, a drain at the curb, the water after a storm, and the lagoon they see from bridges, parks, or shoreline roads.",
+    "A good version of Clearing the Way should make someone look differently at the next storm drain they pass. That is the whole point. If the website, markers, and outreach make one ordinary drain feel connected to a living waterway, the project is doing its job.",
+  ],
+  problem: [
+    "Stormwater is easy to misunderstand because it moves quickly and quietly. When rainwater enters a storm drain, many people assume it is being cleaned somewhere underground. In many cases, the drain is designed to move water away from streets, not to filter out fertilizer, grass clippings, pet waste, oil, trash, or sediment before that water reaches connected waterways.",
+    "That matters because runoff is usually made from ordinary things. A few grass clippings in the road, fertilizer applied before a storm, loose soil near a driveway, or pet waste left on a sidewalk may not look serious by itself. During rain, those small pieces can move together along the curb and into the same drainage system.",
+    "Nutrients such as nitrogen and phosphorus are especially important because they can feed algae growth when they move into water. Algae can reduce light in the water, and less light can make it harder for seagrass to survive. Seagrass is part of the lagoon food web, so a storm drain message is also a habitat message.",
+    "The project does not treat residents like the problem. It treats missing information as the problem. If people do not know where the water goes, they cannot connect small choices before rain to the health of the lagoon. The campaign is designed to make that connection visible before the next storm.",
+    "This page explains the problem in street-level terms because the project is not trying to scare people with abstract environmental language. It is trying to help them see the path: rain crosses the street, picks up what was left outside, enters the drain, moves through the system, and eventually reaches the lagoon.",
+    "The problem is not only what enters the water. It is also how normal the route looks. A curb line, a driveway, and a drain grate do not feel like part of the lagoon when the day is dry. The project has to make that connection visible before the rain makes it obvious in the worst way.",
+    "The word pollution can sound too big for a small street. That is why the project names the everyday sources directly. Fertilizer, grass, dirt, pet waste, leaves, oil, and litter are things people can actually recognize and change. The message works better when it stays close to what people already see.",
+    "The Indian River Lagoon is shallow and sensitive, so what enters from land can matter. The site does not need to overstate that. It only needs to show that neighborhood runoff is one part of a larger pressure on the lagoon, and that a local group can reduce confusion around that route.",
+    "The campaign is stronger when it avoids blame. Most people are not choosing to send pollution into the lagoon. Many just do not know that the storm drain is connected. The project gives them a reason to notice and a simple moment to act before rain.",
+  ],
+  route: [
+    "The storm-drain route is the backbone of the project. It turns a general water-quality issue into a specific path that can be mapped, photographed, marked, and explained. Without the route, the campaign would only say that runoff matters. With the route, the team can show where the runoff starts and where the message needs to appear.",
+    "A good route is not just a set of random drains. The drains need to be visible, safe to access, and close enough to homes or common travel paths that people will actually notice the markers. A marker on a drain that nobody passes does not teach much. A marker near a familiar sidewalk, driveway, or neighborhood street has a better chance of changing what people notice before rain.",
+    "Each marked drain should become a record. The team should save a drain ID, nearby street or intersection, GPS point or map pin, before photo, after photo, date marked, and a short condition note. That record matters because it lets the group prove what happened and lets another team revisit the same drains later.",
+    "The route animation on the website is meant to do the same thing the field route does in real life. It slows down the movement of water so the user can follow it. Street, drain, pipe, outfall, lagoon: those steps are simple, but they are the part most people never see.",
+    "The route also gives the outreach plan a boundary. The homes closest to the marked drains are the homes most likely to recognize the drains and understand the message. That makes the route useful for field work, education, surveys, and the final handoff.",
+    "The route should be readable without a team member standing beside it. A future reader should be able to open the map, see the numbered steps, match the dots to the photos, and understand why those drains were chosen. If the route only makes sense to the people who built it, the handoff is not finished.",
+    "The field record should avoid vague labels. A note like near the neighborhood is not enough. A useful note gives a street, side of road, nearby landmark, drain ID, and photo name. Small details save a lot of confusion when somebody checks the route weeks later.",
+    "The route also helps explain the timing of the whole campaign. First the team identifies drains. Then the markers go down. Then nearby homes get the message. Then the survey checks whether people noticed. The map is not just scenery; it is the schedule of the work.",
+    "When the route is presented well, the project feels less like a school assignment and more like an investigation. The user follows water that is usually hidden, sees the places where the team acted, and understands why the lagoon is part of the same story.",
+  ],
+  mission: [
+    "The mission has four working parts: mark, inform, educate, and save the evidence. Marking makes the route visible on the street. Informing brings the message to nearby homes. Education helps students understand what runoff can carry. Saving the evidence makes the project useful after the campaign is over.",
+    "The marking work is physical and specific. The team is not just saying storm drains matter; it is placing approved reminders on actual drains and documenting each one. That turns infrastructure people ignore into a visible connection to the lagoon.",
+    "The outreach work has to stay clear and short. A door hanger should not sound like a copied textbook paragraph. It should explain that the drain leads toward the lagoon, ask people to take the survey, and give one or two practical actions they can take before rain starts.",
+    "The classroom work gives the project a different kind of reach. A clean-water jar and a runoff jar can show students how quickly water changes when soil, clippings, or other materials enter it. The lesson should connect the demo back to local streets so students understand that the jar represents a real path outside.",
+    "The archive is the part that keeps the mission from disappearing. Photos, route notes, survey exports, classroom materials, and the final report should be stored in a way that another group can understand. A project that leaves a clean handoff has a better chance of continuing.",
+    "Marking is the easiest part to see, but it is not the whole project. A drain marker without outreach might be noticed and forgotten. Outreach without the marker might feel disconnected from the street. The classroom demo without the route might feel like general science. The four parts work because they point at the same local path.",
+    "The inform step should respect people's time. The door hanger and survey should be short enough to finish in a normal day, but clear enough that residents know why they are being asked. A good message says what the drain does, what can wash in, and what someone can do before rain.",
+    "The educate step gives the project a human center. Students can see clean water become cloudy in a way that feels immediate. When that demo is tied back to a real storm drain outside, the science stops being abstract and starts feeling like something happening in their own neighborhood.",
+    "The mission is not to sound dramatic. The mission is to do a few concrete things well and leave behind proof. That is what makes the project credible: visible markers, real outreach, a clear lesson, and organized evidence.",
+  ],
+  impact: [
+    "The impact of this project should be measured honestly. One student campaign will not fix the entire Indian River Lagoon, and the website should not pretend that it will. The real impact is more practical: drains marked, households reached, students taught, surveys collected, and a handoff folder that makes the next step easier.",
+    "The drain markers are evidence because they are visible and countable. If the project marks 50 to 75 drains, each one should have a photo and location record. Those records show that the work happened and help future teams maintain or expand the route.",
+    "The outreach work is measured through homes reached and surveys completed. The survey is not just a form; it is a way to see whether people understand that storm drains can connect to the lagoon. A pre-survey and post-survey give the team a better way to talk about awareness change.",
+    "The classroom work matters because students can carry the message beyond the room. A student who can explain the runoff jar can also explain why a storm drain marker matters. That kind of learning is harder to measure perfectly, but it belongs in the impact story.",
+    "The final archive is also an impact result. If the next team can open the folder and find the map, photos, survey files, outreach copy, classroom plan, and final report, then the project has created something that can outlast the original group.",
+    "Good impact language should be careful. It should not say that a marker saved the lagoon. It can say that the marker made a drain connection visible, that a household received the message, that a student saw the runoff demo, and that a survey answer showed what people understood.",
+    "The project should count things that can be checked. Drain photos, marker counts, street lists, survey exports, attendance notes, and folder links are not exciting by themselves, but they protect the project from sounding vague. They let the group point to real work.",
+    "The impact also depends on repetition. One message may not change a habit, but seeing a marker, reading a door hanger, hearing a student explain the demo, and taking a survey all reinforce the same idea. The site should show that the campaign is a set of repeated reminders, not a single announcement.",
+    "The most honest result is a clearer connection. The project helps people understand that their street and the lagoon are not separate systems. That kind of awareness is small, but it is exactly what this campaign is built to create.",
+  ],
+  team: [
+    "The team structure matters because the project has many small pieces that can easily get lost. One person needs to watch the route. One person needs to watch outreach. One person needs to build the classroom demo. One person needs to keep the data organized. One person needs to make sure the report tells the truth about the work.",
+    "The project lead keeps the timeline and final story connected. That role is important because the field work, survey work, education work, and website all need to describe the same project. If the final report says one thing and the evidence folder shows another, the project becomes weaker.",
+    "The field role is responsible for the physical route. That means choosing visible drains, checking safety, taking clear photos, naming files, and making sure the map matches the real route. Field work is simple in concept, but it requires careful records.",
+    "The outreach and education roles make the project understandable to other people. Door hangers need to sound human, not official or robotic. Classroom lessons need to be hands-on, not just a slideshow. Those roles make the campaign feel local and real.",
+    "The data role ties everything together. Survey exports, app logs, photo folders, map records, and final files have to stay organized. The data work may not be the most visible part of the project, but it is what makes the final website and handoff believable.",
+    "The best team page should not feel like a list of names pasted into boxes. It should show why each role exists. A route lead prevents field details from getting lost. An outreach lead keeps the message consistent. An education lead makes the science understandable. A data lead makes the evidence usable.",
+    "The team also has to sound like it actually did the work. That means responsibilities should be written in plain words: take photos, name files, mark drains, teach the demo, check the survey, update the map, and finish the report. Those details are more believable than polished titles.",
+    "Prithiv Ponnusamy is listed as the education lead because the classroom piece needs someone focused on turning runoff into something students can see. That role connects the project to people who may take the message home and repeat it in their own words.",
+    "A good handoff depends on every role finishing its part. If the markers are placed but the photos are missing, the evidence is weaker. If the survey is live but nobody explains it, responses drop. If the archive is messy, the next group has to restart. The team structure prevents that.",
+  ],
+  survey: [
+    "The survey is designed to measure awareness, not to make people feel tested. The main question is simple: do residents understand that water entering a storm drain can move toward the Indian River Lagoon? If people do not understand that route, the rest of the message is harder to remember.",
+    "The first survey wave should happen before the outreach has changed what people know. That gives the team a baseline. The second wave should happen after residents have seen markers, door hangers, classroom messages, or website materials. Comparing the two waves gives the team a better way to describe what changed.",
+    "The survey should stay short because people are more likely to finish it on a phone. It should ask about the storm-drain path, what can wash into the drain, whether people noticed the marker, and what action they might take before rain. Those questions are enough to connect awareness to behavior.",
+    "The QR code needs to feel useful, not random. The door hanger or website should explain that the survey is short and local. People should know they are helping a student project understand whether the campaign is working.",
+    "The results should feed the next version of the project. If people still miss the drain-to-lagoon connection, the team can improve the marker language, door hanger, classroom script, or website section. The survey is not just a requirement; it is feedback for the campaign.",
+    "The survey language should feel normal. It should not ask questions that sound like they were written for a science test. It should ask what people know, what they noticed, and what they might do before rain. That makes the answers more useful and less forced.",
+    "The pre-survey and post-survey should stay close enough to compare. If the first survey asks where storm drain water goes, the second one should ask the same thing or something very similar. Otherwise the group cannot honestly say whether understanding changed.",
+    "A survey response is also a clue. If many people miss the same idea, the campaign can adjust. Maybe the marker message is too small. Maybe the door hanger needs a simpler diagram. Maybe the website needs to show the route earlier. The survey helps the team fix the message instead of guessing.",
+    "The survey call to action should be simple: help us understand what people know about storm drains and the lagoon. That sounds more human than asking people to participate in a campaign metric, and it gives residents a reason to help.",
+  ],
+  resources: [
+    "The resource archive is where the project becomes useful after the presentation is over. A website can show the story, but the archive should hold the actual materials: route map, drain log, photos, outreach copy, survey exports, classroom plan, and final report.",
+    "The folder should be organized for someone who was not in the group. File names should explain what the files are. A future student should not have to open every image to find the after photo for drain 14 or guess which survey file is the final export.",
+    "The PDF is important, but it should not be the only record. The project needs living materials that can be reused or updated. If a marker falls off, the route log should help someone find it. If a future class wants to repeat the lesson, the classroom kit should make that easy.",
+    "A good handoff also includes unfinished work. If some drains still need a second check, if the survey needs more responses, or if outreach did not cover every target street, the archive should say that clearly. Honest notes are more useful than pretending everything is complete.",
+    "The resources page is meant to act like a table of contents for the project. It gives the next reader a way to find the field guide, route, mission plan, impact record, survey, and handoff materials without digging through the whole site.",
+    "The archive should keep both polished materials and working records. The final report matters, but so do the messy pieces that explain how the work actually happened: draft route lists, field notes, renamed photos, survey exports, classroom timing notes, and outreach edits.",
+    "A future team should be able to use the archive without asking the original group to explain everything. That means the folder structure should be boring in the best way: clear names, clear dates, clear versions, and no mystery files sitting loose at the top level.",
+    "The resources page also protects the project from becoming only a visual experience. The animations and images help people understand the story, but the archive gives the work a practical life after someone closes the website.",
+    "The best handoff is useful even when the next group changes the plan. If they mark a different neighborhood, update the survey, or add more classroom demos, they should still be able to reuse the structure from this project.",
+  ],
+};
+
 function Cursor() {
   return (
     <div className="cursor-dot" aria-hidden="true">
@@ -1214,7 +1305,7 @@ function useMotion() {
         });
       });
 
-      gsap.utils.toArray(".chain-row, .timeline-row, .evidence-row, .data-row").forEach((row) => {
+      gsap.utils.toArray(".chain-row, .timeline-row, .evidence-row, .data-row, .essay-block").forEach((row) => {
         gsap.fromTo(row, {
           x: -42,
           autoAlpha: 0,
@@ -1672,6 +1763,19 @@ function FieldNotes({ items }) {
   );
 }
 
+function ProjectEssay({ items }) {
+  return (
+    <div className="project-essay">
+      {items.map((text, index) => (
+        <article className="essay-block" key={text.slice(0, 48)}>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 function ProblemScene() {
   return (
     <section className="problem" id="problem">
@@ -1891,6 +1995,13 @@ function HomePage() {
       >
         <FieldNotes items={homeNotes} />
       </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="The full story starts with the street."
+        text="These paragraphs explain the project in complete sentences so the site can work as a real information source."
+      >
+        <ProjectEssay items={projectEssays.home} />
+      </ContentBand>
       <OverviewGrid />
       <ContentBand
         kicker="Project snapshot"
@@ -1943,6 +2054,14 @@ function ProblemPage() {
         text="Runoff sounds abstract until it is written out as a street-level story."
       >
         <FieldNotes items={problemNotes} />
+      </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="Why runoff is the problem."
+        text="This section slows the issue down into the full route from ordinary street material to lagoon water."
+        dark
+      >
+        <ProjectEssay items={projectEssays.problem} />
       </ContentBand>
       <ProblemScene />
       <ContentBand
@@ -2020,6 +2139,13 @@ function StormDrainsPage() {
       >
         <FieldNotes items={routeNotes} />
       </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="The route is the project backbone."
+        text="The route turns an environmental issue into something that can be walked, marked, mapped, and checked."
+      >
+        <ProjectEssay items={projectEssays.route} />
+      </ContentBand>
     </>
   );
 }
@@ -2071,6 +2197,13 @@ function MissionPage() {
         dark
       >
         <FieldNotes items={missionNotes} />
+      </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="Mark, inform, educate, and save the proof."
+        text="The mission is practical because every part creates a record or a visible public message."
+      >
+        <ProjectEssay items={projectEssays.mission} />
       </ContentBand>
       <ContentBand
         kicker="What stays"
@@ -2141,6 +2274,13 @@ function ImpactPage() {
       >
         <FieldNotes items={impactNotes} />
       </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="Impact means proof people can check."
+        text="This is the fuller version of what the project can honestly claim when the campaign is complete."
+      >
+        <ProjectEssay items={projectEssays.impact} />
+      </ContentBand>
     </>
   );
 }
@@ -2195,6 +2335,14 @@ function TeamPage() {
       >
         <FieldNotes items={teamNotes} />
       </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="The team structure keeps the evidence clean."
+        text="The project needs clear ownership because field work, outreach, education, and data all depend on each other."
+        dark
+      >
+        <ProjectEssay items={projectEssays.team} />
+      </ContentBand>
     </>
   );
 }
@@ -2230,6 +2378,13 @@ function SurveyPage() {
         dark
       >
         <FieldNotes items={surveyNotes} />
+      </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="The survey checks whether the message landed."
+        text="The survey is short, but it gives the project a way to compare awareness before and after outreach."
+      >
+        <ProjectEssay items={projectEssays.survey} />
       </ContentBand>
       <ContentBand
         kicker="How to help"
@@ -2279,6 +2434,13 @@ function ResourcesPage() {
         dark
       >
         <FieldNotes items={resourceNotes} />
+      </ContentBand>
+      <ContentBand
+        kicker="Project brief"
+        title="The archive is how the work survives."
+        text="These paragraphs explain what belongs in the handoff and why the folder matters."
+      >
+        <ProjectEssay items={projectEssays.resources} />
       </ContentBand>
       <ContentBand
         kicker="Handoff"
