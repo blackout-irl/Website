@@ -858,54 +858,122 @@ html.fluid-dragging {
 }
 
 .project-essay {
+  position: relative;
   display: grid;
-  gap: 1px;
-  border: 1px solid rgba(232, 221, 199, 0.16);
-  background: rgba(232, 221, 199, 0.14);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(18px, 3.4vw, 46px) 0;
+  padding: clamp(8px, 2vw, 22px) 0;
+  border: 0;
+  background: transparent;
+}
+
+.project-essay::before {
+  content: "";
+  position: absolute;
+  left: 8.5%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background:
+    linear-gradient(180deg, transparent, rgba(232, 221, 199, 0.2), transparent),
+    repeating-linear-gradient(180deg, rgba(232, 221, 199, 0.28) 0 12px, transparent 12px 25px);
+  opacity: 0.55;
+}
+
+.project-essay::after {
+  content: "";
+  position: absolute;
+  right: 4%;
+  top: 12%;
+  width: min(320px, 42vw);
+  height: min(320px, 42vw);
+  border: 1px solid rgba(232, 221, 199, 0.1);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(122, 160, 149, 0.13), transparent 62%),
+    repeating-radial-gradient(circle, rgba(232, 221, 199, 0.08) 0 1px, transparent 1px 22px);
+  opacity: 0.42;
+  pointer-events: none;
 }
 
 .essay-block {
   position: relative;
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: clamp(20px, 4vw, 52px);
-  padding: clamp(24px, 4.6vw, 64px);
-  background:
-    linear-gradient(90deg, rgba(244, 239, 229, 0.06), transparent 42%),
-    rgba(17, 24, 20, 0.48);
+  z-index: 1;
+  grid-template-columns: 78px minmax(0, 1fr);
+  grid-column: 2 / span 8;
+  gap: clamp(14px, 2.6vw, 32px);
+  padding: clamp(18px, 3vw, 34px) 0 clamp(18px, 3vw, 34px) clamp(18px, 3.2vw, 42px);
+  border-top: 1px solid rgba(232, 221, 199, 0.16);
+  background: transparent;
   color: var(--paper-bright);
 }
 
-.content-band.light .project-essay {
-  border-color: rgba(17, 24, 20, 0.14);
-  background: rgba(17, 24, 20, 0.12);
+.essay-block:nth-child(3n + 2) {
+  grid-column: 5 / span 7;
 }
 
-.content-band.light .essay-block {
-  background:
-    linear-gradient(90deg, rgba(17, 24, 20, 0.06), transparent 46%),
-    rgba(244, 239, 229, 0.72);
-  color: #111814;
+.essay-block:nth-child(3n) {
+  grid-column: 3 / span 9;
+}
+
+.essay-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(244, 239, 229, 0.58);
+  border-radius: 999px;
+  background: rgba(122, 160, 149, 0.82);
+  box-shadow: 0 0 0 8px rgba(122, 160, 149, 0.08);
+}
+
+.essay-block::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 31px;
+  width: clamp(22px, 3vw, 48px);
+  height: 1px;
+  background: rgba(232, 221, 199, 0.2);
 }
 
 .essay-block span {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted-teal);
+  color: rgba(216, 197, 147, 0.76);
 }
 
 .essay-block p {
-  max-width: 980px;
-  color: rgba(255, 247, 232, 0.86);
-  font-size: clamp(1.08rem, 1.45vw, 1.28rem);
-  line-height: 1.82;
+  max-width: 760px;
+  color: rgba(255, 247, 232, 0.78);
+  font-size: clamp(1.02rem, 1.28vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.content-band.light .project-essay,
+.content-band.light .essay-block {
+  background: transparent;
+  color: var(--paper-bright);
+}
+
+.content-band.light .project-essay::before {
+  background:
+    linear-gradient(180deg, transparent, rgba(232, 221, 199, 0.18), transparent),
+    repeating-linear-gradient(180deg, rgba(232, 221, 199, 0.24) 0 12px, transparent 12px 25px);
+}
+
+.content-band.light .essay-block {
+  border-color: rgba(232, 221, 199, 0.14);
 }
 
 .content-band.light .essay-block p {
-  color: rgba(17, 24, 20, 0.74);
+  color: rgba(255, 247, 232, 0.76);
 }
 
 @media (pointer: fine) {
@@ -4794,11 +4862,40 @@ body::after {
   }
 
   .project-essay {
-    gap: 0;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-left: 12px;
+  }
+
+  .project-essay::before {
+    left: 0;
+  }
+
+  .project-essay::after {
+    right: -18%;
+    top: 4%;
+    width: 220px;
+    height: 220px;
+    opacity: 0.24;
   }
 
   .essay-block {
-    gap: 10px;
+    grid-column: 1 / -1 !important;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 0 18px 22px;
+    border-radius: 0;
+  }
+
+  .essay-block::before {
+    left: -16px;
+    top: 24px;
+  }
+
+  .essay-block::after {
+    left: -12px;
+    top: 28px;
+    width: 22px;
   }
 
   .essay-block p {

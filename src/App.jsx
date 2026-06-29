@@ -1686,10 +1686,10 @@ function FieldNotes({ items }) {
 
 function ProjectEssay({ items }) {
   return (
-    <div className="project-essay">
+    <div className="project-essay" aria-label="Project story notes">
       {items.map((text, index) => (
         <article className="essay-block" key={text.slice(0, 48)}>
-          <span>{String(index + 1).padStart(2, "0")}</span>
+          <span>note {String(index + 1).padStart(2, "0")}</span>
           <p>{text}</p>
         </article>
       ))}
@@ -1917,9 +1917,9 @@ function HomePage() {
         <FieldNotes items={homeNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="The full story starts with the street."
-        text="These paragraphs explain the project in complete sentences so the site can work as a real information source."
+        kicker="Field dispatch"
+        title="The street is where the story starts."
+        text="Short field notes from the project route."
       >
         <ProjectEssay items={projectEssays.home} />
       </ContentBand>
@@ -1977,9 +1977,9 @@ function ProblemPage() {
         <FieldNotes items={problemNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="Why runoff is the problem."
-        text="This section slows the issue down into the full route from ordinary street material to lagoon water."
+        kicker="Runoff notes"
+        title="What the rain carries."
+        text="The problem is easier to understand when it stays close to the street."
         dark
       >
         <ProjectEssay items={projectEssays.problem} />
@@ -2061,9 +2061,9 @@ function StormDrainsPage() {
         <FieldNotes items={routeNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="The route is the project backbone."
-        text="The route turns an environmental issue into something that can be walked, marked, mapped, and checked."
+        kicker="Route notes"
+        title="The map has to hold up later."
+        text="Each note explains why the marked route matters after the field day."
       >
         <ProjectEssay items={projectEssays.route} />
       </ContentBand>
@@ -2120,9 +2120,9 @@ function MissionPage() {
         <FieldNotes items={missionNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="Mark, inform, educate, and save the proof."
-        text="The mission is practical because every part creates a record or a visible public message."
+        kicker="Working notes"
+        title="Four jobs, one route."
+        text="The plan only works when each part points back to the same drains."
       >
         <ProjectEssay items={projectEssays.mission} />
       </ContentBand>
@@ -2196,9 +2196,9 @@ function ImpactPage() {
         <FieldNotes items={impactNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="Impact means proof people can check."
-        text="This is the fuller version of what the project can honestly claim when the campaign is complete."
+        kicker="Impact notes"
+        title="Keep the claims honest."
+        text="The result should be something people can check, not just something that sounds good."
       >
         <ProjectEssay items={projectEssays.impact} />
       </ContentBand>
@@ -2257,9 +2257,9 @@ function TeamPage() {
         <FieldNotes items={teamNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="The team structure keeps the evidence clean."
-        text="The project needs clear ownership because field work, outreach, education, and data all depend on each other."
+        kicker="Team notes"
+        title="The work needs owners."
+        text="These roles keep the route, outreach, lessons, and evidence from getting messy."
         dark
       >
         <ProjectEssay items={projectEssays.team} />
@@ -2301,9 +2301,9 @@ function SurveyPage() {
         <FieldNotes items={surveyNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="The survey checks whether the message landed."
-        text="The survey is short, but it gives the project a way to compare awareness before and after outreach."
+        kicker="Survey notes"
+        title="Ask it like a person."
+        text="The survey should be short enough that people actually finish it."
       >
         <ProjectEssay items={projectEssays.survey} />
       </ContentBand>
@@ -2357,9 +2357,9 @@ function ResourcesPage() {
         <FieldNotes items={resourceNotes} />
       </ContentBand>
       <ContentBand
-        kicker="Project brief"
-        title="The archive is how the work survives."
-        text="These paragraphs explain what belongs in the handoff and why the folder matters."
+        kicker="Archive notes"
+        title="Leave the next group a real trail."
+        text="A handoff only works if someone can open it cold and understand what happened."
       >
         <ProjectEssay items={projectEssays.resources} />
       </ContentBand>
