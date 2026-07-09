@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="loader" aria-hidden="true">
+      <div>
+        <span>Shield Our Elders</span>
+        <strong data-load-count>00</strong>
+      </div>
+    </div>
+
     <div class="progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header">
@@ -22,7 +29,7 @@
         <span>Shield Our Elders</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#pause">The Pause</a>
+        <a href="#pause">Pause</a>
         <a href="#app">App</a>
         <a href="#workshops">Workshops</a>
       </nav>
@@ -43,23 +50,43 @@
         </video>
         <div class="hero-overlay" aria-hidden="true"></div>
 
-        <div class="hero-content reveal">
-          <p class="label">Elder scam defense</p>
-          <h1 id="hero-title">Shield Our Elders</h1>
-          <p>
-            Scams work by rushing people. This gives families a calmer first move:
-            stop, check, and call someone trusted before money leaves.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#pause">
-              <i data-lucide="shield-check"></i>
-              See the pause
-            </a>
-            <a class="button secondary" href="#app">
-              <i data-lucide="smartphone"></i>
-              View app
-            </a>
+        <div class="hero-content">
+          <div class="hero-copy reveal">
+            <p class="label">Elder scam defense</p>
+            <h1 id="hero-title">Pause before panic decides.</h1>
+            <p>
+              A scam safety app and workshop program for older adults, families,
+              caregivers, and the places they already trust.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#pause">
+                <i data-lucide="shield-check"></i>
+                See the flow
+              </a>
+              <a class="button secondary" href="#app">
+                <i data-lucide="smartphone"></i>
+                View app
+              </a>
+            </div>
           </div>
+
+          <aside class="hero-console reveal" aria-label="Safety check preview">
+            <div class="console-top">
+              <span>Live check</span>
+              <strong>01 / 04</strong>
+            </div>
+            <div class="console-alert">
+              <i data-lucide="phone-call"></i>
+              <div>
+                <span>Unknown caller</span>
+                <strong>Asked for a code and secrecy.</strong>
+              </div>
+            </div>
+            <div class="console-result">
+              <span>Next move</span>
+              <strong>Hang up. Call family.</strong>
+            </div>
+          </aside>
         </div>
 
         <div class="hero-footer" aria-label="Safety reminders">
@@ -69,14 +96,25 @@
         </div>
       </section>
 
+      <section class="marquee" aria-label="Common scam pressure signs">
+        <div class="marquee-track">
+          <span>Gift cards</span>
+          <span>Fake charge</span>
+          <span>Verification code</span>
+          <span>Voice clone</span>
+          <span>Unknown QR code</span>
+          <span>Recovery scam</span>
+        </div>
+      </section>
+
       <section class="section pause-section" id="pause">
         <div class="section-kicker reveal">
           <p class="label">The two-minute pause</p>
-          <h2>It starts with one simple interruption.</h2>
+          <h2>It starts with one interruption.</h2>
         </div>
 
         <div class="pause-grid">
-          <article class="message-sample reveal" aria-label="Suspicious message example">
+          <article class="message-sample reveal" aria-label="Suspicious message example" data-depth="0.14">
             <span>Text received at 8:14 PM</span>
             <p>Your Amazon account was charged $799. Tap now to cancel.</p>
           </article>
@@ -89,20 +127,52 @@
         </div>
       </section>
 
-      <section class="section app-section" id="app">
-        <div class="app-shot reveal">
-          <img src="./assets/app-home.png" alt="Shield Our Elders app home screen" />
+      <section class="sequence" id="app" aria-label="How the app guides a scam check">
+        <div class="sequence-sticky">
+          <div class="app-shot reveal" data-depth="-0.08">
+            <img src="./assets/app-home.png" alt="Shield Our Elders app home screen" />
+            <div class="phone-status" aria-hidden="true">
+              <span data-status-label>Message</span>
+              <strong data-status-title>Very likely scam</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="app-copy reveal">
-          <p class="label">The app</p>
-          <h2>Big enough to use under stress.</h2>
-          <p>
-            The home screen keeps the emergency action first, then organizes the
-            rest into plain checks: message, call, link, number, payment, recovery.
-          </p>
+        <div class="sequence-copy">
+          <div class="sequence-intro reveal">
+            <p class="label">The app</p>
+            <h2>Big enough to use under stress.</h2>
+            <p>
+              The home screen keeps the emergency action first, then moves through
+              plain checks one step at a time.
+            </p>
+          </div>
 
-          <div class="result-strip" aria-live="polite">
+          <article class="sequence-step reveal is-active" data-step data-label="Message" data-title="Very likely scam">
+            <span>01</span>
+            <h3>Check the message.</h3>
+            <p>Paste text, upload a screenshot, or add a voicemail transcript.</p>
+          </article>
+
+          <article class="sequence-step reveal" data-step data-label="Call" data-title="Stop and verify">
+            <span>02</span>
+            <h3>Ask five call questions.</h3>
+            <p>Money, secrecy, codes, remote access, threats. No automatic listening.</p>
+          </article>
+
+          <article class="sequence-step reveal" data-step data-label="Payment" data-title="High risk">
+            <span>03</span>
+            <h3>Slow down payments.</h3>
+            <p>Gift cards, crypto, wires, and instant transfer apps get a stronger warning.</p>
+          </article>
+
+          <article class="sequence-step reveal" data-step data-label="Recover" data-title="Act now">
+            <span>04</span>
+            <h3>Recover without shame.</h3>
+            <p>Call the bank, change passwords, report it, and watch for recovery scams.</p>
+          </article>
+
+          <div class="result-strip reveal" aria-live="polite">
             <span data-result-label>Message check</span>
             <strong data-result-title>Very likely scam</strong>
             <p data-result-copy>Prize claim asks for credit card details.</p>
@@ -153,7 +223,7 @@
       </section>
 
       <section class="photo-story" id="workshops">
-        <div class="photo-frame reveal">
+        <div class="photo-frame reveal" data-depth="0.1">
           <img
             src="https://images.unsplash.com/photo-1758686254118-cbcf8e32bafe?auto=format&fit=crop&w=1500&q=84"
             alt="Older adults looking at a phone together"
