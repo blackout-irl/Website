@@ -12,10 +12,7 @@ const updateScrollState = () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
   root.style.setProperty('--progress', clamp(progress, 0, 1).toFixed(4));
-
-  if (nav) {
-    nav.classList.toggle('is-scrolled', window.scrollY > 18);
-  }
+  nav?.classList.toggle('is-scrolled', window.scrollY > 18);
 };
 
 window.addEventListener('scroll', updateScrollState, { passive: true });
@@ -40,9 +37,52 @@ if (prefersReducedMotion) {
   );
 
   revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+    item.style.transitionDelay = `${Math.min(index % 5, 4) * 65}ms`;
     revealObserver.observe(item);
   });
+}
+
+const tickerTrack = document.querySelector('.ticker-track');
+if (tickerTrack && !prefersReducedMotion) {
+  tickerTrack.innerHTML += tickerTrack.innerHTML;
+}
+
+const demos = [
+  {
+    title: 'Very likely scam',
+    copy: 'Prize claim asks for credit card details.',
+  },
+  {
+    title: 'Stop and verify',
+    copy: 'Caller asked for a code and secrecy.',
+  },
+  {
+    title: 'High-risk payment',
+    copy: 'Gift cards and crypto are common scam requests.',
+  },
+];
+
+const demoTitle = document.querySelector('[data-demo-title]');
+const demoCopy = document.querySelector('[data-demo-copy]');
+const demoButton = document.querySelector('[data-demo-button]');
+let demoIndex = 0;
+
+const setDemo = (index) => {
+  const demo = demos[index % demos.length];
+  if (demoTitle) demoTitle.textContent = demo.title;
+  if (demoCopy) demoCopy.textContent = demo.copy;
+};
+
+demoButton?.addEventListener('click', () => {
+  demoIndex = (demoIndex + 1) % demos.length;
+  setDemo(demoIndex);
+});
+
+if (!prefersReducedMotion) {
+  window.setInterval(() => {
+    demoIndex = (demoIndex + 1) % demos.length;
+    setDemo(demoIndex);
+  }, 3600);
 }
 
 const stats = document.querySelectorAll('[data-count]');
@@ -85,42 +125,6 @@ if (prefersReducedMotion) {
   stats.forEach((stat) => statsObserver.observe(stat));
 }
 
-const signalTrack = document.querySelector('.signal-track');
-if (signalTrack && !prefersReducedMotion) {
-  signalTrack.innerHTML += signalTrack.innerHTML;
-}
-
-const phoneCards = [...document.querySelectorAll('[data-phone-card]')];
-const riskRing = document.querySelector('.risk-ring');
-const scoreOutput = document.querySelector('[data-score-output]');
-const phoneScores = [92, 86, 78];
-let activePhoneCard = 0;
-
-const setPhoneCard = (index) => {
-  phoneCards.forEach((card, cardIndex) => {
-    card.classList.toggle('is-active', cardIndex === index);
-  });
-
-  const score = phoneScores[index] ?? phoneScores[0];
-  if (riskRing) {
-    riskRing.style.setProperty('--score', `${score}%`);
-  }
-  if (scoreOutput) {
-    scoreOutput.textContent = `${score}%`;
-  }
-};
-
-if (phoneCards.length) {
-  setPhoneCard(0);
-
-  if (!prefersReducedMotion) {
-    window.setInterval(() => {
-      activePhoneCard = (activePhoneCard + 1) % phoneCards.length;
-      setPhoneCard(activePhoneCard);
-    }, 2700);
-  }
-}
-
 const tiltItems = document.querySelectorAll('[data-tilt]');
 
 if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
@@ -146,8 +150,8 @@ if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
   magneticItems.forEach((item) => {
     item.addEventListener('pointermove', (event) => {
       const rect = item.getBoundingClientRect();
-      const x = (event.clientX - rect.left - rect.width / 2) * 0.12;
-      const y = (event.clientY - rect.top - rect.height / 2) * 0.12;
+      const x = (event.clientX - rect.left - rect.width / 2) * 0.1;
+      const y = (event.clientY - rect.top - rect.height / 2) * 0.1;
       item.style.transform = `translate(${x}px, ${y}px)`;
     });
 

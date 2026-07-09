@@ -5,292 +5,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shield Our Elders is a calm scam-defense program and app concept for older adults, families, and community sites."
+      content="Shield Our Elders helps older adults slow down, check suspicious calls and messages, and ask a trusted person before money leaves their hands."
     />
     <title>Shield Our Elders</title>
     <link rel="preconnect" href="https://assets.mixkit.co" />
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <nav class="site-nav" aria-label="Primary navigation">
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-nav">
       <a class="brand" href="#top" aria-label="Shield Our Elders home">
-        <span class="brand-mark"><i data-lucide="shield-check"></i></span>
+        <img src="./assets/icon.png" alt="" />
         <span>Shield Our Elders</span>
       </a>
-      <div class="nav-links">
-        <a href="#program">Program</a>
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#app">App</a>
+        <a href="#checks">Checks</a>
+        <a href="#plan">Plan</a>
         <a href="#impact">Impact</a>
-      </div>
-      <a class="nav-cta magnetic" href="#bring">Bring it here</a>
-      <span class="scroll-line" aria-hidden="true"></span>
-    </nav>
+      </nav>
+      <a class="nav-action magnetic" href="#bring">Bring it here</a>
+    </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <video
-          class="hero-video"
+          class="hero-media"
           autoplay
           muted
           loop
           playsinline
           poster="https://assets.mixkit.co/videos/13322/13322-thumb-720-0.jpg"
-          data-parallax="slow"
         >
           <source src="https://assets.mixkit.co/videos/13322/13322-720.mp4" type="video/mp4" />
         </video>
-        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
 
-        <div class="hero-grid">
-          <div class="hero-copy-block">
-            <p class="eyebrow reveal">Brevard County elder scam defense</p>
-            <h1 id="hero-title" class="reveal">Shield Our Elders</h1>
-            <p class="hero-copy reveal">
-              A calm app and workshop program that helps older adults pause, check, and call someone they trust.
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Elder scam defense</p>
+            <h1 id="hero-title">Shield Our Elders</h1>
+            <p>
+              Scam help that slows the moment down. Built for calls, texts, links,
+              payments, and the family emergencies that do not feel fake at first.
             </p>
-            <div class="hero-actions reveal">
+            <div class="hero-actions">
               <a class="button primary magnetic" href="#app">
                 <i data-lucide="smartphone"></i>
                 See the app
               </a>
-              <a class="button glass magnetic" href="#program">
-                <i data-lucide="play-circle"></i>
-                Watch the flow
+              <a class="button secondary magnetic" href="#checks">
+                <i data-lucide="shield-alert"></i>
+                View checks
               </a>
             </div>
           </div>
 
-          <div class="hero-live reveal" aria-label="Live alert preview" data-tilt>
-            <div class="live-topline">
-              <span class="live-dot"></span>
-              <span>Live protection view</span>
+          <div class="alert-stage reveal" aria-label="Sample scam alerts" data-tilt>
+            <div class="stage-top">
+              <span></span>
+              Live protection
             </div>
-            <div class="live-card live-card-call is-current">
+            <article class="alert-card active">
               <i data-lucide="phone-call"></i>
               <div>
-                <span>Incoming call</span>
-                <strong>Asked for a verification code</strong>
+                <span>Unknown caller</span>
+                <strong>Asked for a bank code</strong>
+                <p>Hang up. Call the bank yourself.</p>
               </div>
-            </div>
-            <div class="live-card live-card-message">
+            </article>
+            <article class="alert-card danger">
               <i data-lucide="message-circle-warning"></i>
               <div>
-                <span>Text message</span>
-                <strong>Prize claim asks for card details</strong>
+                <span>New text</span>
+                <strong>Free prize asks for card details</strong>
+                <p>Do not reply or tap links.</p>
               </div>
-            </div>
-            <div class="live-card live-card-safe">
-              <i data-lucide="users"></i>
+            </article>
+            <article class="alert-card calm">
+              <i data-lucide="users-round"></i>
               <div>
-                <span>Next step</span>
-                <strong>Call trusted contact first</strong>
+                <span>Trusted contact</span>
+                <strong>Ask someone before paying</strong>
+                <p>One tap sends a help message.</p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="signal-ribbon" aria-label="Protection alerts">
-        <div class="signal-track">
-          <article class="signal-pill">
-            <i data-lucide="phone-call"></i>
-            <span>Unknown call</span>
-            <strong>End the call. Verify another way.</strong>
-          </article>
-          <article class="signal-pill warning">
-            <i data-lucide="message-circle"></i>
-            <span>New text</span>
-            <strong>Free prize asks for card details.</strong>
-          </article>
-          <article class="signal-pill danger">
-            <i data-lucide="mail-warning"></i>
-            <span>Email alert</span>
-            <strong>Pressure language and a strange link.</strong>
-          </article>
-          <article class="signal-pill">
-            <i data-lucide="qr-code"></i>
-            <span>QR code</span>
-            <strong>Preview before opening.</strong>
-          </article>
-          <article class="signal-pill calm">
-            <i data-lucide="heart-handshake"></i>
-            <span>Trusted person</span>
-            <strong>One tap to ask for help.</strong>
-          </article>
-        </div>
-      </section>
-
-      <section class="section intro" id="program">
-        <div class="section-copy reveal">
-          <p class="eyebrow">The habit</p>
-          <h2>Scams move fast. This teaches people to slow the moment down.</h2>
-          <p>
-            Seniors practice real calls, texts, emails, links, QR codes, payments, and family emergency stories.
-            The goal is simple: stop, verify, then act.
-          </p>
-          <div class="mini-metrics" aria-label="Program focus areas">
-            <span><strong>1</strong> trusted contact</span>
-            <span><strong>3</strong> minute checks</span>
-            <span><strong>0</strong> pressure decisions</span>
-          </div>
-        </div>
-        <div class="image-panel reveal" data-tilt>
-          <img
-            src="https://images.unsplash.com/photo-1758686254118-cbcf8e32bafe?auto=format&fit=crop&w=1500&q=84"
-            alt="Older adults looking at a smartphone together"
-          />
-          <div class="image-note">
-            <span>Not fear</span>
-            <strong>Clear next steps</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="journey" aria-label="Program journey">
-        <div class="journey-header reveal">
-          <p class="eyebrow">Workshop flow</p>
-          <h2>Short, repeatable, easy to remember.</h2>
-        </div>
-        <div class="journey-rail">
-          <article class="journey-step reveal" data-tilt>
-            <span>01</span>
-            <h3>Spot the pressure</h3>
-            <p>Urgency, secrecy, threats, codes, links, and unusual payments.</p>
-          </article>
-          <article class="journey-step reveal" data-tilt>
-            <span>02</span>
-            <h3>Practice the pause</h3>
-            <p>Realistic examples build confidence before a stressful moment happens.</p>
-          </article>
-          <article class="journey-step reveal" data-tilt>
-            <span>03</span>
-            <h3>Leave with a plan</h3>
-            <p>A trusted contact, a family phrase, and a recovery checklist.</p>
-          </article>
+      <section class="ticker" aria-label="Common scam warnings">
+        <div class="ticker-track">
+          <span><i data-lucide="mail-warning"></i> Fake delivery email</span>
+          <span><i data-lucide="badge-dollar-sign"></i> Gift card request</span>
+          <span><i data-lucide="qr-code"></i> Unknown QR code</span>
+          <span><i data-lucide="phone-off"></i> Threatening call</span>
+          <span><i data-lucide="key-round"></i> Verification code request</span>
+          <span><i data-lucide="mic"></i> Voice clone warning</span>
         </div>
       </section>
 
       <section class="section app-section" id="app">
-        <div class="phone-stage reveal">
-          <div class="phone" aria-label="Shield Our Elders app preview" data-tilt>
-            <div class="phone-top"></div>
-            <div class="phone-header">
-              <div>
-                <span>Shield check</span>
-                <strong>Ready</strong>
-              </div>
-              <i data-lucide="shield"></i>
-            </div>
-            <div class="risk-ring" aria-label="Risk score preview">
-              <span data-score-output>92%</span>
-              <small>risk</small>
-            </div>
-            <div class="phone-card is-active" data-phone-card>
-              <small>Message</small>
-              <strong>Very likely scam</strong>
-              <p>They ask for card details to claim a prize.</p>
-            </div>
-            <div class="phone-card" data-phone-card>
-              <small>Call</small>
-              <strong>Stop and verify</strong>
-              <p>They asked for a code and said not to tell anyone.</p>
-            </div>
-            <div class="phone-card" data-phone-card>
-              <small>Payment</small>
-              <strong>High risk</strong>
-              <p>Gift cards and crypto are common scam payment requests.</p>
-            </div>
-            <button class="panic-button" type="button">
-              <i data-lucide="octagon-alert"></i>
-              I THINK THIS IS A SCAM
-            </button>
-            <div class="quick-list">
-              <span><i data-lucide="phone"></i> Call checklist</span>
-              <span><i data-lucide="message-square-text"></i> Message check</span>
-              <span><i data-lucide="life-buoy"></i> Recovery guide</span>
-            </div>
+        <div class="phone-wrap reveal">
+          <div class="phone-frame" data-tilt>
+            <img src="./assets/app-home.png" alt="Shield Our Elders app home screen" />
+          </div>
+          <div class="screen-note note-red">
+            <span>Emergency</span>
+            <strong>Big red button first.</strong>
+          </div>
+          <div class="screen-note note-green">
+            <span>Safe next step</span>
+            <strong>Call a trusted person.</strong>
           </div>
         </div>
+
         <div class="section-copy reveal">
-          <p class="eyebrow">The app concept</p>
-          <h2>Built for the moment when someone feels rushed.</h2>
+          <p class="eyebrow">The app</p>
+          <h2>One clear path when panic hits.</h2>
           <p>
-            Large type, plain language, one main action, and a trusted contact path. The app explains why something looks risky.
+            Large buttons. Plain words. No shame. The app explains what feels
+            suspicious and gives the next safest move.
           </p>
-          <div class="feature-list">
-            <span><i data-lucide="message-square-warning"></i> Message and screenshot checks</span>
-            <span><i data-lucide="phone-forwarded"></i> Call checklist</span>
-            <span><i data-lucide="scan-qr-code"></i> QR and link preview</span>
-            <span><i data-lucide="mic"></i> Voicemail transcript review</span>
+          <div class="decision-demo" aria-label="Example app result">
+            <div>
+              <span>Message check</span>
+              <strong data-demo-title>Very likely scam</strong>
+              <p data-demo-copy>Prize claim asks for credit card details.</p>
+            </div>
+            <button type="button" data-demo-button>
+              <i data-lucide="refresh-cw"></i>
+              Next example
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="video-band" aria-labelledby="video-title">
+      <section class="checks" id="checks">
+        <div class="checks-heading reveal">
+          <p class="eyebrow">What it checks</p>
+          <h2>Made for the scams people actually see.</h2>
+        </div>
+        <div class="check-grid">
+          <article class="check-tile reveal">
+            <i data-lucide="message-square-text"></i>
+            <span>Messages</span>
+            <strong>Texts, emails, screenshots.</strong>
+          </article>
+          <article class="check-tile reveal">
+            <i data-lucide="phone-incoming"></i>
+            <span>Calls</span>
+            <strong>Money, secrecy, codes, threats.</strong>
+          </article>
+          <article class="check-tile reveal">
+            <i data-lucide="link"></i>
+            <span>Links</span>
+            <strong>Look before tapping.</strong>
+          </article>
+          <article class="check-tile reveal">
+            <i data-lucide="scan-qr-code"></i>
+            <span>QR codes</span>
+            <strong>Preview the destination first.</strong>
+          </article>
+          <article class="check-tile reveal">
+            <i data-lucide="credit-card"></i>
+            <span>Payments</span>
+            <strong>Gift cards, crypto, wires.</strong>
+          </article>
+          <article class="check-tile reveal">
+            <i data-lucide="audio-lines"></i>
+            <span>Voicemail</span>
+            <strong>Transcribe and highlight pressure.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="story" id="plan">
+        <div class="photo-panel reveal" data-tilt>
+          <img
+            src="https://images.unsplash.com/photo-1758686254118-cbcf8e32bafe?auto=format&fit=crop&w=1500&q=84"
+            alt="Older adults looking at a phone together"
+          />
+          <div class="photo-caption">
+            <span>Not fear</span>
+            <strong>Give people a script they can use.</strong>
+          </div>
+        </div>
+        <div class="steps reveal">
+          <p class="eyebrow">The habit</p>
+          <h2>Stop. Check. Ask. Recover.</h2>
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <strong>End the pressure.</strong>
+                <p>Hang up. Do not click. Do not send money.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Check the warning signs.</strong>
+                <p>Codes, secrecy, fake urgency, unusual payment requests.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Ask a trusted person.</strong>
+                <p>Call family, a caregiver, or the official company number.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Recover without getting tricked again.</strong>
+                <p>Bank, passwords, reports, and recovery scam warnings.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="video-band" aria-labelledby="workshop-title">
         <video autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/47021/47021-thumb-720-0.jpg">
           <source src="https://assets.mixkit.co/videos/47021/47021-720.mp4" type="video/mp4" />
         </video>
         <div class="video-shade" aria-hidden="true"></div>
         <div class="video-copy reveal">
-          <p class="eyebrow">Human support</p>
-          <h2 id="video-title">Made for senior centers, libraries, families, and caregivers.</h2>
-          <p>Real examples. Calm scripts. Materials people can keep.</p>
+          <p class="eyebrow">For real rooms</p>
+          <h2 id="workshop-title">Senior centers, libraries, families, and caregivers.</h2>
+          <p>Short lessons. Real examples. A plan people can keep.</p>
         </div>
       </section>
 
-      <section class="section impact" id="impact">
-        <div class="section-copy reveal">
+      <section class="impact" id="impact">
+        <div class="impact-copy reveal">
           <p class="eyebrow">Target impact</p>
-          <h2>Measure confidence, not just attendance.</h2>
+          <h2>Confidence should go up every visit.</h2>
           <p>
-            Repeated visits make it possible to track learning, retention, and whether people actually use the safety plan.
+            The program tracks practice scores, recovery knowledge, and whether
+            every participant leaves with a trusted-contact plan.
           </p>
         </div>
-        <div class="stats reveal" aria-label="Project target metrics">
-          <div data-tilt>
+        <div class="metrics reveal">
+          <article data-tilt>
             <strong data-count="5">0</strong>
             <span>anchor sites</span>
-          </div>
-          <div data-tilt>
+          </article>
+          <article data-tilt>
             <strong data-count="250">0</strong>
             <span>seniors reached</span>
-          </div>
-          <div data-tilt>
+          </article>
+          <article data-tilt>
             <strong data-count="35">0</strong>
             <span>% score lift</span>
-          </div>
-          <div data-tilt>
+          </article>
+          <article data-tilt>
             <strong data-count="75">0</strong>
             <span>wallet cards</span>
-          </div>
+          </article>
         </div>
-      </section>
-
-      <section class="proof-grid">
-        <article class="proof-photo reveal" data-tilt>
-          <img
-            src="https://images.unsplash.com/photo-1758691032057-311433e71225?auto=format&fit=crop&w=1300&q=84"
-            alt="Older adult using a phone and payment card"
-          />
-        </article>
-        <article class="proof-copy reveal">
-          <p class="eyebrow">What people leave with</p>
-          <h2>A safety plan they can use the same day.</h2>
-          <ul>
-            <li><i data-lucide="user-round-check"></i> One trusted person to call before sending money.</li>
-            <li><i data-lucide="badge-check"></i> One family phrase for emergency calls.</li>
-            <li><i data-lucide="phone-off"></i> One script for ending pressure calls.</li>
-            <li><i data-lucide="clipboard-check"></i> One recovery guide if something already happened.</li>
-          </ul>
-        </article>
       </section>
 
       <section class="cta" id="bring">
-        <video autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/13322/13322-thumb-720-0.jpg" aria-hidden="true">
-          <source src="https://assets.mixkit.co/videos/13322/13322-720.mp4" type="video/mp4" />
-        </video>
-        <div class="cta-shade" aria-hidden="true"></div>
         <div class="cta-inner reveal">
           <p class="eyebrow">Bring Shield Our Elders to your site</p>
           <h2>One workshop starts the habit. Repeated visits make it stick.</h2>
