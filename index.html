@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shield Our Elders helps older adults pause, check suspicious calls or messages, and ask a trusted person before money moves."
+      content="Shield Our Elders is a student-led scam safety app for older adults and families."
     />
     <meta property="og:title" content="Shield Our Elders" />
     <meta
       property="og:description"
-      content="A calmer way for older adults and families to spot scams before they do damage."
+      content="A simple way to check suspicious calls, texts, links, and payment requests."
     />
     <meta property="og:image" content="./assets/app-home.png" />
     <title>Shield Our Elders</title>
-    <link rel="preconnect" href="https://assets.mixkit.co" />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="./styles.css" />
@@ -29,151 +28,144 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#tools">Tools</a>
         <a href="#check">Check</a>
         <a href="#family">Family</a>
-        <a href="#practice">Practice</a>
       </nav>
 
-      <a class="nav-cta" href="mailto:projectshieldourelders@gmail.com">Contact</a>
+      <a class="nav-cta" href="mailto:projectshieldourelders@gmail.com">Email us</a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="https://assets.mixkit.co/videos/13322/13322-thumb-720-0.jpg"
-        >
-          <source src="https://assets.mixkit.co/videos/13322/13322-720.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-scrim" aria-hidden="true"></div>
-
-        <div class="hero-inner">
-          <p class="eyebrow reveal">Scam safety for older adults</p>
-          <h1 id="hero-title" class="reveal">Don&apos;t send it yet.</h1>
+        <div class="hero-copy-block">
+          <p class="eyebrow reveal">Student-led elder scam prevention</p>
+          <h1 id="hero-title" class="reveal">Check it before you answer.</h1>
           <p class="hero-copy reveal">
-            A calm app for checking suspicious calls, texts, links, and payment
-            requests before money or information leaves your hands.
+            A simple app for older adults and families. Paste a message, answer a
+            few call questions, or ask a trusted person before sending money.
           </p>
           <div class="hero-actions reveal">
             <a class="button primary" href="#check">
-              <i data-lucide="shield-check"></i>
-              See how it works
+              Try a sample check
+              <i data-lucide="arrow-down"></i>
+            </a>
+            <a class="button secondary" href="mailto:projectshieldourelders@gmail.com">
+              Contact the team
             </a>
           </div>
         </div>
 
-        <div class="quiet-alert reveal" aria-label="Example warning">
-          <span>Unknown caller</span>
-          <p>Asked for a code and said not to tell anyone.</p>
-          <strong>Hang up. Verify first.</strong>
+        <div class="hero-photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=84"
+            alt="A phone and laptop on a desk"
+          />
+          <div class="paper-note" aria-label="Example reminder">
+            <span>Before you reply</span>
+            <strong>Stop. Check. Call someone you trust.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Project summary">
+        <p>
+          Made for senior centers, libraries, families, and anyone who has ever
+          wondered, “Is this message real?”
+        </p>
+      </section>
+
+      <section class="section tools-section" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow reveal">What it helps with</p>
+          <h2 id="tools-title" class="reveal">The common scam moments, in plain language.</h2>
+        </div>
+
+        <div class="tool-list">
+          <article class="tool-row reveal">
+            <span><i data-lucide="message-square-text"></i></span>
+            <div>
+              <h3>Messages and screenshots</h3>
+              <p>Paste a text or upload a screenshot. The app explains what looks suspicious.</p>
+            </div>
+          </article>
+          <article class="tool-row reveal">
+            <span><i data-lucide="phone-call"></i></span>
+            <div>
+              <h3>Calls that feel urgent</h3>
+              <p>Answer five yes-or-no questions about money, secrecy, codes, threats, and remote access.</p>
+            </div>
+          </article>
+          <article class="tool-row reveal">
+            <span><i data-lucide="credit-card"></i></span>
+            <div>
+              <h3>Payments</h3>
+              <p>Gift cards, crypto, wire transfers, Zelle, Cash App, and Venmo get a clear warning.</p>
+            </div>
+          </article>
+          <article class="tool-row reveal">
+            <span><i data-lucide="qr-code"></i></span>
+            <div>
+              <h3>Links and QR codes</h3>
+              <p>Check where a link goes before opening it, especially for banks, tolls, and deliveries.</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section check-section" id="check" aria-labelledby="check-title">
-        <div class="section-heading">
-          <p class="eyebrow reveal">Scam Check</p>
-          <h2 id="check-title" class="reveal">A simple answer with a reason.</h2>
-          <p class="section-copy reveal">
-            The app does not just say “scam.” It explains the warning signs in
-            plain language, then gives the next safe step.
+        <div class="sample-copy reveal">
+          <p class="eyebrow">Sample check</p>
+          <h2 id="check-title">What the app says back.</h2>
+          <p>
+            The goal is not to scare people. It gives a clear reason and one
+            safe next step.
           </p>
         </div>
 
-        <div class="check-layout">
-          <div class="phone-shell reveal" data-depth="-0.04">
-            <div class="phone-notch" aria-hidden="true"></div>
-            <img src="./assets/app-home.png" alt="Shield Our Elders app preview" />
+        <div class="sample-card reveal">
+          <div class="message-card" data-message-card>
+            <span data-example-source>Text message</span>
+            <p data-example-message>
+              You won a free iPhone. Send your credit card details to claim.
+            </p>
           </div>
 
-          <div class="check-panel reveal">
-            <div class="message-card" data-message-card>
-              <span data-example-source>Text message</span>
-              <p data-example-message>
-                You won a free iPhone. Send your credit card details to claim.
-              </p>
-            </div>
-
-            <div class="result-card" data-result-card>
-              <span data-risk-label>Likely scam</span>
-              <strong data-risk-title>It asks for private payment info.</strong>
-              <p data-risk-copy>
-                Real prizes do not need your credit card number in a text.
-              </p>
-            </div>
-
-            <button class="text-button" type="button" data-next-example>
-              Try another example
-              <i data-lucide="arrow-right"></i>
-            </button>
+          <div class="result-card" data-result-card>
+            <span data-risk-label>Likely scam</span>
+            <strong data-risk-title>It asks for private payment info.</strong>
+            <p data-risk-copy>Real prizes do not need your credit card number in a text.</p>
           </div>
-        </div>
-      </section>
 
-      <section class="section moments-section" aria-labelledby="moments-title">
-        <div class="section-heading narrow">
-          <p class="eyebrow reveal">What it covers</p>
-          <h2 id="moments-title" class="reveal">Built for the moments that feel rushed.</h2>
-        </div>
-
-        <div class="moment-list">
-          <article class="moment reveal">
-            <i data-lucide="phone-call"></i>
-            <div>
-              <h3>Calls</h3>
-              <p>Money, secrecy, verification codes, remote access, or threats.</p>
-            </div>
-          </article>
-          <article class="moment reveal">
-            <i data-lucide="link"></i>
-            <div>
-              <h3>Links and QR codes</h3>
-              <p>Check first, open later. Especially for banks, deliveries, and tolls.</p>
-            </div>
-          </article>
-          <article class="moment reveal">
-            <i data-lucide="credit-card"></i>
-            <div>
-              <h3>Payments</h3>
-              <p>Gift cards, crypto, wires, and instant apps get a clear pause.</p>
-            </div>
-          </article>
+          <button class="text-button" type="button" data-next-example>
+            Try another example
+            <i data-lucide="refresh-cw"></i>
+          </button>
         </div>
       </section>
 
       <section class="family-section" id="family" aria-labelledby="family-title">
-        <div class="family-media reveal">
-          <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=84"
-            alt="People sitting together around a table"
-          />
+        <div class="phone-preview reveal">
+          <img src="./assets/app-home.png" alt="Shield Our Elders app home screen" />
         </div>
 
         <div class="family-copy reveal">
           <p class="eyebrow">Trusted contact</p>
-          <h2 id="family-title">One tap brings in someone real.</h2>
+          <h2 id="family-title">A second opinion should be one tap away.</h2>
           <p>
-            When something feels wrong, the app helps the user call or text a
-            trusted person instead of staying alone with the pressure.
+            Users can save a daughter, son, caregiver, neighbor, or bank number.
+            When a call feels wrong, the app helps them send this:
           </p>
-          <div class="trusted-note">
-            <span>Text ready</span>
-            <strong>I received a suspicious call. Can you help me verify it?</strong>
-          </div>
+          <blockquote>
+            “I received a suspicious call. Can you help me verify it?”
+          </blockquote>
         </div>
       </section>
 
-      <section class="section practice-section" id="practice" aria-labelledby="practice-title">
+      <section class="section practice-section" aria-labelledby="practice-title">
         <div class="section-heading">
           <p class="eyebrow reveal">Practice</p>
-          <h2 id="practice-title" class="reveal">Short lessons that build confidence.</h2>
-          <p class="section-copy reveal">
-            Realistic examples help seniors notice the warning signs before the
-            real call or message arrives.
-          </p>
+          <h2 id="practice-title" class="reveal">Short examples. No lecture.</h2>
         </div>
 
         <div class="lesson-row">
@@ -199,11 +191,11 @@
 
       <section class="final-section">
         <div class="final-copy reveal">
-          <p class="eyebrow">Start with one pause</p>
-          <h2>Help an older adult check before they act.</h2>
+          <p class="eyebrow">Bring it to your group</p>
+          <h2>Start with one person and one safer decision.</h2>
           <a class="button primary" href="mailto:projectshieldourelders@gmail.com">
             <i data-lucide="mail"></i>
-            Start a conversation
+            Email the project
           </a>
         </div>
       </section>
@@ -211,11 +203,9 @@
 
     <footer class="site-footer">
       <span>Shield Our Elders</span>
-      <span>Student-led scam defense for older adults and families.</span>
+      <span>Student-led scam safety for older adults and families.</span>
       <span>
-        Real media from
-        <a href="https://mixkit.co/free-stock-video/" target="_blank" rel="noreferrer">Mixkit</a>
-        and
+        Photo from
         <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a>.
       </span>
     </footer>
