@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="progress" aria-hidden="true"><span data-progress></span></div>
+    <div class="progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Shield Our Elders home">
@@ -29,9 +29,9 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#check">Scam Check</a>
+        <a href="#check">Check</a>
         <a href="#family">Family</a>
-        <a href="#learn">Learn</a>
+        <a href="#practice">Practice</a>
       </nav>
 
       <a class="nav-cta" href="mailto:projectshieldourelders@gmail.com">Contact</a>
@@ -55,77 +55,43 @@
           <p class="eyebrow reveal">Scam safety for older adults</p>
           <h1 id="hero-title" class="reveal">Don&apos;t send it yet.</h1>
           <p class="hero-copy reveal">
-            Shield Our Elders gives seniors one calm place to check a call,
-            message, link, payment request, or voicemail before they act.
+            A calm app for checking suspicious calls, texts, links, and payment
+            requests before money or information leaves your hands.
           </p>
-
           <div class="hero-actions reveal">
             <a class="button primary" href="#check">
               <i data-lucide="shield-check"></i>
-              See the check
+              See how it works
             </a>
-            <a class="button ghost" href="#family">How families help</a>
           </div>
         </div>
 
-        <div class="hero-card reveal" aria-label="Example warning">
-          <div class="call-strip">
-            <span>Incoming call</span>
-            <strong>Unknown number</strong>
-          </div>
-          <div class="risk-meter" aria-hidden="true">
-            <span></span>
-          </div>
-          <p>They asked for a code and said not to tell anyone.</p>
-          <b>Stop. Call your trusted contact.</b>
-        </div>
-
-        <a class="scroll-cue" href="#check" aria-label="Scroll to next section">
-          <span></span>
-        </a>
-      </section>
-
-      <section class="ticker" aria-label="Scam examples">
-        <div>
-          <span>Fake Medicare calls</span>
-          <span>Gift card payments</span>
-          <span>Package delivery texts</span>
-          <span>Bank login links</span>
-          <span>AI voice pressure</span>
-          <span>Remote access requests</span>
-          <span>Verification code traps</span>
+        <div class="quiet-alert reveal" aria-label="Example warning">
+          <span>Unknown caller</span>
+          <p>Asked for a code and said not to tell anyone.</p>
+          <strong>Hang up. Verify first.</strong>
         </div>
       </section>
 
       <section class="section check-section" id="check" aria-labelledby="check-title">
-        <div class="section-kicker reveal">Main check</div>
         <div class="section-heading">
-          <h2 id="check-title" class="reveal">A warning that explains itself.</h2>
-          <p class="reveal">
-            No mystery score. No scary wall of text. The app points out the exact
-            signals and gives a next step.
+          <p class="eyebrow reveal">Scam Check</p>
+          <h2 id="check-title" class="reveal">A simple answer with a reason.</h2>
+          <p class="section-copy reveal">
+            The app does not just say “scam.” It explains the warning signs in
+            plain language, then gives the next safe step.
           </p>
         </div>
 
-        <div class="demo-grid">
-          <div class="phone-shell reveal" data-depth="-0.05">
-            <div class="phone-top">
-              <span></span>
-            </div>
+        <div class="check-layout">
+          <div class="phone-shell reveal" data-depth="-0.04">
+            <div class="phone-notch" aria-hidden="true"></div>
             <img src="./assets/app-home.png" alt="Shield Our Elders app preview" />
           </div>
 
-          <div class="live-panel reveal">
-            <div class="panel-top">
-              <span>Live example</span>
-              <button type="button" data-next-example>
-                <i data-lucide="refresh-cw"></i>
-                Try another
-              </button>
-            </div>
-
+          <div class="check-panel reveal">
             <div class="message-card" data-message-card>
-              <small data-example-source>Text message</small>
+              <span data-example-source>Text message</span>
               <p data-example-message>
                 You won a free iPhone. Send your credit card details to claim.
               </p>
@@ -138,151 +104,103 @@
                 Real prizes do not need your credit card number in a text.
               </p>
             </div>
+
+            <button class="text-button" type="button" data-next-example>
+              Try another example
+              <i data-lucide="arrow-right"></i>
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="split-scene pressure-scene" aria-labelledby="pressure-title">
-        <div class="scene-media reveal">
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=84"
-            alt="A person using a phone beside a laptop"
-          />
+      <section class="section moments-section" aria-labelledby="moments-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow reveal">What it covers</p>
+          <h2 id="moments-title" class="reveal">Built for the moments that feel rushed.</h2>
         </div>
-        <div class="scene-copy reveal">
-          <p class="eyebrow">Calls</p>
-          <h2 id="pressure-title">When a caller pushes, the app slows things down.</h2>
-          <ul class="signal-list">
-            <li><i data-lucide="banknote"></i> Asked for money</li>
-            <li><i data-lucide="lock-keyhole"></i> Asked for secrecy</li>
-            <li><i data-lucide="key-round"></i> Asked for a code</li>
-            <li><i data-lucide="monitor-up"></i> Wanted remote access</li>
-            <li><i data-lucide="siren"></i> Threatened arrest or closure</li>
-          </ul>
-        </div>
-      </section>
 
-      <section class="feature-river" aria-label="Product features">
-        <article class="river-card reveal">
-          <span>01</span>
-          <h3>Screenshot check</h3>
-          <p>Upload a text, email, or social post. The app explains what looks off.</p>
-        </article>
-        <article class="river-card reveal">
-          <span>02</span>
-          <h3>Link and QR guard</h3>
-          <p>Paste or scan first. Open only after the warning makes sense.</p>
-        </article>
-        <article class="river-card reveal">
-          <span>03</span>
-          <h3>Payment pause</h3>
-          <p>Gift cards, crypto, wires, and instant apps get a harder stop.</p>
-        </article>
-        <article class="river-card reveal">
-          <span>04</span>
-          <h3>Recovery steps</h3>
-          <p>Bank, card, password, report. Clear steps after something happens.</p>
-        </article>
+        <div class="moment-list">
+          <article class="moment reveal">
+            <i data-lucide="phone-call"></i>
+            <div>
+              <h3>Calls</h3>
+              <p>Money, secrecy, verification codes, remote access, or threats.</p>
+            </div>
+          </article>
+          <article class="moment reveal">
+            <i data-lucide="link"></i>
+            <div>
+              <h3>Links and QR codes</h3>
+              <p>Check first, open later. Especially for banks, deliveries, and tolls.</p>
+            </div>
+          </article>
+          <article class="moment reveal">
+            <i data-lucide="credit-card"></i>
+            <div>
+              <h3>Payments</h3>
+              <p>Gift cards, crypto, wires, and instant apps get a clear pause.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="family-section" id="family" aria-labelledby="family-title">
-        <div class="family-bg" aria-hidden="true">
+        <div class="family-media reveal">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=84"
-            alt=""
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=84"
+            alt="People sitting together around a table"
           />
         </div>
 
         <div class="family-copy reveal">
           <p class="eyebrow">Trusted contact</p>
-          <h2 id="family-title">One tap can bring in a real person.</h2>
+          <h2 id="family-title">One tap brings in someone real.</h2>
           <p>
-            The safest answer is often simple: call a daughter, son, caregiver,
-            neighbor, or bank using a number the user already trusts.
+            When something feels wrong, the app helps the user call or text a
+            trusted person instead of staying alone with the pressure.
           </p>
-        </div>
-
-        <div class="contact-stack reveal">
-          <div class="contact-bubble">
+          <div class="trusted-note">
             <span>Text ready</span>
-            <p>I received a suspicious call. Can you help me verify it?</p>
-          </div>
-          <div class="contact-actions">
-            <button type="button"><i data-lucide="phone"></i> Call daughter</button>
-            <button type="button"><i data-lucide="message-circle"></i> Text son</button>
-            <button type="button"><i data-lucide="building-2"></i> Call bank</button>
+            <strong>I received a suspicious call. Can you help me verify it?</strong>
           </div>
         </div>
       </section>
 
-      <section class="learn-section section" id="learn" aria-labelledby="learn-title">
-        <div class="section-kicker reveal">Practice</div>
-        <div class="section-heading compact">
-          <h2 id="learn-title" class="reveal">Small lessons. Better instincts.</h2>
-          <p class="reveal">
-            Seniors practice real examples until the warning signs feel familiar.
+      <section class="section practice-section" id="practice" aria-labelledby="practice-title">
+        <div class="section-heading">
+          <p class="eyebrow reveal">Practice</p>
+          <h2 id="practice-title" class="reveal">Short lessons that build confidence.</h2>
+          <p class="section-copy reveal">
+            Realistic examples help seniors notice the warning signs before the
+            real call or message arrives.
           </p>
         </div>
 
-        <div class="lesson-grid">
-          <button class="lesson-card reveal is-active" type="button" data-lesson="Bank scam">
-            <span><i data-lucide="landmark"></i></span>
-            <strong>Bank scam</strong>
-            <small>Fake account alert</small>
+        <div class="lesson-row">
+          <button class="lesson-button reveal is-active" type="button" data-lesson="Bank scam">
+            Bank scam
           </button>
-          <button class="lesson-card reveal" type="button" data-lesson="Grandparent scam">
-            <span><i data-lucide="heart-handshake"></i></span>
-            <strong>Grandparent scam</strong>
-            <small>Urgent family story</small>
+          <button class="lesson-button reveal" type="button" data-lesson="Grandparent scam">
+            Grandparent scam
           </button>
-          <button class="lesson-card reveal" type="button" data-lesson="Tech support">
-            <span><i data-lucide="laptop"></i></span>
-            <strong>Tech support</strong>
-            <small>Remote access trick</small>
+          <button class="lesson-button reveal" type="button" data-lesson="Tech support">
+            Tech support
           </button>
         </div>
 
-        <div class="quiz-demo reveal" aria-live="polite">
-          <div>
-            <span>Practice question</span>
-            <p data-lesson-prompt>
-              Your bank account is locked. Tap this link now to confirm your login.
-            </p>
-          </div>
-          <div class="quiz-buttons" aria-label="Practice answers">
-            <button type="button">Safe</button>
-            <button type="button" class="selected">Suspicious</button>
-            <button type="button">Scam</button>
-          </div>
+        <div class="practice-card reveal" aria-live="polite">
+          <span>Practice question</span>
+          <p data-lesson-prompt>
+            Your bank account is locked. Tap this link now to confirm your login.
+          </p>
           <strong data-lesson-answer>Suspicious link. Call the bank from the card.</strong>
         </div>
       </section>
 
-      <section class="stats-section" aria-label="Project goals">
-        <div class="stat reveal">
-          <strong data-count="5">0</strong>
-          <span>community sites</span>
-        </div>
-        <div class="stat reveal">
-          <strong data-count="250">0</strong>
-          <span>older adults reached</span>
-        </div>
-        <div class="stat reveal">
-          <strong data-count="35">0</strong>
-          <span>confidence lift goal</span>
-        </div>
-      </section>
-
       <section class="final-section">
-        <div class="final-media reveal">
-          <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=84"
-            alt="Paperwork and a calculator on a desk"
-          />
-        </div>
         <div class="final-copy reveal">
-          <p class="eyebrow">Bring it to a workshop</p>
-          <h2>Give someone a second before a scam gets the first move.</h2>
+          <p class="eyebrow">Start with one pause</p>
+          <h2>Help an older adult check before they act.</h2>
           <a class="button primary" href="mailto:projectshieldourelders@gmail.com">
             <i data-lucide="mail"></i>
             Start a conversation
