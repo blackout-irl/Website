@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shield Our Elders is a scam safety app and workshop program that helps older adults pause, verify, and recover with confidence."
+      content="Shield Our Elders helps older adults pause, check suspicious calls or messages, and ask a trusted person before money moves."
     />
+    <meta property="og:title" content="Shield Our Elders" />
+    <meta
+      property="og:description"
+      content="A calmer way for older adults and families to spot scams before they do damage."
+    />
+    <meta property="og:image" content="./assets/app-home.png" />
     <title>Shield Our Elders</title>
     <link rel="preconnect" href="https://assets.mixkit.co" />
     <link rel="preconnect" href="https://images.unsplash.com" />
@@ -14,51 +20,22 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="loader" aria-hidden="true">
-      <div>
-        <span>Shield Our Elders</span>
-        <strong data-load-count>00</strong>
-      </div>
-    </div>
+    <div class="progress" aria-hidden="true"><span data-progress></span></div>
 
-    <div class="intro-gate" data-start-gate>
-      <div class="intro-mark" aria-hidden="true">
-        <span>Shield</span>
-        <i></i>
-        <span>Elders</span>
-      </div>
-      <p>The Pause Lab</p>
-      <button type="button" data-start-button>Click to begin</button>
-      <small>Scroll to navigate</small>
-    </div>
-
-    <div class="progress" aria-hidden="true"><span></span></div>
-
-    <header class="lab-header">
+    <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Shield Our Elders home">
         <img src="./assets/icon.png" alt="" />
         <span>Shield Our Elders</span>
       </a>
 
-      <nav class="chapter-nav" aria-label="Story chapters">
-        <a href="#chapter-pressure" data-chapter-link="1">I</a>
-        <a href="#chapter-message" data-chapter-link="2">II</a>
-        <a href="#chapter-payment" data-chapter-link="3">III</a>
-        <a href="#chapter-recovery" data-chapter-link="4">IV</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#check">Scam Check</a>
+        <a href="#family">Family</a>
+        <a href="#learn">Learn</a>
       </nav>
 
-      <a class="contact-link" href="mailto:projectshieldourelders@gmail.com">Contact</a>
+      <a class="nav-cta" href="mailto:projectshieldourelders@gmail.com">Contact</a>
     </header>
-
-    <aside class="story-panel" aria-live="polite">
-      <span data-current-kicker>Scroll to navigate</span>
-      <strong data-current-roman>I</strong>
-      <p data-current-title>Pressure check</p>
-    </aside>
-
-    <button class="quiet-toggle" type="button" data-sound-toggle aria-pressed="true">
-      Quiet mode
-    </button>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -72,240 +49,241 @@
         >
           <source src="https://assets.mixkit.co/videos/13322/13322-720.mp4" type="video/mp4" />
         </video>
-        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
 
-        <div class="hero-center reveal">
-          <p class="eyebrow">A guided scam defense experience</p>
-          <h1 id="hero-title">The Pause Lab</h1>
-          <p>
-            Scams win by rushing the room. This gives older adults one calm move:
-            stop, check, and call someone trusted.
+        <div class="hero-inner">
+          <p class="eyebrow reveal">Scam safety for older adults</p>
+          <h1 id="hero-title" class="reveal">Don&apos;t send it yet.</h1>
+          <p class="hero-copy reveal">
+            Shield Our Elders gives seniors one calm place to check a call,
+            message, link, payment request, or voicemail before they act.
           </p>
-          <a class="start-link" href="#chapter-pressure">
-            <i data-lucide="arrow-down"></i>
-            Enter the lab
-          </a>
+
+          <div class="hero-actions reveal">
+            <a class="button primary" href="#check">
+              <i data-lucide="shield-check"></i>
+              See the check
+            </a>
+            <a class="button ghost" href="#family">How families help</a>
+          </div>
         </div>
 
-        <div class="hero-index" aria-label="Story sections">
-          <a href="#chapter-pressure"><span>I</span> Pressure</a>
-          <a href="#chapter-message"><span>II</span> Message</a>
-          <a href="#chapter-payment"><span>III</span> Payment</a>
-          <a href="#chapter-recovery"><span>IV</span> Recovery</a>
+        <div class="hero-card reveal" aria-label="Example warning">
+          <div class="call-strip">
+            <span>Incoming call</span>
+            <strong>Unknown number</strong>
+          </div>
+          <div class="risk-meter" aria-hidden="true">
+            <span></span>
+          </div>
+          <p>They asked for a code and said not to tell anyone.</p>
+          <b>Stop. Call your trusted contact.</b>
+        </div>
+
+        <a class="scroll-cue" href="#check" aria-label="Scroll to next section">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="ticker" aria-label="Scam examples">
+        <div>
+          <span>Fake Medicare calls</span>
+          <span>Gift card payments</span>
+          <span>Package delivery texts</span>
+          <span>Bank login links</span>
+          <span>AI voice pressure</span>
+          <span>Remote access requests</span>
+          <span>Verification code traps</span>
         </div>
       </section>
 
-      <section
-        class="lab-chapter"
-        id="chapter-pressure"
-        data-chapter="1"
-        data-roman="I"
-        data-title="Pressure check"
-        data-kicker="Five questions"
-      >
-        <div class="chapter-stage">
-          <div class="chapter-media">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=84"
-              alt=""
-            />
-          </div>
-          <div class="chapter-shade" aria-hidden="true"></div>
-          <span class="chapter-number" aria-hidden="true">I</span>
-
-          <div class="chapter-content">
-            <div class="chapter-copy reveal">
-              <p class="eyebrow">Five questions</p>
-              <h2>The rush is the signal.</h2>
-              <p>
-                Money, secrecy, codes, remote access, threats. If one shows up,
-                the safest next move is to pause.
-              </p>
-            </div>
-
-            <div class="artifact pressure-artifact reveal" data-depth="0.1">
-              <div class="artifact-top">
-                <span>Incoming call</span>
-                <strong>Unknown number</strong>
-              </div>
-              <div class="question-stack">
-                <span>Asked for money</span>
-                <span>Asked for secrecy</span>
-                <span>Asked for a code</span>
-                <span>Threatened arrest</span>
-                <span>Wanted remote access</span>
-              </div>
-              <div class="artifact-result">
-                <small>Shield says</small>
-                <b>Hang up. Verify first.</b>
-              </div>
-            </div>
-          </div>
+      <section class="section check-section" id="check" aria-labelledby="check-title">
+        <div class="section-kicker reveal">Main check</div>
+        <div class="section-heading">
+          <h2 id="check-title" class="reveal">A warning that explains itself.</h2>
+          <p class="reveal">
+            No mystery score. No scary wall of text. The app points out the exact
+            signals and gives a next step.
+          </p>
         </div>
-      </section>
 
-      <section
-        class="lab-chapter"
-        id="chapter-message"
-        data-chapter="2"
-        data-roman="II"
-        data-title="Message check"
-        data-kicker="Screenshot or text"
-      >
-        <div class="chapter-stage">
-          <div class="chapter-media">
-            <video autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/47021/47021-thumb-720-0.jpg">
-              <source src="https://assets.mixkit.co/videos/47021/47021-720.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="chapter-shade" aria-hidden="true"></div>
-          <span class="chapter-number" aria-hidden="true">II</span>
-
-          <div class="chapter-content reverse">
-            <div class="phone-artifact reveal" data-depth="-0.08">
-              <img src="./assets/app-home.png" alt="Shield Our Elders app home screen" />
-              <div class="phone-readout">
-                <span>Message check</span>
-                <strong data-result-title>Very likely scam</strong>
-                <p data-result-copy>Prize claim asks for credit card details.</p>
-              </div>
+        <div class="demo-grid">
+          <div class="phone-shell reveal" data-depth="-0.05">
+            <div class="phone-top">
+              <span></span>
             </div>
+            <img src="./assets/app-home.png" alt="Shield Our Elders app preview" />
+          </div>
 
-            <div class="chapter-copy reveal">
-              <p class="eyebrow">Screenshot or text</p>
-              <h2>Plain reasons beat vague warnings.</h2>
-              <p>
-                The app explains what feels off: urgency, fake charges, payment
-                pressure, links, and personal information requests.
-              </p>
-              <button class="inline-action" type="button" data-case-next>
-                <i data-lucide="rotate-cw"></i>
-                Change example
+          <div class="live-panel reveal">
+            <div class="panel-top">
+              <span>Live example</span>
+              <button type="button" data-next-example>
+                <i data-lucide="refresh-cw"></i>
+                Try another
               </button>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section
-        class="lab-chapter"
-        id="chapter-payment"
-        data-chapter="3"
-        data-roman="III"
-        data-title="Payment stop"
-        data-kicker="Before money moves"
-      >
-        <div class="chapter-stage warm">
-          <div class="chapter-media">
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=84"
-              alt=""
-            />
-          </div>
-          <div class="chapter-shade" aria-hidden="true"></div>
-          <span class="chapter-number" aria-hidden="true">III</span>
-
-          <div class="chapter-content">
-            <div class="chapter-copy reveal">
-              <p class="eyebrow">Before money moves</p>
-              <h2>No gift cards. No panic transfers.</h2>
-              <p>
-                Gift cards, crypto, wires, Zelle, Cash App, and Venmo are hard
-                to reverse. The app slows the decision down.
+            <div class="message-card" data-message-card>
+              <small data-example-source>Text message</small>
+              <p data-example-message>
+                You won a free iPhone. Send your credit card details to claim.
               </p>
             </div>
 
-            <div class="artifact payment-artifact reveal" data-depth="0.12">
-              <div class="lab-label">
-                <span>Payment risk</span>
-                <strong>High</strong>
-              </div>
-              <ul>
-                <li><i data-lucide="badge-alert"></i> Gift card</li>
-                <li><i data-lucide="badge-alert"></i> Crypto</li>
-                <li><i data-lucide="badge-alert"></i> Wire transfer</li>
-                <li><i data-lucide="badge-alert"></i> Instant app</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="lab-chapter"
-        id="chapter-recovery"
-        data-chapter="4"
-        data-roman="IV"
-        data-title="Recovery guide"
-        data-kicker="After a mistake"
-      >
-        <div class="chapter-stage recovery">
-          <div class="chapter-media">
-            <img
-              src="https://images.unsplash.com/photo-1758686254118-cbcf8e32bafe?auto=format&fit=crop&w=1800&q=84"
-              alt=""
-            />
-          </div>
-          <div class="chapter-shade" aria-hidden="true"></div>
-          <span class="chapter-number" aria-hidden="true">IV</span>
-
-          <div class="chapter-content reverse">
-            <div class="artifact recovery-artifact reveal" data-depth="-0.08">
-              <div class="lab-label">
-                <span>Trusted contact</span>
-                <strong>One tap</strong>
-              </div>
-              <p>I received a suspicious call. Can you help me verify it?</p>
-              <ol>
-                <li>Call the bank</li>
-                <li>Freeze the card</li>
-                <li>Change passwords</li>
-                <li>Report it</li>
-              </ol>
-            </div>
-
-            <div class="chapter-copy reveal">
-              <p class="eyebrow">After a mistake</p>
-              <h2>Recovery should feel direct, not shameful.</h2>
-              <p>
-                The guide gives clear steps and warns about recovery scams,
-                because a second scam often follows the first.
+            <div class="result-card" data-result-card>
+              <span data-risk-label>Likely scam</span>
+              <strong data-risk-title>It asks for private payment info.</strong>
+              <p data-risk-copy>
+                Real prizes do not need your credit card number in a text.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="proof-section" aria-labelledby="proof-title">
-        <div class="proof-copy reveal">
-          <p class="eyebrow">For families and community sites</p>
-          <h2 id="proof-title">Practice the moment before it matters.</h2>
+      <section class="split-scene pressure-scene" aria-labelledby="pressure-title">
+        <div class="scene-media reveal">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=84"
+            alt="A person using a phone beside a laptop"
+          />
         </div>
-        <div class="metrics reveal">
-          <article>
-            <strong data-count="5">0</strong>
-            <span>anchor sites</span>
-          </article>
-          <article>
-            <strong data-count="250">0</strong>
-            <span>seniors reached</span>
-          </article>
-          <article>
-            <strong data-count="35">0</strong>
-            <span>% score lift</span>
-          </article>
-          <article>
-            <strong data-count="75">0</strong>
-            <span>wallet cards</span>
-          </article>
+        <div class="scene-copy reveal">
+          <p class="eyebrow">Calls</p>
+          <h2 id="pressure-title">When a caller pushes, the app slows things down.</h2>
+          <ul class="signal-list">
+            <li><i data-lucide="banknote"></i> Asked for money</li>
+            <li><i data-lucide="lock-keyhole"></i> Asked for secrecy</li>
+            <li><i data-lucide="key-round"></i> Asked for a code</li>
+            <li><i data-lucide="monitor-up"></i> Wanted remote access</li>
+            <li><i data-lucide="siren"></i> Threatened arrest or closure</li>
+          </ul>
         </div>
       </section>
 
-      <section class="finale">
-        <div class="finale-inner reveal">
-          <p class="eyebrow">Bring it to your site</p>
-          <h2>The first win is getting one person to pause.</h2>
-          <a class="start-link light" href="mailto:projectshieldourelders@gmail.com">
+      <section class="feature-river" aria-label="Product features">
+        <article class="river-card reveal">
+          <span>01</span>
+          <h3>Screenshot check</h3>
+          <p>Upload a text, email, or social post. The app explains what looks off.</p>
+        </article>
+        <article class="river-card reveal">
+          <span>02</span>
+          <h3>Link and QR guard</h3>
+          <p>Paste or scan first. Open only after the warning makes sense.</p>
+        </article>
+        <article class="river-card reveal">
+          <span>03</span>
+          <h3>Payment pause</h3>
+          <p>Gift cards, crypto, wires, and instant apps get a harder stop.</p>
+        </article>
+        <article class="river-card reveal">
+          <span>04</span>
+          <h3>Recovery steps</h3>
+          <p>Bank, card, password, report. Clear steps after something happens.</p>
+        </article>
+      </section>
+
+      <section class="family-section" id="family" aria-labelledby="family-title">
+        <div class="family-bg" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=84"
+            alt=""
+          />
+        </div>
+
+        <div class="family-copy reveal">
+          <p class="eyebrow">Trusted contact</p>
+          <h2 id="family-title">One tap can bring in a real person.</h2>
+          <p>
+            The safest answer is often simple: call a daughter, son, caregiver,
+            neighbor, or bank using a number the user already trusts.
+          </p>
+        </div>
+
+        <div class="contact-stack reveal">
+          <div class="contact-bubble">
+            <span>Text ready</span>
+            <p>I received a suspicious call. Can you help me verify it?</p>
+          </div>
+          <div class="contact-actions">
+            <button type="button"><i data-lucide="phone"></i> Call daughter</button>
+            <button type="button"><i data-lucide="message-circle"></i> Text son</button>
+            <button type="button"><i data-lucide="building-2"></i> Call bank</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="learn-section section" id="learn" aria-labelledby="learn-title">
+        <div class="section-kicker reveal">Practice</div>
+        <div class="section-heading compact">
+          <h2 id="learn-title" class="reveal">Small lessons. Better instincts.</h2>
+          <p class="reveal">
+            Seniors practice real examples until the warning signs feel familiar.
+          </p>
+        </div>
+
+        <div class="lesson-grid">
+          <button class="lesson-card reveal is-active" type="button" data-lesson="Bank scam">
+            <span><i data-lucide="landmark"></i></span>
+            <strong>Bank scam</strong>
+            <small>Fake account alert</small>
+          </button>
+          <button class="lesson-card reveal" type="button" data-lesson="Grandparent scam">
+            <span><i data-lucide="heart-handshake"></i></span>
+            <strong>Grandparent scam</strong>
+            <small>Urgent family story</small>
+          </button>
+          <button class="lesson-card reveal" type="button" data-lesson="Tech support">
+            <span><i data-lucide="laptop"></i></span>
+            <strong>Tech support</strong>
+            <small>Remote access trick</small>
+          </button>
+        </div>
+
+        <div class="quiz-demo reveal" aria-live="polite">
+          <div>
+            <span>Practice question</span>
+            <p data-lesson-prompt>
+              Your bank account is locked. Tap this link now to confirm your login.
+            </p>
+          </div>
+          <div class="quiz-buttons" aria-label="Practice answers">
+            <button type="button">Safe</button>
+            <button type="button" class="selected">Suspicious</button>
+            <button type="button">Scam</button>
+          </div>
+          <strong data-lesson-answer>Suspicious link. Call the bank from the card.</strong>
+        </div>
+      </section>
+
+      <section class="stats-section" aria-label="Project goals">
+        <div class="stat reveal">
+          <strong data-count="5">0</strong>
+          <span>community sites</span>
+        </div>
+        <div class="stat reveal">
+          <strong data-count="250">0</strong>
+          <span>older adults reached</span>
+        </div>
+        <div class="stat reveal">
+          <strong data-count="35">0</strong>
+          <span>confidence lift goal</span>
+        </div>
+      </section>
+
+      <section class="final-section">
+        <div class="final-media reveal">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=84"
+            alt="Paperwork and a calculator on a desk"
+          />
+        </div>
+        <div class="final-copy reveal">
+          <p class="eyebrow">Bring it to a workshop</p>
+          <h2>Give someone a second before a scam gets the first move.</h2>
+          <a class="button primary" href="mailto:projectshieldourelders@gmail.com">
             <i data-lucide="mail"></i>
             Start a conversation
           </a>
@@ -313,11 +291,11 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <span>Shield Our Elders</span>
-      <span>Student-led elder scam defense for Brevard County.</span>
+      <span>Student-led scam defense for older adults and families.</span>
       <span>
-        Media from
+        Real media from
         <a href="https://mixkit.co/free-stock-video/" target="_blank" rel="noreferrer">Mixkit</a>
         and
         <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a>.
