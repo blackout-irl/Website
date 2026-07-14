@@ -15,7 +15,13 @@
     <meta property="og:image" content="./assets/app-home.png" />
     <title>Shield Our Elders</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://unpkg.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@600&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -39,15 +45,15 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy-block">
-          <p class="eyebrow reveal">Student-led elder scam prevention</p>
-          <h1 id="hero-title" class="reveal">Check it before you answer.</h1>
+          <p class="eyebrow reveal">A student project for families</p>
+          <h1 id="hero-title" class="reveal">Wait. Let&apos;s check it first.</h1>
           <p class="hero-copy reveal">
-            A simple app for older adults and families. Paste a message, answer a
-            few call questions, or ask a trusted person before sending money.
+            Scams work because they rush people. Shield Our Elders gives someone
+            a quiet minute to check a message, a phone call, or a payment request.
           </p>
           <div class="hero-actions reveal">
             <a class="button primary" href="#check">
-              Try a sample check
+              See an example
               <i data-lucide="arrow-down"></i>
             </a>
             <a class="button secondary" href="mailto:projectshieldourelders@gmail.com">
@@ -62,52 +68,56 @@
             alt="A phone and laptop on a desk"
           />
           <div class="paper-note" aria-label="Example reminder">
-            <span>Before you reply</span>
-            <strong>Stop. Check. Call someone you trust.</strong>
+            <span>Fridge note version</span>
+            <strong>Do not send money while someone is rushing you.</strong>
           </div>
         </div>
       </section>
 
       <section class="intro-strip" aria-label="Project summary">
         <p>
-          Made for senior centers, libraries, families, and anyone who has ever
-          wondered, “Is this message real?”
+          Built for senior centers, libraries, and families who want a simple
+          answer to one question: “Should I trust this?”
         </p>
       </section>
 
       <section class="section tools-section" id="tools" aria-labelledby="tools-title">
         <div class="section-heading">
-          <p class="eyebrow reveal">What it helps with</p>
-          <h2 id="tools-title" class="reveal">The common scam moments, in plain language.</h2>
+          <p class="eyebrow reveal">What it checks</p>
+          <h2 id="tools-title" class="reveal">A warning should be easy to read.</h2>
+          <p class="section-note reveal">
+            We kept the core questions short because stress makes long screens
+            harder to use.
+          </p>
         </div>
 
         <div class="tool-list">
           <article class="tool-row reveal">
             <span><i data-lucide="message-square-text"></i></span>
             <div>
-              <h3>Messages and screenshots</h3>
-              <p>Paste a text or upload a screenshot. The app explains what looks suspicious.</p>
+              <h3>Texts, emails, screenshots</h3>
+              <p>Paste it in. The app points to the part that feels wrong.</p>
             </div>
           </article>
           <article class="tool-row reveal">
             <span><i data-lucide="phone-call"></i></span>
             <div>
-              <h3>Calls that feel urgent</h3>
-              <p>Answer five yes-or-no questions about money, secrecy, codes, threats, and remote access.</p>
+              <h3>Phone calls</h3>
+              <p>Did they ask for money, secrecy, a code, remote access, or threaten you?</p>
             </div>
           </article>
           <article class="tool-row reveal">
             <span><i data-lucide="credit-card"></i></span>
             <div>
               <h3>Payments</h3>
-              <p>Gift cards, crypto, wire transfers, Zelle, Cash App, and Venmo get a clear warning.</p>
+              <p>Gift cards, crypto, wires, Zelle, Cash App, and Venmo are treated carefully.</p>
             </div>
           </article>
           <article class="tool-row reveal">
             <span><i data-lucide="qr-code"></i></span>
             <div>
               <h3>Links and QR codes</h3>
-              <p>Check where a link goes before opening it, especially for banks, tolls, and deliveries.</p>
+              <p>Check where it goes before opening it, especially for banks, tolls, and deliveries.</p>
             </div>
           </article>
         </div>
@@ -116,14 +126,15 @@
       <section class="section check-section" id="check" aria-labelledby="check-title">
         <div class="sample-copy reveal">
           <p class="eyebrow">Sample check</p>
-          <h2 id="check-title">What the app says back.</h2>
+          <h2 id="check-title">The answer should sound like a person.</h2>
           <p>
-            The goal is not to scare people. It gives a clear reason and one
-            safe next step.
+            No dramatic score. No giant red screen. Just why it looks suspicious
+            and what to do next.
           </p>
         </div>
 
         <div class="sample-card reveal">
+          <p class="card-label">Practice message</p>
           <div class="message-card" data-message-card>
             <span data-example-source>Text message</span>
             <p data-example-message>
@@ -151,10 +162,10 @@
 
         <div class="family-copy reveal">
           <p class="eyebrow">Trusted contact</p>
-          <h2 id="family-title">A second opinion should be one tap away.</h2>
+          <h2 id="family-title">The app should not replace family.</h2>
           <p>
-            Users can save a daughter, son, caregiver, neighbor, or bank number.
-            When a call feels wrong, the app helps them send this:
+            It should make it easier to reach family. Users can save a daughter,
+            son, caregiver, neighbor, or bank number and send a simple text:
           </p>
           <blockquote>
             “I received a suspicious call. Can you help me verify it?”
@@ -165,7 +176,7 @@
       <section class="section practice-section" aria-labelledby="practice-title">
         <div class="section-heading">
           <p class="eyebrow reveal">Practice</p>
-          <h2 id="practice-title" class="reveal">Short examples. No lecture.</h2>
+          <h2 id="practice-title" class="reveal">A few examples before the real thing.</h2>
         </div>
 
         <div class="lesson-row">
@@ -192,7 +203,11 @@
       <section class="final-section">
         <div class="final-copy reveal">
           <p class="eyebrow">Bring it to your group</p>
-          <h2>Start with one person and one safer decision.</h2>
+          <h2>One pause can be enough.</h2>
+          <p>
+            We are building this with older adults in mind: bigger text, fewer
+            choices, and no shame if someone already clicked.
+          </p>
           <a class="button primary" href="mailto:projectshieldourelders@gmail.com">
             <i data-lucide="mail"></i>
             Email the project
