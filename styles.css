@@ -651,6 +651,61 @@ blockquote {
   margin-top: 0.7rem;
 }
 
+.legal-page {
+  min-height: 78svh;
+  padding: clamp(4.8rem, 9vw, 8rem) clamp(1rem, 5vw, 4rem);
+}
+
+.legal-hero {
+  width: min(62rem, 100%);
+  margin-bottom: clamp(2.4rem, 5vw, 4rem);
+}
+
+.legal-hero h1 {
+  max-width: 9.5ch;
+  font-size: clamp(3.8rem, 8vw, 7.8rem);
+}
+
+.legal-hero p:not(.eyebrow),
+.legal-list p {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.34vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.legal-hero .button {
+  margin-top: 1rem;
+}
+
+.legal-list {
+  width: min(74rem, 100%);
+  border-top: 1px solid var(--line);
+}
+
+.legal-list article {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.35rem, 3vw, 2.2rem) 0;
+}
+
+.legal-list h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.7rem);
+}
+
+.legal-list p {
+  margin: 0;
+}
+
+.legal-list a {
+  color: var(--teal-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1fr 1.4fr auto;
@@ -743,6 +798,10 @@ blockquote {
 
   .sample-copy {
     position: static;
+  }
+
+  .legal-list article {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
